@@ -1,0 +1,22 @@
+[project]
+name = "mathorcup-a-workflow"
+version = "0.1.0"
+description = "MathorCup 2026 A题 baseline workflow"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "kaiwu",
+  "numpy==2.2.6",
+  "pandas==2.2.3",
+  "openpyxl==3.1.5",
+  "pypdf==6.10.0",
+]
+
+[tool.uv.sources]
+kaiwu = { path = "kaiwu-1.3.1-cp310-none-any.whl" }
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

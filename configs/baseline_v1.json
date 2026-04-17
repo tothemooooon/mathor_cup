@@ -1,0 +1,82 @@
+{
+  "profile_name": "baseline_v1",
+  "profile_version": "1.1.0",
+  "description": "MathorCup 2026 A题 Baseline V1，Q2已升级为时间窗入模 B+C 迭代主线",
+  "questions": {
+    "Q1": {
+      "params": {
+        "n_customers": 15,
+        "seed_start": 0,
+        "seed_count": 8
+      },
+      "known_limitations": [],
+      "experiment_sources": [
+        "experiments/results/q1_20260417_133616.json"
+      ],
+      "recommended_command": "python run_baseline.py --profile baseline_v1 --question Q1"
+    },
+    "Q2": {
+      "params": {
+        "n_customers": 15,
+        "seed_start": 0,
+        "seed_count": 12,
+        "tw_weight": 1.0,
+        "mode": "iterative_bc",
+        "min_rounds": 3,
+        "max_rounds": 5,
+        "tw_weight_grid": [0.1, 0.5, 1.0, 2.0, 5.0, 10.0],
+        "beta": 0.65,
+        "improve_tol": 0.001,
+        "m1": 10.0,
+        "m2": 20.0,
+        "objective_eval_weight": 1.0,
+        "baseline_reference_objective": 241172.0,
+        "max_weight_expand": 1,
+        "weight_expand_factor": 5.0
+      },
+      "known_limitations": [
+        "当前Q2使用位置级时间窗惩罚估计，精度受tau估计误差影响。",
+        "当前Q2的原始二值解存在可行性波动，最终路线由解码修复得到。"
+      ],
+      "experiment_sources": [
+        "experiments/results/q2_20260417_151438.json",
+        "experiments/results/q2_20260417_160116.json",
+        "experiments/results/q2_iterative_bc_curve_20260417_160114.csv"
+      ],
+      "recommended_command": "python run_baseline.py --profile baseline_v1 --question Q2"
+    },
+    "Q3": {
+      "params": {
+        "n_customers": 50,
+        "cluster_size": 10,
+        "seed_count_per_cluster": 3,
+        "tw_weight": 1.0,
+        "do_two_opt": true
+      },
+      "known_limitations": [],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q3_20260417_150017.json"
+      ],
+      "recommended_command": "python run_baseline.py --profile baseline_v1 --question Q3"
+    },
+    "Q4": {
+      "params": {
+        "n_customers": 50,
+        "vehicle_weight": 120.0,
+        "tw_weight": 1.0,
+        "travel_weight": 1.0,
+        "min_vehicle_count": 5,
+        "max_vehicle_count": 8,
+        "seed_count_per_vehicle": 2
+      },
+      "known_limitations": [
+        "当前车辆权重网格(80,120,180)下最优车辆数均为7。",
+        "后续需做vehicle_weight与tw_weight联合网格寻找车辆数切换阈值。"
+      ],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q4_20260417_150127.json"
+      ],
+      "recommended_command": "python run_baseline.py --profile baseline_v1 --question Q4"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+round,selected_tw_weight,objective,travel,tw_penalty,delta_from_prev
+1,5.0,214648.0,48.0,214600.0,0.0
+2,1.0,224169.0,49.0,224120.0,9521.0
+3,0.1,239121.0,51.0,239070.0,14952.0

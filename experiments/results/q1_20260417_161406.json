@@ -1,0 +1,197 @@
+{
+  "question": "Q1",
+  "method": "QUBO-TSP + Kaiwu SimulatedAnnealing",
+  "route": [
+    0,
+    7,
+    11,
+    9,
+    4,
+    6,
+    8,
+    5,
+    13,
+    15,
+    14,
+    2,
+    10,
+    1,
+    3,
+    12,
+    0
+  ],
+  "routes": null,
+  "per_customer": [],
+  "decision_points": {
+    "惩罚系数规模": "lambda_pos/lambda_cus 影响可行率与目标值平衡",
+    "退火预算": "seed_count、temperature、iterations_per_t 决定运行时长与稳定性"
+  },
+  "parameters": {
+    "n_customers": 15,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "seed_start": 0,
+    "seed_count": 8,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50
+  },
+  "diagnostics": {
+    "candidate_count": 8,
+    "all_candidates": [
+      {
+        "seed": 0,
+        "travel_time": 47.0,
+        "qubo_value": 47.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 6,
+        "travel_time": 48.0,
+        "qubo_value": 48.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 5,
+        "travel_time": 52.0,
+        "qubo_value": 52.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 2,
+        "travel_time": 54.0,
+        "qubo_value": 54.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 4,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 7,
+        "travel_time": 61.0,
+        "qubo_value": 61.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 1,
+        "travel_time": 63.0,
+        "qubo_value": 63.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      },
+      {
+        "seed": 3,
+        "travel_time": 63.0,
+        "qubo_value": 63.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0
+      }
+    ],
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "baseline_v1",
+    "profile_version": "1.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/baseline_v1.json",
+    "known_limitations": [],
+    "profile_experiment_sources": [
+      "experiments/results/q1_20260417_133616.json"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 47.0,
+    "total_time_window_penalty": 0.0,
+    "total_objective": 47.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 4.5665106249798555
+  },
+  "generated_at": "2026-04-17T16:14:06"
+}

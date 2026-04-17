@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-04-17T16:56:33",
+  "classical_baseline": {
+    "greedy_route": [
+      0,
+      6,
+      5,
+      8,
+      7,
+      10,
+      11,
+      1,
+      3,
+      12,
+      4,
+      2,
+      13,
+      14,
+      15,
+      9,
+      0
+    ],
+    "greedy_travel": 38.0,
+    "two_opt_route": [
+      0,
+      10,
+      11,
+      7,
+      8,
+      5,
+      6,
+      13,
+      14,
+      15,
+      2,
+      4,
+      12,
+      3,
+      1,
+      9,
+      0
+    ],
+    "two_opt_travel": 33.0
+  },
+  "settings": {
+    "stage_a": {
+      "multipliers": [
+        2.0,
+        3.0,
+        5.0,
+        8.0,
+        10.0
+      ],
+      "runs_per_p": 5,
+      "iterations_per_t": 240,
+      "size_limit": 50
+    },
+    "stage_b": {
+      "enabled": true,
+      "disabled": false,
+      "triggered": true,
+      "trigger_reason": "Stage A best_qubo > 1.05 * L_2opt",
+      "multipliers": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0,
+        8.0,
+        10.0,
+        12.0,
+        15.0
+      ],
+      "runs_per_p": 20,
+      "iterations_per_t": 400,
+      "size_limit": 80
+    }
+  },
+  "stage_used_for_decision": "B",
+  "summary_stage_a": [
+    {
+      "stage": "A",
+      "multiplier": 2.0,
+      "P": 76.0,
+      "runs": 5,
+      "feasible_rate": 1.0,
+      "best_travel": 58.0,
+      "mean_travel": 63.4,
+      "worst_travel": 70.0,
+      "best_gap_ratio": 1.7575757575757576,
+      "best_gap_pct": 75.75757575757575,
+      "meets_1p05": false
+    },
+    {
+      "stage": "A",
+      "multiplier": 3.0,
+      "P": 114.0,
+      "runs": 5,
+      "feasible_rate": 1.0,
+      "best_travel": 50.0,
+      "mean_travel": 55.8,
+      "worst_travel": 61.0,
+      "best_gap_ratio": 1.5151515151515151,
+      "best_gap_pct": 51.515151515151516,
+      "meets_1p05": false
+    },
+    {
+      "stage": "A",
+      "multiplier": 5.0,
+      "P": 190.0,
+      "runs": 5,
+      "feasible_rate": 1.0,
+      "best_travel": 46.0,
+      "mean_travel": 57.8,
+      "worst_travel": 65.0,
+      "best_gap_ratio": 1.393939393939394,
+      "best_gap_pct": 39.39393939393939,
+      "meets_1p05": false
+    },
+    {
+      "stage": "A",
+      "multiplier": 8.0,
+      "P": 304.0,
+      "runs": 5,
+      "feasible_rate": 1.0,
+      "best_travel": 54.0,
+      "mean_travel": 58.4,
+      "worst_travel": 61.0,
+      "best_gap_ratio": 1.6363636363636365,
+      "best_gap_pct": 63.63636363636363,
+      "meets_1p05": false
+    },
+    {
+      "stage": "A",
+      "multiplier": 10.0,
+      "P": 380.0,
+      "runs": 5,
+      "feasible_rate": 1.0,
+      "best_travel": 52.0,
+      "mean_travel": 57.0,
+      "worst_travel": 64.0,
+      "best_gap_ratio": 1.5757575757575757,
+      "best_gap_pct": 57.57575757575758,
+      "meets_1p05": false
+    }
+  ],
+  "summary_stage_final": [
+    {
+      "stage": "B",
+      "multiplier": 0.5,
+      "P": 19.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 44.0,
+      "mean_travel": 53.65,
+      "worst_travel": 60.0,
+      "best_gap_ratio": 1.3333333333333333,
+      "best_gap_pct": 33.33333333333333,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 1.0,
+      "P": 38.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 46.0,
+      "mean_travel": 56.0,
+      "worst_travel": 67.0,
+      "best_gap_ratio": 1.393939393939394,
+      "best_gap_pct": 39.39393939393939,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 1.5,
+      "P": 57.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 49.0,
+      "mean_travel": 57.95,
+      "worst_travel": 70.0,
+      "best_gap_ratio": 1.4848484848484849,
+      "best_gap_pct": 48.484848484848484,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 2.0,
+      "P": 76.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 47.0,
+      "mean_travel": 55.5,
+      "worst_travel": 71.0,
+      "best_gap_ratio": 1.4242424242424243,
+      "best_gap_pct": 42.42424242424242,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 3.0,
+      "P": 114.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 45.0,
+      "mean_travel": 54.05,
+      "worst_travel": 61.0,
+      "best_gap_ratio": 1.3636363636363635,
+      "best_gap_pct": 36.36363636363637,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 5.0,
+      "P": 190.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 45.0,
+      "mean_travel": 54.25,
+      "worst_travel": 61.0,
+      "best_gap_ratio": 1.3636363636363635,
+      "best_gap_pct": 36.36363636363637,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 8.0,
+      "P": 304.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 54.0,
+      "mean_travel": 59.1,
+      "worst_travel": 67.0,
+      "best_gap_ratio": 1.6363636363636365,
+      "best_gap_pct": 63.63636363636363,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 10.0,
+      "P": 380.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 50.0,
+      "mean_travel": 63.35,
+      "worst_travel": 72.0,
+      "best_gap_ratio": 1.5151515151515151,
+      "best_gap_pct": 51.515151515151516,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 12.0,
+      "P": 456.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 45.0,
+      "mean_travel": 60.1,
+      "worst_travel": 68.0,
+      "best_gap_ratio": 1.3636363636363635,
+      "best_gap_pct": 36.36363636363637,
+      "meets_1p05": false
+    },
+    {
+      "stage": "B",
+      "multiplier": 15.0,
+      "P": 570.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 53.0,
+      "mean_travel": 61.25,
+      "worst_travel": 72.0,
+      "best_gap_ratio": 1.606060606060606,
+      "best_gap_pct": 60.60606060606061,
+      "meets_1p05": false
+    }
+  ],
+  "acceptance": {
+    "best_qubo": 44.0,
+    "l_2opt": 33.0,
+    "best_qubo_over_l2opt": 1.3333333333333333,
+    "threshold": 1.05,
+    "pass": false,
+    "failure_reason": "P range and SA budget under current settings cannot meet <=1.05"
+  },
+  "optimal_p_interval": {
+    "has_solution": true,
+    "obj_star": 44.0,
+    "interval_low": 19.0,
+    "interval_high": 19.0,
+    "interval_rows": [
+      {
+        "stage": "B",
+        "multiplier": 0.5,
+        "P": 19.0,
+        "runs": 20,
+        "feasible_rate": 1.0,
+        "best_travel": 44.0,
+        "mean_travel": 53.65,
+        "worst_travel": 60.0,
+        "best_gap_ratio": 1.3333333333333333,
+        "best_gap_pct": 33.33333333333333,
+        "meets_1p05": false
+      }
+    ],
+    "selected": {
+      "stage": "B",
+      "multiplier": 0.5,
+      "P": 19.0,
+      "runs": 20,
+      "feasible_rate": 1.0,
+      "best_travel": 44.0,
+      "mean_travel": 53.65,
+      "worst_travel": 60.0,
+      "best_gap_ratio": 1.3333333333333333,
+      "best_gap_pct": 33.33333333333333,
+      "meets_1p05": false
+    }
+  },
+  "cross_question_scaling_check": {
+    "enabled": true,
+    "ratio_range": {
+      "r_low": 0.5,
+      "r_high": 0.5,
+      "r_star": 0.5
+    },
+    "q2_scale": {
+      "S_q2": 60.0,
+      "lambda_q2": 30.0
+    },
+    "runs": {
+      "Q2": {
+        "contract_check": {
+          "passed": true,
+          "route_ok": true,
+          "metrics_ok": true,
+          "diagnostics_ok": true
+        },
+        "objective": 162452.0,
+        "travel": 42.0,
+        "tw_penalty": 162410.0,
+        "feasible": false
+      },
+      "Q3": {
+        "contract_check": {
+          "passed": true,
+          "route_ok": true,
+          "metrics_ok": true,
+          "diagnostics_ok": true
+        },
+        "objective": 5216301.0,
+        "travel": 61.0,
+        "tw_penalty": 5216240.0,
+        "feasible": true
+      },
+      "Q4": {
+        "contract_check": {
+          "passed": true,
+          "route_ok": true,
+          "metrics_ok": true,
+          "diagnostics_ok": true
+        },
+        "objective": 308191.0,
+        "travel": 171.0,
+        "tw_penalty": 307060.0,
+        "feasible": true,
+        "selected_k": 8
+      }
+    }
+  },
+  "artifacts": {
+    "detail_csv": "experiments/results/q1_penalty_tuning_20260417_164902_detail.csv",
+    "summary_csv": "experiments/results/q1_penalty_tuning_20260417_164902_summary.csv",
+    "report_md": "experiments/results/q1_penalty_tuning_20260417_164902_report.md",
+    "paper_md": "experiments/results/q1_penalty_tuning_20260417_164902_paper.md"
+  }
+}

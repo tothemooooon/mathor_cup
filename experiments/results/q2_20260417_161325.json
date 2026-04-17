@@ -1,0 +1,640 @@
+{
+  "question": "Q2",
+  "method": "Iterative BC: position-penalty-embedded QUBO (B) + iterative tau update (C)",
+  "route": [
+    0,
+    2,
+    12,
+    3,
+    9,
+    1,
+    4,
+    13,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    14,
+    15,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 2,
+      "arrival": 2.0,
+      "start_service": 2.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 4.0
+    },
+    {
+      "node": 12,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 3,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 4.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 160.0,
+      "leave_time": 12.0
+    },
+    {
+      "node": 9,
+      "arrival": 14.0,
+      "start_service": 14.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 16.0
+    },
+    {
+      "node": 1,
+      "arrival": 18.0,
+      "start_service": 18.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 20.0
+    },
+    {
+      "node": 4,
+      "arrival": 24.0,
+      "start_service": 24.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 26.0
+    },
+    {
+      "node": 13,
+      "arrival": 29.0,
+      "start_service": 29.0,
+      "window_lower": 9.0,
+      "window_upper": 27.0,
+      "early_violation": 0.0,
+      "late_violation": 2.0,
+      "time_window_penalty": 80.0,
+      "leave_time": 31.0
+    },
+    {
+      "node": 5,
+      "arrival": 33.0,
+      "start_service": 33.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 19.0,
+      "time_window_penalty": 7220.0,
+      "leave_time": 35.0
+    },
+    {
+      "node": 6,
+      "arrival": 36.0,
+      "start_service": 36.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 16.0,
+      "time_window_penalty": 5120.0,
+      "leave_time": 38.0
+    },
+    {
+      "node": 7,
+      "arrival": 41.0,
+      "start_service": 41.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 27.0,
+      "time_window_penalty": 14580.0,
+      "leave_time": 43.0
+    },
+    {
+      "node": 8,
+      "arrival": 45.0,
+      "start_service": 45.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 27.0,
+      "time_window_penalty": 14580.0,
+      "leave_time": 47.0
+    },
+    {
+      "node": 10,
+      "arrival": 50.0,
+      "start_service": 50.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 30.0,
+      "time_window_penalty": 18000.0,
+      "leave_time": 52.0
+    },
+    {
+      "node": 11,
+      "arrival": 53.0,
+      "start_service": 53.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 33.0,
+      "time_window_penalty": 21780.0,
+      "leave_time": 55.0
+    },
+    {
+      "node": 14,
+      "arrival": 62.0,
+      "start_service": 62.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 44.0,
+      "time_window_penalty": 38720.0,
+      "leave_time": 64.0
+    },
+    {
+      "node": 15,
+      "arrival": 66.0,
+      "start_service": 66.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 46.0,
+      "time_window_penalty": 42320.0,
+      "leave_time": 68.0
+    }
+  ],
+  "decision_points": {
+    "B主线": "将位置级时间窗惩罚一次项直接入模，不增加变量数",
+    "C迭代": "每轮用真实到达时间更新tau并重建QUBO",
+    "权重网格": "若目标无变化则自动放大权重量级"
+  },
+  "parameters": {
+    "n_customers": 15,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "mode": "iterative_bc",
+    "seed_start": 0,
+    "seed_count": 12,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50,
+    "tw_weight_input": 1.0,
+    "tw_weight_grid": [
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "max_rounds": 5,
+    "min_rounds": 3,
+    "beta": 0.65,
+    "improve_tol": 0.001,
+    "m1": 10.0,
+    "m2": 20.0,
+    "objective_eval_weight": 1.0
+  },
+  "diagnostics": {
+    "mode": "iterative_bc",
+    "candidate_count_per_weight": 12,
+    "iter_history": [
+      {
+        "round": 1,
+        "selected_tw_weight": 0.1,
+        "objective": 162612.0,
+        "travel": 42.0,
+        "tw_penalty": 162570.0,
+        "delta_from_prev": 0.0,
+        "expanded_steps": 0
+      },
+      {
+        "round": 2,
+        "selected_tw_weight": 0.1,
+        "objective": 179494.0,
+        "travel": 44.0,
+        "tw_penalty": 179450.0,
+        "delta_from_prev": 16882.0,
+        "expanded_steps": 0
+      },
+      {
+        "round": 3,
+        "selected_tw_weight": 0.5,
+        "objective": 175554.0,
+        "travel": 44.0,
+        "tw_penalty": 175510.0,
+        "delta_from_prev": -3940.0,
+        "expanded_steps": 0
+      },
+      {
+        "round": 4,
+        "selected_tw_weight": 2.0,
+        "objective": 193436.0,
+        "travel": 46.0,
+        "tw_penalty": 193390.0,
+        "delta_from_prev": 17882.0,
+        "expanded_steps": 0
+      }
+    ],
+    "round_trials": [
+      {
+        "round": 1,
+        "tau_k": [
+          4.0,
+          10.0,
+          16.0,
+          22.0,
+          28.0,
+          34.0,
+          40.0,
+          46.0,
+          52.0,
+          58.0,
+          64.0,
+          70.0,
+          76.0,
+          82.0,
+          88.0
+        ],
+        "weight_trials": [
+          {
+            "tw_weight": 0.1,
+            "best_objective": 162612.0,
+            "best_travel": 42.0,
+            "best_tw_penalty": 162570.0,
+            "best_seed": 5
+          },
+          {
+            "tw_weight": 0.5,
+            "best_objective": 214648.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 214600.0,
+            "best_seed": 1
+          },
+          {
+            "tw_weight": 1.0,
+            "best_objective": 214648.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 214600.0,
+            "best_seed": 1
+          },
+          {
+            "tw_weight": 2.0,
+            "best_objective": 214648.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 214600.0,
+            "best_seed": 0
+          },
+          {
+            "tw_weight": 5.0,
+            "best_objective": 214648.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 214600.0,
+            "best_seed": 0
+          },
+          {
+            "tw_weight": 10.0,
+            "best_objective": 214648.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 214600.0,
+            "best_seed": 0
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "tau_k": [
+          2.7,
+          8.05,
+          12.1,
+          16.799999999999997,
+          21.5,
+          27.5,
+          32.85,
+          37.55,
+          41.6,
+          46.95,
+          51.65,
+          57.0,
+          61.05,
+          69.0,
+          73.69999999999999
+        ],
+        "weight_trials": [
+          {
+            "tw_weight": 0.1,
+            "best_objective": 179494.0,
+            "best_travel": 44.0,
+            "best_tw_penalty": 179450.0,
+            "best_seed": 5
+          },
+          {
+            "tw_weight": 0.5,
+            "best_objective": 209338.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 209290.0,
+            "best_seed": 2
+          },
+          {
+            "tw_weight": 1.0,
+            "best_objective": 209338.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 209290.0,
+            "best_seed": 2
+          },
+          {
+            "tw_weight": 2.0,
+            "best_objective": 209338.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 209290.0,
+            "best_seed": 0
+          },
+          {
+            "tw_weight": 5.0,
+            "best_objective": 209338.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 209290.0,
+            "best_seed": 2
+          },
+          {
+            "tw_weight": 10.0,
+            "best_objective": 209338.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 209290.0,
+            "best_seed": 6
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "tau_k": [
+          2.895,
+          6.7175,
+          11.385,
+          14.979999999999999,
+          19.225,
+          23.925,
+          29.697499999999998,
+          34.5925,
+          37.96,
+          44.3825,
+          48.6275,
+          53.75,
+          57.11749999999999,
+          65.75,
+          69.995
+        ],
+        "weight_trials": [
+          {
+            "tw_weight": 0.5,
+            "best_objective": 175554.0,
+            "best_travel": 44.0,
+            "best_tw_penalty": 175510.0,
+            "best_seed": 9
+          },
+          {
+            "tw_weight": 2.0,
+            "best_objective": 175554.0,
+            "best_travel": 44.0,
+            "best_tw_penalty": 175510.0,
+            "best_seed": 3
+          },
+          {
+            "tw_weight": 1.0,
+            "best_objective": 189445.0,
+            "best_travel": 45.0,
+            "best_tw_penalty": 189400.0,
+            "best_seed": 5
+          },
+          {
+            "tw_weight": 10.0,
+            "best_objective": 197036.0,
+            "best_travel": 46.0,
+            "best_tw_penalty": 196990.0,
+            "best_seed": 5
+          },
+          {
+            "tw_weight": 5.0,
+            "best_objective": 207817.0,
+            "best_travel": 47.0,
+            "best_tw_penalty": 207770.0,
+            "best_seed": 3
+          },
+          {
+            "tw_weight": 0.1,
+            "best_objective": 225400.0,
+            "best_travel": 50.0,
+            "best_tw_penalty": 225350.0,
+            "best_seed": 11
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "tau_k": [
+          2.9632500000000004,
+          6.251125,
+          11.13475,
+          14.343,
+          18.42875,
+          22.67375,
+          27.944125,
+          31.607374999999998,
+          36.036,
+          43.483875,
+          47.569625,
+          52.612500000000004,
+          55.741125,
+          64.6125,
+          68.69825
+        ],
+        "weight_trials": [
+          {
+            "tw_weight": 2.0,
+            "best_objective": 193436.0,
+            "best_travel": 46.0,
+            "best_tw_penalty": 193390.0,
+            "best_seed": 4
+          },
+          {
+            "tw_weight": 1.0,
+            "best_objective": 194766.0,
+            "best_travel": 46.0,
+            "best_tw_penalty": 194720.0,
+            "best_seed": 4
+          },
+          {
+            "tw_weight": 10.0,
+            "best_objective": 194766.0,
+            "best_travel": 46.0,
+            "best_tw_penalty": 194720.0,
+            "best_seed": 7
+          },
+          {
+            "tw_weight": 0.5,
+            "best_objective": 206727.0,
+            "best_travel": 47.0,
+            "best_tw_penalty": 206680.0,
+            "best_seed": 7
+          },
+          {
+            "tw_weight": 5.0,
+            "best_objective": 208948.0,
+            "best_travel": 48.0,
+            "best_tw_penalty": 208900.0,
+            "best_seed": 3
+          },
+          {
+            "tw_weight": 0.1,
+            "best_objective": 212695.0,
+            "best_travel": 45.0,
+            "best_tw_penalty": 212650.0,
+            "best_seed": 11
+          }
+        ]
+      }
+    ],
+    "selected_tw_weight": 0.1,
+    "tau_update_rule": "tau <- beta * real_arrival + (1-beta) * tau",
+    "beta": 0.65,
+    "weight_grid_base": [
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "stop_reason": "converged_by_improve_tol",
+    "convergence_csv": "experiments/results/q2_iterative_bc_curve_20260417_161325.csv",
+    "convergence_png": "experiments/results/q2_iterative_bc_curve_20260417_161325.png",
+    "baseline_reference_objective": 241172.0,
+    "improvement_vs_baseline": {
+      "ratio": 0.3257426235218019,
+      "percent": 32.57426235218019,
+      "target_ratio": 0.15,
+      "target_reached": true
+    },
+    "selected_seed": 5,
+    "selected_qubo_value": 3733.0,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "baseline_v1",
+    "profile_version": "1.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/baseline_v1.json",
+    "known_limitations": [
+      "当前Q2使用位置级时间窗惩罚估计，精度受tau估计误差影响。",
+      "当前Q2的原始二值解存在可行性波动，最终路线由解码修复得到。"
+    ],
+    "profile_experiment_sources": [
+      "experiments/results/q2_20260417_151438.json",
+      "experiments/results/q2_20260417_160116.json",
+      "experiments/results/q2_iterative_bc_curve_20260417_160114.csv"
+    ],
+    "proxy_score": {
+      "proxy_score": 28.98,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 42.0,
+    "total_time_window_penalty": 162570.0,
+    "total_objective": 162612.0,
+    "feasible": false,
+    "row_violations": 8,
+    "col_violations": 8,
+    "runtime_sec": 172.32035174997873
+  },
+  "generated_at": "2026-04-17T16:13:25"
+}

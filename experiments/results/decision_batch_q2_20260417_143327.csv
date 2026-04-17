@@ -1,0 +1,4 @@
+tw_weight,objective,travel,tw_penalty,balanced_score,feasible,runtime_sec
+0.0,53.0,53.0,316750.0,0.0,True,1.1792202920187265
+0.01,3220.5,53.0,316750.0,0.0,True,1.1946472089912277
+0.1,31728.0,53.0,316750.0,0.0,True,1.1888368749932852

@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.DS_Store
+*.whl
+kaiwu-*.whl
+参考算例.xlsx
