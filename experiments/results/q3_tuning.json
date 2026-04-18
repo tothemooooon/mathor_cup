@@ -1,0 +1,34 @@
+[
+  {
+    "tw_weight": 0.1,
+    "n_partitions": 3,
+    "strategy": "distance",
+    "objective": 804649.0,
+    "travel": 116.0,
+    "tw_violation_ratio": 0.94
+  },
+  {
+    "tw_weight": 0.1,
+    "n_partitions": 5,
+    "strategy": "distance",
+    "objective": 644428.0,
+    "travel": 94.0,
+    "tw_violation_ratio": 0.92
+  },
+  {
+    "tw_weight": 0.2,
+    "n_partitions": 3,
+    "strategy": "distance",
+    "objective": 1609182.0,
+    "travel": 116.0,
+    "tw_violation_ratio": 0.94
+  },
+  {
+    "tw_weight": 0.2,
+    "n_partitions": 5,
+    "strategy": "distance",
+    "objective": 1288762.0,
+    "travel": 94.0,
+    "tw_violation_ratio": 0.92
+  }
+]

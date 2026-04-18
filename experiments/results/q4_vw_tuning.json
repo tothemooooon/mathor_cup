@@ -1,0 +1,42 @@
+[
+  {
+    "vehicle_weight": 80,
+    "n_vehicles": 5,
+    "objective": 91903.0,
+    "travel": 133.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.72
+  },
+  {
+    "vehicle_weight": 100,
+    "n_vehicles": 5,
+    "objective": 92003.0,
+    "travel": 133.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.72
+  },
+  {
+    "vehicle_weight": 150,
+    "n_vehicles": 5,
+    "objective": 92253.0,
+    "travel": 133.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.72
+  },
+  {
+    "vehicle_weight": 80,
+    "n_vehicles": 6,
+    "objective": 93453.0,
+    "travel": 133.0,
+    "selected_k": 6,
+    "tw_violation_ratio": 0.64
+  },
+  {
+    "vehicle_weight": 100,
+    "n_vehicles": 6,
+    "objective": 93573.0,
+    "travel": 133.0,
+    "selected_k": 6,
+    "tw_violation_ratio": 0.64
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "soft_strategy": "distance",
+    "n_vehicles": 5,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 92103.0,
+    "travel": 133.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.72
+  },
+  {
+    "soft_strategy": "distance",
+    "n_vehicles": 6,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 93693.0,
+    "travel": 133.0,
+    "selected_k": 6,
+    "tw_violation_ratio": 0.64
+  },
+  {
+    "soft_strategy": "distance",
+    "n_vehicles": 7,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 93933.0,
+    "travel": 133.0,
+    "selected_k": 7,
+    "tw_violation_ratio": 0.7
+  },
+  {
+    "soft_strategy": "regret",
+    "n_vehicles": 5,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 116661.0,
+    "travel": 141.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.78
+  },
+  {
+    "soft_strategy": "regret",
+    "n_vehicles": 6,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 109903.0,
+    "travel": 143.0,
+    "selected_k": 6,
+    "tw_violation_ratio": 0.68
+  },
+  {
+    "soft_strategy": "uniform",
+    "n_vehicles": 5,
+    "cross_refine": true,
+    "pareto": true,
+    "objective": 155381.0,
+    "travel": 141.0,
+    "selected_k": 5,
+    "tw_violation_ratio": 0.68
+  }
+]
