@@ -1,0 +1,754 @@
+{
+  "question": "Q2",
+  "method": "Iterative BC + adaptive lambda/tw search + exact DP benchmark",
+  "route": [
+    0,
+    2,
+    12,
+    3,
+    9,
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 2,
+      "arrival": 2.0,
+      "start_service": 2.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 4.0
+    },
+    {
+      "node": 12,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 3,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 4.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 160.0,
+      "leave_time": 12.0
+    },
+    {
+      "node": 9,
+      "arrival": 14.0,
+      "start_service": 14.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 16.0
+    },
+    {
+      "node": 1,
+      "arrival": 18.0,
+      "start_service": 18.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 20.0
+    },
+    {
+      "node": 4,
+      "arrival": 24.0,
+      "start_service": 24.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 26.0
+    },
+    {
+      "node": 5,
+      "arrival": 31.0,
+      "start_service": 31.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 17.0,
+      "time_window_penalty": 5780.0,
+      "leave_time": 33.0
+    },
+    {
+      "node": 6,
+      "arrival": 34.0,
+      "start_service": 34.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 14.0,
+      "time_window_penalty": 3920.0,
+      "leave_time": 36.0
+    },
+    {
+      "node": 7,
+      "arrival": 39.0,
+      "start_service": 39.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 25.0,
+      "time_window_penalty": 12500.0,
+      "leave_time": 41.0
+    },
+    {
+      "node": 8,
+      "arrival": 43.0,
+      "start_service": 43.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 25.0,
+      "time_window_penalty": 12500.0,
+      "leave_time": 45.0
+    },
+    {
+      "node": 10,
+      "arrival": 48.0,
+      "start_service": 48.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 28.0,
+      "time_window_penalty": 15680.0,
+      "leave_time": 50.0
+    },
+    {
+      "node": 11,
+      "arrival": 51.0,
+      "start_service": 51.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 31.0,
+      "time_window_penalty": 19220.0,
+      "leave_time": 53.0
+    }
+  ],
+  "decision_points": {
+    "B主线": "将位置级时间窗惩罚一次项直接入模，不增加变量数",
+    "C迭代": "每轮用真实到达时间更新tau并重建QUBO",
+    "权重网格": "在候选lambda上做tw_weight扫描与放大",
+    "精确对照": "n<=cap 时用动态规划给出精确基准"
+  },
+  "parameters": {
+    "n_customers": 12,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "mode": "iterative_bc",
+    "seed_start": 0,
+    "seed_count": 4,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50,
+    "tw_weight_input": 1.0,
+    "tw_weight_grid": [
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "max_rounds": 5,
+    "min_rounds": 3,
+    "beta": 0.65,
+    "improve_tol": 0.001,
+    "m1": 10.0,
+    "m2": 20.0,
+    "objective_eval_weight": 1.0,
+    "use_adaptive_lambda": true,
+    "adaptive_rounds": 2,
+    "adaptive_budget": 2,
+    "exact_benchmark_cap": 12
+  },
+  "diagnostics": {
+    "mode": "iterative_bc",
+    "candidate_count_per_weight": 4,
+    "iter_history": [
+      {
+        "round": 1,
+        "selected_lambda": 5.515151515151515,
+        "selected_tw_weight": 0.1,
+        "objective": 69803.0,
+        "travel": 33.0,
+        "tw_penalty": 69770.0,
+        "delta_from_prev": 0.0,
+        "expanded_steps": 0
+      },
+      {
+        "round": 2,
+        "selected_lambda": 5.515151515151515,
+        "selected_tw_weight": 0.1,
+        "objective": 73394.0,
+        "travel": 34.0,
+        "tw_penalty": 73360.0,
+        "delta_from_prev": 3591.0,
+        "expanded_steps": 0
+      },
+      {
+        "round": 3,
+        "selected_lambda": 5.515151515151515,
+        "selected_tw_weight": 0.1,
+        "objective": 73394.0,
+        "travel": 34.0,
+        "tw_penalty": 73360.0,
+        "delta_from_prev": 0.0,
+        "expanded_steps": 0
+      }
+    ],
+    "round_trials": [
+      {
+        "round": 1,
+        "tau_k": [
+          3.7564102564102564,
+          9.512820512820513,
+          15.26923076923077,
+          21.025641025641026,
+          26.78205128205128,
+          32.53846153846154,
+          38.294871794871796,
+          44.05128205128205,
+          49.80769230769231,
+          55.56410256410256,
+          61.32051282051282,
+          67.07692307692308
+        ],
+        "weight_trials": [
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.1,
+            "best_objective": 69803.0,
+            "best_travel": 33.0,
+            "best_tw_penalty": 69770.0,
+            "best_seed": 4
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.1,
+            "best_objective": 69803.0,
+            "best_travel": 33.0,
+            "best_tw_penalty": 69770.0,
+            "best_seed": 29
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.5,
+            "best_objective": 82787.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82750.0,
+            "best_seed": 32
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.5,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 8
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 1.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 13
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 2.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 18
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 5.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 20
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 10.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 24
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 1.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 36
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 2.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 40
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 5.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 44
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 10.0,
+            "best_objective": 82877.0,
+            "best_travel": 37.0,
+            "best_tw_penalty": 82840.0,
+            "best_seed": 48
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "tau_k": [
+          2.61474358974359,
+          7.879487179487179,
+          11.84423076923077,
+          16.45897435897436,
+          21.07371794871795,
+          26.98846153846154,
+          33.55320512820513,
+          37.51794871794872,
+          42.78269230769231,
+          47.3974358974359,
+          52.662179487179486,
+          56.62692307692308
+        ],
+        "weight_trials": [
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.1,
+            "best_objective": 73394.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 73360.0,
+            "best_seed": 52
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.1,
+            "best_objective": 78375.0,
+            "best_travel": 35.0,
+            "best_tw_penalty": 78340.0,
+            "best_seed": 77
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 10.0,
+            "best_objective": 78894.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 78860.0,
+            "best_seed": 98
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.5,
+            "best_objective": 81345.0,
+            "best_travel": 35.0,
+            "best_tw_penalty": 81310.0,
+            "best_seed": 81
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.5,
+            "best_objective": 88578.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 88540.0,
+            "best_seed": 58
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 1.0,
+            "best_objective": 88578.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 88540.0,
+            "best_seed": 61
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 1.0,
+            "best_objective": 88578.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 88540.0,
+            "best_seed": 85
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 2.0,
+            "best_objective": 88578.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 88540.0,
+            "best_seed": 88
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 5.0,
+            "best_objective": 88578.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 88540.0,
+            "best_seed": 92
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 5.0,
+            "best_objective": 91368.0,
+            "best_travel": 38.0,
+            "best_tw_penalty": 91330.0,
+            "best_seed": 71
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 2.0,
+            "best_objective": 91729.0,
+            "best_travel": 39.0,
+            "best_tw_penalty": 91690.0,
+            "best_seed": 64
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 10.0,
+            "best_objective": 105570.0,
+            "best_travel": 40.0,
+            "best_tw_penalty": 105530.0,
+            "best_seed": 72
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "tau_k": [
+          2.2151602564102566,
+          6.657820512820512,
+          11.29548076923077,
+          14.860641025641025,
+          19.075801282051284,
+          23.74596153846154,
+          29.943621794871795,
+          35.88128205128205,
+          40.973942307692305,
+          45.18910256410257,
+          50.281762820512824,
+          53.619423076923084
+        ],
+        "weight_trials": [
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.1,
+            "best_objective": 73394.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 73360.0,
+            "best_seed": 102
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 0.5,
+            "best_objective": 73394.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 73360.0,
+            "best_seed": 106
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.1,
+            "best_objective": 73394.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 73360.0,
+            "best_seed": 124
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 1.0,
+            "best_objective": 73394.0,
+            "best_travel": 34.0,
+            "best_tw_penalty": 73360.0,
+            "best_seed": 132
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 0.5,
+            "best_objective": 75385.0,
+            "best_travel": 35.0,
+            "best_tw_penalty": 75350.0,
+            "best_seed": 130
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 5.0,
+            "best_objective": 89846.0,
+            "best_travel": 36.0,
+            "best_tw_penalty": 89810.0,
+            "best_seed": 117
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 10.0,
+            "best_objective": 89846.0,
+            "best_travel": 36.0,
+            "best_tw_penalty": 89810.0,
+            "best_seed": 121
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 5.0,
+            "best_objective": 89846.0,
+            "best_travel": 36.0,
+            "best_tw_penalty": 89810.0,
+            "best_seed": 141
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 10.0,
+            "best_objective": 89846.0,
+            "best_travel": 36.0,
+            "best_tw_penalty": 89810.0,
+            "best_seed": 144
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 2.0,
+            "best_objective": 128313.0,
+            "best_travel": 43.0,
+            "best_tw_penalty": 128270.0,
+            "best_seed": 112
+          },
+          {
+            "lambda": 5.515151515151515,
+            "tw_weight": 1.0,
+            "best_objective": 130272.0,
+            "best_travel": 42.0,
+            "best_tw_penalty": 130230.0,
+            "best_seed": 108
+          },
+          {
+            "lambda": 8.272727272727272,
+            "tw_weight": 2.0,
+            "best_objective": 130272.0,
+            "best_travel": 42.0,
+            "best_tw_penalty": 130230.0,
+            "best_seed": 136
+          }
+        ]
+      }
+    ],
+    "adaptive_trace": [
+      {
+        "round": 1,
+        "lambda": 5.515151515151515,
+        "feasible_rate": 0.0,
+        "best_objective": 82877.0,
+        "best_seed": 0,
+        "best_travel": 37.0,
+        "best_tw_penalty": 82840.0
+      },
+      {
+        "round": 2,
+        "lambda": 8.272727272727272,
+        "feasible_rate": 0.0,
+        "best_objective": 82877.0,
+        "best_seed": 2,
+        "best_travel": 37.0,
+        "best_tw_penalty": 82840.0
+      }
+    ],
+    "use_adaptive_lambda": true,
+    "lambda_candidates": [
+      5.515151515151515,
+      8.272727272727272
+    ],
+    "best_by_lambda": [
+      {
+        "lambda": 5.515151515151515,
+        "best_objective": 69803.0,
+        "best_travel": 33.0,
+        "best_tw_penalty": 69770.0,
+        "best_seed": 4
+      },
+      {
+        "lambda": 8.272727272727272,
+        "best_objective": 69803.0,
+        "best_travel": 33.0,
+        "best_tw_penalty": 69770.0,
+        "best_seed": 29
+      }
+    ],
+    "selected_tw_weight": 0.1,
+    "selected_lambda": 5.515151515151515,
+    "tau_update_rule": "tau <- beta * real_arrival + (1-beta) * tau",
+    "beta": 0.65,
+    "weight_grid_base": [
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "stop_reason": "converged_by_improve_tol",
+    "convergence_csv": "experiments/results/q2_iterative_bc_curve_20260417_215707.csv",
+    "convergence_png": "experiments/results/q2_iterative_bc_curve_20260417_215707.png",
+    "baseline_reference_objective": 241172.0,
+    "improvement_vs_baseline": {
+      "ratio": 0.7105675617401689,
+      "percent": 71.05675617401688,
+      "target_ratio": 0.15,
+      "target_reached": true
+    },
+    "selected_seed": 4,
+    "selected_qubo_value": 90.53920864789688,
+    "exact_reference": {
+      "status": "ok",
+      "route": [
+        0,
+        2,
+        6,
+        5,
+        8,
+        7,
+        11,
+        10,
+        1,
+        12,
+        3,
+        9,
+        4,
+        0
+      ],
+      "travel": 27.0,
+      "tw_penalty": 29660.0,
+      "objective": 29687.0,
+      "scale": 1,
+      "state_count": 862695
+    },
+    "search_seed_end_exclusive": 148,
+    "gap_abs": 40116.0,
+    "gap_ratio": 2.3512985481860746,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": null,
+    "profile_version": null,
+    "profile_path": null,
+    "known_limitations": [],
+    "profile_experiment_sources": [],
+    "proxy_score": {
+      "proxy_score": 28.98,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 33.0,
+    "total_time_window_penalty": 69770.0,
+    "total_objective": 69803.0,
+    "feasible": false,
+    "row_violations": 7,
+    "col_violations": 7,
+    "runtime_sec": 89.70136645800085
+  },
+  "generated_at": "2026-04-17T21:57:08"
+}

@@ -1,0 +1,425 @@
+{
+  "question": "Q1",
+  "method": "QUBO-TSP + Kaiwu SA (adaptive lambda + profile ensemble + anchor decomposition)",
+  "route": [
+    0,
+    6,
+    14,
+    15,
+    2,
+    13,
+    5,
+    8,
+    7,
+    11,
+    10,
+    1,
+    9,
+    3,
+    12,
+    4,
+    0
+  ],
+  "routes": null,
+  "per_customer": [],
+  "decision_points": {
+    "惩罚系数规模": "先网格筛选lambda，再在入围lambda上做深度搜索",
+    "退火预算": "采用多退火档案并控制在预算倍率约束内",
+    "锚点分解": "固定首访客户以降低跨可行解跃迁难度"
+  },
+  "parameters": {
+    "n_customers": 15,
+    "lambda_pos": null,
+    "lambda_cus": null,
+    "seed_start": 0,
+    "seed_count": 8,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50,
+    "adaptive_lambda_grid": [
+      12.0,
+      16.0,
+      19.0,
+      24.0,
+      32.0,
+      48.0,
+      64.0
+    ],
+    "top_k_lambda": 2,
+    "anchor_count": 4,
+    "screen_seed_plan": 12,
+    "profile_seed_plan": 20,
+    "budget_multiplier": 10.0,
+    "screen_budget_ratio": 0.3,
+    "anchor_weight": 2000.0,
+    "exact_max_customers": 20,
+    "target_travel_stop": 33.0,
+    "use_adaptive_lambda": true,
+    "adaptive_rounds": 5,
+    "adaptive_init_scale": 1.4,
+    "adaptive_target_ratio": 1.05
+  },
+  "diagnostics": {
+    "candidate_count": 8,
+    "all_candidates": [
+      {
+        "seed": 7,
+        "travel_time": 30.0,
+        "qubo_value": 30.000000003394234,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 5.379735,
+        "lambda_cus": 5.379735,
+        "anchor_customer": 6,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 6,
+        "travel_time": 34.0,
+        "qubo_value": 34.000000003394234,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 5.379735,
+        "lambda_cus": 5.379735,
+        "anchor_customer": 6,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 4,
+        "travel_time": 41.0,
+        "qubo_value": 41.000000003394234,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 5.379735,
+        "lambda_cus": 5.379735,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 1,
+        "travel_time": 42.0,
+        "qubo_value": 41.99999999998545,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 4.964,
+        "lambda_cus": 4.964,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 3,
+        "travel_time": 44.0,
+        "qubo_value": 44.00000000397995,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 6.3291,
+        "lambda_cus": 6.3291,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 5,
+        "travel_time": 44.0,
+        "qubo_value": 44.000000003394234,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 5.379735,
+        "lambda_cus": 5.379735,
+        "anchor_customer": 6,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 0,
+        "travel_time": 47.0,
+        "qubo_value": 46.99999999485226,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 5.84,
+        "lambda_cus": 5.84,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 2,
+        "travel_time": 42.0,
+        "qubo_value": 37.438800002440985,
+        "feasible_raw": false,
+        "row_violations": 1,
+        "col_violations": 1,
+        "lambda_pos": 4.2194,
+        "lambda_cus": 4.2194,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      }
+    ],
+    "exact_reference": {
+      "method": "Held-Karp Dynamic Programming",
+      "optimal_route": [
+        0,
+        13,
+        2,
+        15,
+        14,
+        6,
+        5,
+        8,
+        7,
+        11,
+        10,
+        1,
+        9,
+        3,
+        12,
+        4,
+        0
+      ],
+      "optimal_value": 29.0
+    },
+    "search_budget_breakdown": {
+      "baseline_units": 1920,
+      "budget_multiplier": 10.0,
+      "total_budget_units": 19200,
+      "screen_budget_units": 5760,
+      "deep_budget_units": 13440,
+      "screen_seed_plan": 12,
+      "screen_seed_used": 1,
+      "profile_seed_plan": 20,
+      "profile_seed_used": 1,
+      "spent_screen_units": 4800,
+      "spent_deep_units": 9920,
+      "spent_total_units": 14720,
+      "anchor_count": 4,
+      "lambda_grid": [
+        12.0,
+        16.0,
+        19.0,
+        24.0,
+        32.0,
+        48.0,
+        64.0
+      ],
+      "adaptive_mode": true,
+      "adaptive_rounds": 5,
+      "adaptive_init_scale": 1.4,
+      "adaptive_target_ratio": 1.05,
+      "adaptive_low_feasible_rate": 0.5,
+      "adaptive_high_feasible_rate": 0.8,
+      "adaptive_scale_up_low": 1.5,
+      "adaptive_scale_up_mid": 1.2,
+      "adaptive_scale_down_high": 0.85,
+      "avg_customer_dist": 4.171428571428572,
+      "top_k_lambda": 2,
+      "target_travel_stop": 33.0,
+      "early_stop_triggered": true,
+      "best_travel_seen_during_search": 30.0,
+      "profiles": [
+        {
+          "name": "P1",
+          "initial_temperature": 120.0,
+          "alpha": 0.995,
+          "iterations_per_t": 240,
+          "cutoff_temperature": 0.05,
+          "size_limit": 50
+        },
+        {
+          "name": "P2",
+          "initial_temperature": 180.0,
+          "alpha": 0.997,
+          "iterations_per_t": 400,
+          "cutoff_temperature": 0.02,
+          "size_limit": 70
+        },
+        {
+          "name": "P3",
+          "initial_temperature": 220.0,
+          "alpha": 0.998,
+          "iterations_per_t": 600,
+          "cutoff_temperature": 0.01,
+          "size_limit": 100
+        }
+      ],
+      "seed_start": 0,
+      "seed_end_exclusive": 8
+    },
+    "best_by_lambda": [
+      {
+        "lambda": 4.2194,
+        "best_travel": 42.0,
+        "best_seed": 2,
+        "best_anchor": 6,
+        "best_profile": "SCREEN"
+      },
+      {
+        "lambda": 4.964,
+        "best_travel": 42.0,
+        "best_seed": 1,
+        "best_anchor": 6,
+        "best_profile": "SCREEN"
+      },
+      {
+        "lambda": 5.379735,
+        "best_travel": 30.0,
+        "best_seed": 7,
+        "best_anchor": 6,
+        "best_profile": "P3"
+      },
+      {
+        "lambda": 5.84,
+        "best_travel": 47.0,
+        "best_seed": 0,
+        "best_anchor": 6,
+        "best_profile": "SCREEN"
+      },
+      {
+        "lambda": 6.3291,
+        "best_travel": 44.0,
+        "best_seed": 3,
+        "best_anchor": 6,
+        "best_profile": "SCREEN"
+      }
+    ],
+    "best_by_profile": [
+      {
+        "profile": "P1",
+        "best_travel": 44.0,
+        "best_seed": 5,
+        "best_anchor": 6,
+        "best_lambda": 5.379735
+      },
+      {
+        "profile": "P2",
+        "best_travel": 34.0,
+        "best_seed": 6,
+        "best_anchor": 6,
+        "best_lambda": 5.379735
+      },
+      {
+        "profile": "P3",
+        "best_travel": 30.0,
+        "best_seed": 7,
+        "best_anchor": 6,
+        "best_lambda": 5.379735
+      }
+    ],
+    "best_by_anchor": [
+      {
+        "anchor_customer": 6,
+        "best_travel": 30.0,
+        "best_seed": 7,
+        "best_lambda": 5.379735,
+        "best_profile": "P3",
+        "candidate_count": 8,
+        "selected_lambdas": [
+          5.379735,
+          4.964
+        ]
+      }
+    ],
+    "gap_abs": 1.0,
+    "gap_ratio": 1.0344827586206897,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "baseline_v1",
+    "profile_version": "1.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/baseline_v1.json",
+    "known_limitations": [],
+    "profile_experiment_sources": [
+      "experiments/results/q1_20260417_133616.json"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 30.0,
+    "total_time_window_penalty": 0.0,
+    "total_objective": 30.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 22.323131833021762
+  },
+  "generated_at": "2026-04-17T20:56:16"
+}

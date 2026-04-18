@@ -1,0 +1,200 @@
+{
+  "generated_at": "2026-04-18T13:27:30",
+  "n_customers": 15,
+  "tw_weight": 1.0,
+  "tw_weight_grid": [
+    0.8,
+    1.0,
+    1.2
+  ],
+  "m1": 10.0,
+  "m2": 20.0,
+  "objective_eval_weight": 1.0,
+  "fixed_lambda": 200.0,
+  "seed_count": 2,
+  "seed_repeats": 1,
+  "adaptive_rounds": 2,
+  "adaptive_budget": 2,
+  "adaptive_target_ratio": 1.05,
+  "adaptive_tw_top_k": 2,
+  "final_combo_top_k": 2,
+  "tw_pairwise_weight": 0.35,
+  "edge_bias_weight": 0.08,
+  "anchor_candidates": 4,
+  "anchor_seed_ratio": 0.35,
+  "use_profile_ensemble": true,
+  "use_anchor_restarts": true,
+  "use_adaptive_tw_weight": true,
+  "dp_max_states": 12000000,
+  "dp_reference": {
+    "status": "ok",
+    "route": [
+      0,
+      2,
+      13,
+      6,
+      5,
+      8,
+      7,
+      11,
+      10,
+      1,
+      9,
+      3,
+      12,
+      4,
+      15,
+      14,
+      0
+    ],
+    "travel": 31.0,
+    "tw_penalty": 84090.0,
+    "objective": 84121.0,
+    "scale": 1,
+    "state_count": 11592759
+  },
+  "group_summary": {
+    "DP_EXACT": {
+      "count": 1,
+      "best_objective": 84121.0,
+      "median_objective": 84121.0,
+      "p90_objective": 84121.0,
+      "runtime_mean": null,
+      "gap_to_dp_best": 1.0,
+      "gap_to_dp_median": 1.0,
+      "gap_to_dp_p90": 1.0,
+      "selected_lambda_distribution": [],
+      "selected_tw_weight_distribution": [],
+      "selected_profile_distribution": [],
+      "selected_anchor_distribution": []
+    },
+    "QUBO_ADAPTIVE": {
+      "count": 1,
+      "best_objective": 142498.0,
+      "median_objective": 142498.0,
+      "p90_objective": 142498.0,
+      "runtime_mean": 28.02882533299271,
+      "gap_to_dp_best": 1.6939646461644535,
+      "gap_to_dp_median": 1.6939646461644535,
+      "gap_to_dp_p90": 1.6939646461644535,
+      "selected_lambda_distribution": [
+        {
+          "value": "5.84",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_tw_weight_distribution": [
+        {
+          "value": "1.2",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_profile_distribution": [
+        {
+          "value": "P0",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_anchor_distribution": [
+        {
+          "value": "15",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ]
+    },
+    "QUBO_FIXED": {
+      "count": 1,
+      "best_objective": 317926.0,
+      "median_objective": 317926.0,
+      "p90_objective": 317926.0,
+      "runtime_mean": 5.607199874997605,
+      "gap_to_dp_best": 3.7793892131572377,
+      "gap_to_dp_median": 3.7793892131572377,
+      "gap_to_dp_p90": 3.7793892131572377,
+      "selected_lambda_distribution": [
+        {
+          "value": "200.0",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_tw_weight_distribution": [
+        {
+          "value": "1.0",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_profile_distribution": [
+        {
+          "value": "P0",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ],
+      "selected_anchor_distribution": [
+        {
+          "value": "7",
+          "count": 1,
+          "ratio": 1.0
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "group": "QUBO_FIXED",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 317926.0,
+      "travel": 56.0,
+      "tw_penalty": 317870.0,
+      "runtime_sec": 5.607199874997605,
+      "selected_lambda": 200.0,
+      "selected_tw_weight": 1.0,
+      "selected_profile": "P0",
+      "selected_anchor": 7,
+      "gap_to_dp_abs": 233805.0,
+      "gap_to_dp_ratio": 3.7793892131572377
+    },
+    {
+      "group": "QUBO_ADAPTIVE",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 142498.0,
+      "travel": 38.0,
+      "tw_penalty": 142460.0,
+      "runtime_sec": 28.02882533299271,
+      "selected_lambda": 5.84,
+      "selected_tw_weight": 1.2,
+      "selected_profile": "P0",
+      "selected_anchor": 15,
+      "gap_to_dp_abs": 58377.0,
+      "gap_to_dp_ratio": 1.6939646461644535
+    },
+    {
+      "group": "DP_EXACT",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 84121.0,
+      "travel": 31.0,
+      "tw_penalty": 84090.0,
+      "runtime_sec": null,
+      "selected_lambda": null,
+      "selected_tw_weight": null,
+      "selected_profile": null,
+      "selected_anchor": null,
+      "gap_to_dp_abs": 0.0,
+      "gap_to_dp_ratio": 1.0
+    }
+  ],
+  "branch_cut_piece_sensitivity": [],
+  "notes": {
+    "time_window_semantics": "no waiting service",
+    "milp_penalty": "piecewise linearized quadratic penalty; objective_eval is recomputed by unified evaluator"
+  }
+}

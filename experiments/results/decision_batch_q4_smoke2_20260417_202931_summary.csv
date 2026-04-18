@@ -1,0 +1,4 @@
+assignment_strategy,route_postprocess,enable_tw_repair,vehicle_scan_mode,n_runs,feasibility_rate,cap_ok_rate,tw_violation_ratio_mean,objective_mean,objective_std,objective_min,objective_p25,objective_p75,travel_mean,tw_penalty_mean,runtime_mean,runtime_std,selected_k_mean,strategy_signature
+regret,or_opt,True,feasibility_filtered,2,1.0,1.0,0.66,105597.5,2721.5,102876.0,104236.75,106958.25,137.5,104800.0,15.349388312504743,0.045919562500785105,5.5,assign=regret|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15
+ffd,two_opt,True,fixed,2,1.0,1.0,0.69,113470.5,3035.5,110435.0,111952.75,114988.25,135.5,112675.0,13.63637408350769,0.010319750508642755,5.5,assign=ffd|post=two_opt|tw_repair=True|scan=fixed|qubo_cap=15
+tw_pressure,or_opt,True,feasibility_filtered,2,1.0,1.0,0.63,129517.0,3452.0,126065.0,127791.0,131243.0,137.0,128720.0,15.475532437500078,0.02177481251419522,5.5,assign=tw_pressure|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15

@@ -1,0 +1,327 @@
+{
+  "question": "Q2",
+  "method": "Direct-penalty QUBO + adaptive lambda + exact DP benchmark",
+  "route": [
+    0,
+    2,
+    5,
+    6,
+    1,
+    3,
+    4,
+    7,
+    8,
+    9,
+    10,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 2,
+      "arrival": 2.0,
+      "start_service": 2.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 4.0
+    },
+    {
+      "node": 5,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 6,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 12.0
+    },
+    {
+      "node": 1,
+      "arrival": 15.0,
+      "start_service": 15.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 2.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 40.0,
+      "leave_time": 17.0
+    },
+    {
+      "node": 3,
+      "arrival": 19.0,
+      "start_service": 19.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 1.0,
+      "time_window_penalty": 20.0,
+      "leave_time": 21.0
+    },
+    {
+      "node": 4,
+      "arrival": 24.0,
+      "start_service": 24.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 26.0
+    },
+    {
+      "node": 7,
+      "arrival": 32.0,
+      "start_service": 32.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 18.0,
+      "time_window_penalty": 6480.0,
+      "leave_time": 34.0
+    },
+    {
+      "node": 8,
+      "arrival": 36.0,
+      "start_service": 36.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 18.0,
+      "time_window_penalty": 6480.0,
+      "leave_time": 38.0
+    },
+    {
+      "node": 9,
+      "arrival": 44.0,
+      "start_service": 44.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 24.0,
+      "time_window_penalty": 11520.0,
+      "leave_time": 46.0
+    },
+    {
+      "node": 10,
+      "arrival": 49.0,
+      "start_service": 49.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 29.0,
+      "time_window_penalty": 16820.0,
+      "leave_time": 51.0
+    }
+  ],
+  "decision_points": {
+    "时间窗入模": "位置级时间窗惩罚一次项直接进入QUBO",
+    "求解策略": "固定λ或自适应λ（可行率门控）",
+    "评估口径": "无等待服务，到达即服务",
+    "精确对照": "n<=cap 时用动态规划给出精确基准"
+  },
+  "parameters": {
+    "n_customers": 10,
+    "seed_start": 0,
+    "seed_count": 1,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50,
+    "tw_weight": 1.0,
+    "m1": 10.0,
+    "m2": 20.0,
+    "objective_eval_weight": 1.0,
+    "lambda_fixed": null,
+    "use_adaptive_lambda": true,
+    "adaptive_rounds": 2,
+    "adaptive_budget": 1,
+    "adaptive_target_ratio": 1.05,
+    "adaptive_low_feasible_rate": 0.5,
+    "adaptive_high_feasible_rate": 0.8,
+    "adaptive_scale_up_low": 1.5,
+    "adaptive_scale_up_mid": 1.2,
+    "adaptive_scale_down_high": 0.85,
+    "exact_benchmark_cap": 10,
+    "exact_dp_max_states": 12000000
+  },
+  "diagnostics": {
+    "candidate_count_per_lambda": 1,
+    "adaptive_trace": [
+      {
+        "round": 1,
+        "lambda": 5.568888888888889,
+        "feasible_rate": 0.0,
+        "best_objective": 41404.0,
+        "best_seed": 0,
+        "best_travel": 34.0,
+        "best_tw_penalty": 41370.0
+      },
+      {
+        "round": 2,
+        "lambda": 8.353333333333333,
+        "feasible_rate": 0.0,
+        "best_objective": 46265.0,
+        "best_seed": 1,
+        "best_travel": 35.0,
+        "best_tw_penalty": 46230.0
+      }
+    ],
+    "use_adaptive_lambda": true,
+    "lambda_candidates": [
+      5.568888888888889,
+      8.353333333333333
+    ],
+    "best_by_lambda": [
+      {
+        "lambda": 5.568888888888889,
+        "best_objective": 41404.0,
+        "best_travel": 34.0,
+        "best_tw_penalty": 41370.0,
+        "best_seed": 2
+      },
+      {
+        "lambda": 8.353333333333333,
+        "best_objective": 46265.0,
+        "best_travel": 35.0,
+        "best_tw_penalty": 46230.0,
+        "best_seed": 3
+      }
+    ],
+    "selected_lambda": 5.568888888888889,
+    "selected_seed": 2,
+    "selected_qubo_value": 75.82666667341255,
+    "tw_penalty_estimation": "single-pass position estimate (no B+C iteration)",
+    "exact_reference": {
+      "status": "ok",
+      "route": [
+        0,
+        2,
+        6,
+        5,
+        8,
+        7,
+        10,
+        9,
+        3,
+        1,
+        4,
+        0
+      ],
+      "travel": 25.0,
+      "tw_penalty": 9600.0,
+      "objective": 9625.0,
+      "scale": 1,
+      "state_count": 105712
+    },
+    "search_seed_end_exclusive": 4,
+    "gap_abs": 31779.0,
+    "gap_ratio": 4.301714285714286,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "baseline_v1",
+    "profile_version": "1.2.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/baseline_v1.json",
+    "known_limitations": [
+      "当前Q2使用位置级时间窗惩罚估计，精度受tau估计误差影响。",
+      "当前Q2的原始二值解存在可行性波动，最终路线由解码修复得到。"
+    ],
+    "profile_experiment_sources": [
+      "experiments/results/q2_20260417_151438.json",
+      "experiments/results/q2_20260417_215708.json"
+    ],
+    "proxy_score": {
+      "proxy_score": 28.98,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 34.0,
+    "total_time_window_penalty": 41370.0,
+    "total_objective": 41404.0,
+    "feasible": false,
+    "row_violations": 6,
+    "col_violations": 6,
+    "runtime_sec": 2.3363387919962406
+  },
+  "generated_at": "2026-04-18T12:32:52"
+}

@@ -1,0 +1,5 @@
+k,objective_mean,travel_mean,tw_penalty_mean,timewindow_feasible_rate,samples
+5,107083.4,135.4,106348.0,0.8,5
+6,106475.0,135.0,105620.0,0.8,5
+7,105760.0,134.0,104786.0,0.8,5
+8,102084.6,132.6,100992.0,0.8,5

@@ -1,0 +1,228 @@
+{
+  "generated_at": "2026-04-17T20:23:09",
+  "question": "Q4",
+  "report_tag": "smoke",
+  "settings": {
+    "n_customers": 50,
+    "seed_grid": [
+      0,
+      1
+    ],
+    "tw_weight": 1.0,
+    "travel_weight": 1.0,
+    "vehicle_weight": 120.0,
+    "min_vehicles": 5,
+    "max_vehicles": 7,
+    "seed_count_per_vehicle": 2,
+    "qubo_cap": 15,
+    "feasibility_threshold": 0.6,
+    "combo_count": 3,
+    "run_count": 6
+  },
+  "literature": [
+    {
+      "theme": "分解型VRP",
+      "citation": "Ropke & Pisinger (2006) - ALNS for pickup and delivery with time windows",
+      "url": "https://pubsonline.informs.org/doi/10.1287/trsc.1050.0135",
+      "mapped_switch": "assignment_strategy + vehicle_scan_mode",
+      "expected_gain": "提高可行解发现率",
+      "boundary": "参数与算子较多"
+    },
+    {
+      "theme": "时间窗惩罚建模",
+      "citation": "Irie et al. (2019) - Quantum annealing of VRP with time, state and capacity",
+      "url": "https://arxiv.org/abs/1903.06322",
+      "mapped_switch": "route_postprocess + tw_repair",
+      "expected_gain": "降低时间窗违反率",
+      "boundary": "会增加局部搜索开销"
+    },
+    {
+      "theme": "量子/退火QUBO在VRP",
+      "citation": "Feld et al. (2019) - Hybrid method for CVRP with quantum annealer",
+      "url": "https://www.frontiersin.org/journals/ict/articles/10.3389/fict.2019.00013/full",
+      "mapped_switch": "qubo_cap + seed_grid",
+      "expected_gain": "在受限算力下保持可算性",
+      "boundary": "子问题规模必须严格控制"
+    },
+    {
+      "theme": "混合元启发式",
+      "citation": "Vidal et al. (2020) - Hybrid Genetic Search for CVRP",
+      "url": "https://arxiv.org/abs/2012.10384",
+      "mapped_switch": "model_fusion(top2 assignment)",
+      "expected_gain": "降低单策略退化风险",
+      "boundary": "融合阶段运行时增加"
+    },
+    {
+      "theme": "多目标车辆数权衡",
+      "citation": "Wang et al. (2023) - CVRPTW via GCN-assisted tree search and quantum-inspired computing",
+      "url": "https://www.frontiersin.org/journals/applied-mathematics-and-statistics/articles/10.3389/fams.2023.1155356/full",
+      "mapped_switch": "vehicle_weight + travel_weight + tw_weight",
+      "expected_gain": "提升多目标叙事与权重解释性",
+      "boundary": "权重设置需做敏感性分析"
+    }
+  ],
+  "assignment_rank": [
+    {
+      "assignment_strategy": "regret",
+      "best_feasibility_rate": 0.0,
+      "best_objective_mean": 96983.0,
+      "best_runtime_mean": 15.768249583008583
+    },
+    {
+      "assignment_strategy": "ffd",
+      "best_feasibility_rate": 0.0,
+      "best_objective_mean": 114925.0,
+      "best_runtime_mean": 14.465420520515181
+    },
+    {
+      "assignment_strategy": "tw_pressure",
+      "best_feasibility_rate": 0.0,
+      "best_objective_mean": 130765.5,
+      "best_runtime_mean": 16.916582895995816
+    }
+  ],
+  "top2_assignment_for_fusion": [
+    "regret",
+    "ffd"
+  ],
+  "selection_from_full_pool": {
+    "assignment_strategy": "regret",
+    "route_postprocess": "or_opt",
+    "enable_tw_repair": true,
+    "vehicle_scan_mode": "feasibility_filtered",
+    "n_runs": 2,
+    "feasibility_rate": 0.0,
+    "cap_ok_rate": 1.0,
+    "tw_violation_ratio_mean": 0.7,
+    "objective_mean": 96983.0,
+    "objective_std": 1321.0,
+    "objective_min": 95662.0,
+    "objective_p25": 96322.5,
+    "objective_p75": 97643.5,
+    "travel_mean": 133.0,
+    "tw_penalty_mean": 96250.0,
+    "runtime_mean": 15.768249583008583,
+    "runtime_std": 0.16999420798674691,
+    "selected_k_mean": 5.0,
+    "strategy_signature": "assign=regret|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15",
+    "selection_reason": "no strategy reaches feasibility threshold; fallback by max feasibility then objective"
+  },
+  "selection_from_fusion_pool": {
+    "assignment_strategy": "regret",
+    "route_postprocess": "or_opt",
+    "enable_tw_repair": true,
+    "vehicle_scan_mode": "feasibility_filtered",
+    "n_runs": 2,
+    "feasibility_rate": 0.0,
+    "cap_ok_rate": 1.0,
+    "tw_violation_ratio_mean": 0.7,
+    "objective_mean": 96983.0,
+    "objective_std": 1321.0,
+    "objective_min": 95662.0,
+    "objective_p25": 96322.5,
+    "objective_p75": 97643.5,
+    "travel_mean": 133.0,
+    "tw_penalty_mean": 96250.0,
+    "runtime_mean": 15.768249583008583,
+    "runtime_std": 0.16999420798674691,
+    "selected_k_mean": 5.0,
+    "strategy_signature": "assign=regret|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15",
+    "selection_reason": "no strategy reaches feasibility threshold; fallback by max feasibility then objective"
+  },
+  "recommended": {
+    "assignment_strategy": "regret",
+    "route_postprocess": "or_opt",
+    "enable_tw_repair": true,
+    "vehicle_scan_mode": "feasibility_filtered",
+    "n_runs": 2,
+    "feasibility_rate": 0.0,
+    "cap_ok_rate": 1.0,
+    "tw_violation_ratio_mean": 0.7,
+    "objective_mean": 96983.0,
+    "objective_std": 1321.0,
+    "objective_min": 95662.0,
+    "objective_p25": 96322.5,
+    "objective_p75": 97643.5,
+    "travel_mean": 133.0,
+    "tw_penalty_mean": 96250.0,
+    "runtime_mean": 15.768249583008583,
+    "runtime_std": 0.16999420798674691,
+    "selected_k_mean": 5.0,
+    "strategy_signature": "assign=regret|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15",
+    "selection_reason": "selected from top2-assignment fusion pool",
+    "selection_rule": "feasibility threshold first, then objective"
+  },
+  "summary": [
+    {
+      "assignment_strategy": "regret",
+      "route_postprocess": "or_opt",
+      "enable_tw_repair": true,
+      "vehicle_scan_mode": "feasibility_filtered",
+      "n_runs": 2,
+      "feasibility_rate": 0.0,
+      "cap_ok_rate": 1.0,
+      "tw_violation_ratio_mean": 0.7,
+      "objective_mean": 96983.0,
+      "objective_std": 1321.0,
+      "objective_min": 95662.0,
+      "objective_p25": 96322.5,
+      "objective_p75": 97643.5,
+      "travel_mean": 133.0,
+      "tw_penalty_mean": 96250.0,
+      "runtime_mean": 15.768249583008583,
+      "runtime_std": 0.16999420798674691,
+      "selected_k_mean": 5.0,
+      "strategy_signature": "assign=regret|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15"
+    },
+    {
+      "assignment_strategy": "ffd",
+      "route_postprocess": "two_opt",
+      "enable_tw_repair": true,
+      "vehicle_scan_mode": "fixed",
+      "n_runs": 2,
+      "feasibility_rate": 0.0,
+      "cap_ok_rate": 1.0,
+      "tw_violation_ratio_mean": 0.67,
+      "objective_mean": 114925.0,
+      "objective_std": 4761.0,
+      "objective_min": 110164.0,
+      "objective_p25": 112544.5,
+      "objective_p75": 117305.5,
+      "travel_mean": 140.0,
+      "tw_penalty_mean": 114005.0,
+      "runtime_mean": 14.465420520515181,
+      "runtime_std": 0.04761818749830127,
+      "selected_k_mean": 6.5,
+      "strategy_signature": "assign=ffd|post=two_opt|tw_repair=True|scan=fixed|qubo_cap=15"
+    },
+    {
+      "assignment_strategy": "tw_pressure",
+      "route_postprocess": "or_opt",
+      "enable_tw_repair": true,
+      "vehicle_scan_mode": "feasibility_filtered",
+      "n_runs": 2,
+      "feasibility_rate": 0.0,
+      "cap_ok_rate": 1.0,
+      "tw_violation_ratio_mean": 0.62,
+      "objective_mean": 130765.5,
+      "objective_std": 2181.5,
+      "objective_min": 128584.0,
+      "objective_p25": 129674.75,
+      "objective_p75": 131856.25,
+      "travel_mean": 135.5,
+      "tw_penalty_mean": 129910.0,
+      "runtime_mean": 16.916582895995816,
+      "runtime_std": 0.5810735209961422,
+      "selected_k_mean": 6.0,
+      "strategy_signature": "assign=tw_pressure|post=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15"
+    }
+  ],
+  "k_sensitivity_curve": [],
+  "artifacts": {
+    "raw_csv": "experiments/results/decision_batch_q4_smoke_20260417_202309_raw.csv",
+    "summary_csv": "experiments/results/decision_batch_q4_smoke_20260417_202309_summary.csv",
+    "k_curve_csv": "experiments/results/decision_batch_q4_smoke_20260417_202309_k_curve.csv",
+    "report_md": "experiments/results/decision_batch_q4_smoke_20260417_202309_report.md",
+    "paper_md": "experiments/results/decision_batch_q4_smoke_20260417_202309_paper.md"
+  }
+}

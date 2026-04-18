@@ -1,7 +1,7 @@
 {
   "profile_name": "baseline_v1",
-  "profile_version": "1.1.0",
-  "description": "MathorCup 2026 A题 Baseline V1，Q2已升级为时间窗入模 B+C 迭代主线",
+  "profile_version": "1.3.0",
+  "description": "MathorCup 2026 A题 Baseline V1，Q2增强为二层自适应(lambda+tw_weight)+多退火档案+锚点重启（纯QUBO-SA）",
   "questions": {
     "Q1": {
       "params": {
@@ -21,27 +21,42 @@
         "seed_start": 0,
         "seed_count": 12,
         "tw_weight": 1.0,
-        "mode": "iterative_bc",
-        "min_rounds": 3,
-        "max_rounds": 5,
-        "tw_weight_grid": [0.1, 0.5, 1.0, 2.0, 5.0, 10.0],
-        "beta": 0.65,
-        "improve_tol": 0.001,
+        "lambda_fixed": null,
+        "use_adaptive_lambda": true,
+        "adaptive_rounds": 5,
+        "adaptive_budget": 6,
+        "adaptive_target_ratio": 1.05,
         "m1": 10.0,
         "m2": 20.0,
         "objective_eval_weight": 1.0,
-        "baseline_reference_objective": 241172.0,
-        "max_weight_expand": 1,
-        "weight_expand_factor": 5.0
+        "exact_benchmark_cap": 15,
+        "exact_dp_max_states": 12000000,
+        "use_profile_ensemble": true,
+        "use_anchor_restarts": true,
+        "anchor_candidate_count": 3,
+        "anchor_seed_ratio": 0.2,
+        "tw_weight_grid": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "use_adaptive_tw_weight": true,
+        "adaptive_tw_top_k": 2,
+        "final_combo_top_k": 1,
+        "tw_pairwise_weight": 0.35,
+        "edge_bias_weight": 0.08,
+        "normalize_qubo_terms": true
       },
       "known_limitations": [
-        "当前Q2使用位置级时间窗惩罚估计，精度受tau估计误差影响。",
-        "当前Q2的原始二值解存在可行性波动，最终路线由解码修复得到。"
+        "当前Q2虽加入相邻次序二元修正，但仍属于位置估计近似，和精确DP存在代理误差。",
+        "当前Q2的原始二值解存在可行性波动，最终路线由解码修复得到。",
+        "锚点重启与多档案会增加运行时，需在质量与时长间权衡。"
       ],
       "experiment_sources": [
         "experiments/results/q2_20260417_151438.json",
-        "experiments/results/q2_20260417_160116.json",
-        "experiments/results/q2_iterative_bc_curve_20260417_160114.csv"
+        "experiments/results/q2_20260417_215708.json",
+        "experiments/results/decision_batch_q2_compare_20260418_124137.json",
+        "experiments/results/decision_batch_q2_compare_*.md"
       ],
       "recommended_command": "python run_baseline.py --profile baseline_v1 --question Q2"
     },

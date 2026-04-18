@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-04-18T12:47:07",
+  "n_customers": 15,
+  "tw_weight": 1.0,
+  "m1": 10.0,
+  "m2": 20.0,
+  "objective_eval_weight": 1.0,
+  "fixed_lambda": 200.0,
+  "seed_count": 12,
+  "seed_repeats": 3,
+  "adaptive_rounds": 5,
+  "adaptive_budget": 6,
+  "adaptive_target_ratio": 1.05,
+  "dp_max_states": 12000000,
+  "dp_reference": {
+    "status": "ok",
+    "route": [
+      0,
+      2,
+      13,
+      6,
+      5,
+      8,
+      7,
+      11,
+      10,
+      1,
+      9,
+      3,
+      12,
+      4,
+      15,
+      14,
+      0
+    ],
+    "travel": 31.0,
+    "tw_penalty": 84090.0,
+    "objective": 84121.0,
+    "scale": 1,
+    "state_count": 11592759
+  },
+  "group_summary": {
+    "BRANCH_CUT": {
+      "count": 1,
+      "best_objective": 97920.0,
+      "median_objective": 97920.0,
+      "p90_objective": 97920.0,
+      "runtime_mean": 122.53880204100278,
+      "gap_to_dp_best": 1.1640375173856707,
+      "gap_to_dp_median": 1.1640375173856707,
+      "gap_to_dp_p90": 1.1640375173856707
+    },
+    "DP_EXACT": {
+      "count": 1,
+      "best_objective": 84121.0,
+      "median_objective": 84121.0,
+      "p90_objective": 84121.0,
+      "runtime_mean": null,
+      "gap_to_dp_best": 1.0,
+      "gap_to_dp_median": 1.0,
+      "gap_to_dp_p90": 1.0
+    },
+    "QUBO_ADAPTIVE": {
+      "count": 3,
+      "best_objective": 207427.0,
+      "median_objective": 214648.0,
+      "p90_objective": 214648.0,
+      "runtime_mean": 45.29148027800451,
+      "gap_to_dp_best": 2.4658170968010364,
+      "gap_to_dp_median": 2.5516577311254025,
+      "gap_to_dp_p90": 2.5516577311254025
+    },
+    "QUBO_FIXED": {
+      "count": 3,
+      "best_objective": 214648.0,
+      "median_objective": 214648.0,
+      "p90_objective": 214648.0,
+      "runtime_mean": 19.746384985677043,
+      "gap_to_dp_best": 2.5516577311254025,
+      "gap_to_dp_median": 2.5516577311254025,
+      "gap_to_dp_p90": 2.5516577311254025
+    }
+  },
+  "rows": [
+    {
+      "group": "QUBO_FIXED",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 214648.0,
+      "travel": 48.0,
+      "tw_penalty": 214600.0,
+      "runtime_sec": 19.509718957997393,
+      "selected_lambda": 200.0,
+      "gap_to_dp_abs": 130527.0,
+      "gap_to_dp_ratio": 2.5516577311254025
+    },
+    {
+      "group": "QUBO_ADAPTIVE",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 207427.0,
+      "travel": 47.0,
+      "tw_penalty": 207380.0,
+      "runtime_sec": 45.21766416699393,
+      "selected_lambda": 5.84,
+      "gap_to_dp_abs": 123306.0,
+      "gap_to_dp_ratio": 2.4658170968010364
+    },
+    {
+      "group": "QUBO_FIXED",
+      "run_id": 1,
+      "status": "ok",
+      "objective": 214648.0,
+      "travel": 48.0,
+      "tw_penalty": 214600.0,
+      "runtime_sec": 20.178950541012455,
+      "selected_lambda": 200.0,
+      "gap_to_dp_abs": 130527.0,
+      "gap_to_dp_ratio": 2.5516577311254025
+    },
+    {
+      "group": "QUBO_ADAPTIVE",
+      "run_id": 1,
+      "status": "ok",
+      "objective": 214648.0,
+      "travel": 48.0,
+      "tw_penalty": 214600.0,
+      "runtime_sec": 45.663638041995,
+      "selected_lambda": 13.14,
+      "gap_to_dp_abs": 130527.0,
+      "gap_to_dp_ratio": 2.5516577311254025
+    },
+    {
+      "group": "QUBO_FIXED",
+      "run_id": 2,
+      "status": "ok",
+      "objective": 214648.0,
+      "travel": 48.0,
+      "tw_penalty": 214600.0,
+      "runtime_sec": 19.550485458021285,
+      "selected_lambda": 200.0,
+      "gap_to_dp_abs": 130527.0,
+      "gap_to_dp_ratio": 2.5516577311254025
+    },
+    {
+      "group": "QUBO_ADAPTIVE",
+      "run_id": 2,
+      "status": "ok",
+      "objective": 214648.0,
+      "travel": 48.0,
+      "tw_penalty": 214600.0,
+      "runtime_sec": 44.993138625024585,
+      "selected_lambda": 13.14,
+      "gap_to_dp_abs": 130527.0,
+      "gap_to_dp_ratio": 2.5516577311254025
+    },
+    {
+      "group": "BRANCH_CUT",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 97920.0,
+      "travel": 30.0,
+      "tw_penalty": 97890.0,
+      "runtime_sec": 122.53880204100278,
+      "selected_lambda": null,
+      "gap_to_dp_abs": 13799.0,
+      "gap_to_dp_ratio": 1.1640375173856707,
+      "objective_milp": 110490.19999999998,
+      "subtour_cuts": 0,
+      "solve_rounds": 1,
+      "approximation_note": "MILP objective uses piecewise linearized TW penalty"
+    },
+    {
+      "group": "DP_EXACT",
+      "run_id": 0,
+      "status": "ok",
+      "objective": 84121.0,
+      "travel": 31.0,
+      "tw_penalty": 84090.0,
+      "runtime_sec": null,
+      "selected_lambda": null,
+      "gap_to_dp_abs": 0.0,
+      "gap_to_dp_ratio": 1.0
+    }
+  ],
+  "notes": {
+    "time_window_semantics": "no waiting service",
+    "milp_penalty": "piecewise linearized quadratic penalty; objective_eval is recomputed by unified evaluator"
+  }
+}

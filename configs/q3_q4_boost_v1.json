@@ -1,0 +1,61 @@
+{
+  "profile_name": "q3_q4_boost_v1",
+  "profile_version": "1.0.0",
+  "description": "Q3/Q4 提分迭代冻结配置：可行率优先 + QUBO子问题上限15 + 分层混合求解",
+  "questions": {
+    "Q3": {
+      "params": {
+        "n_customers": 50,
+        "cluster_size": 10,
+        "seed_count_per_cluster": 2,
+        "tw_weight": 1.0,
+        "do_two_opt": true,
+        "decompose_strategy": "multi_start_fusion",
+        "postprocess_strategy": "two_opt",
+        "enable_tw_repair": true,
+        "qubo_cap": 15,
+        "seed_offset": 0,
+        "tw_violation_ratio_cap": 0.92
+      },
+      "known_limitations": [
+        "在无等待假设下，Q3时间窗违反率仍偏高（约0.90量级），目标值受时间窗惩罚主导。",
+        "multi_start_fusion显著提升稳定性但增加运行时。"
+      ],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313.json",
+        "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313_report.md",
+        "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313_paper.md"
+      ],
+      "recommended_command": "python run_baseline.py --profile q3_q4_boost_v1 --question Q3"
+    },
+    "Q4": {
+      "params": {
+        "n_customers": 50,
+        "tw_weight": 1.0,
+        "travel_weight": 1.0,
+        "vehicle_weight": 120.0,
+        "min_vehicle_count": 5,
+        "max_vehicle_count": 8,
+        "seed_count_per_vehicle": 1,
+        "assignment_strategy": "regret",
+        "route_postprocess": "or_opt",
+        "enable_tw_repair": true,
+        "vehicle_scan_mode": "feasibility_filtered",
+        "qubo_cap": 15,
+        "seed_offset": 0,
+        "tw_violation_ratio_cap": 0.7
+      },
+      "known_limitations": [
+        "当前最优策略的时间窗违反率均值约0.664，尚未达到强可行(近0)水平。",
+        "k扫描区间固定[5,8]，若数据分布变化需重新做敏感性扫描。"
+      ],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046.json",
+        "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046_k_curve.csv",
+        "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046_report.md",
+        "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046_paper.md"
+      ],
+      "recommended_command": "python run_baseline.py --profile q3_q4_boost_v1 --question Q4"
+    }
+  }
+}

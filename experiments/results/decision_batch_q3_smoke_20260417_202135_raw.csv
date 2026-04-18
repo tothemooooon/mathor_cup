@@ -1,0 +1,7 @@
+seed,ablation_id,decompose_strategy,route_postprocess,enable_tw_repair,objective,travel,tw_penalty,runtime_sec,feasible,tw_violation_ratio,max_subproblem_size,subproblem_cap_ok,strategy_signature
+0,q3:depot_distance:two_opt:1:seed0,depot_distance,two_opt,True,5856754.0,84.0,5856670.0,41.17136804200709,False,0.9,10,True,decompose=depot_distance|chosen=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15
+1,q3:depot_distance:two_opt:1:seed1,depot_distance,two_opt,True,7096416.0,96.0,7096320.0,15.775932125019608,False,0.92,10,True,decompose=depot_distance|chosen=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15
+0,q3:distance_tw:or_opt:1:seed0,distance_tw,or_opt,True,8574992.0,102.0,8574890.0,27.48910104201059,False,0.96,10,True,decompose=distance_tw|chosen=distance_tw|post=or_opt|tw_repair=True|qubo_cap=15
+1,q3:distance_tw:or_opt:1:seed1,distance_tw,or_opt,True,8882913.0,103.0,8882810.0,24.772899959003553,False,0.94,10,True,decompose=distance_tw|chosen=distance_tw|post=or_opt|tw_repair=True|qubo_cap=15
+0,q3:multi_start_fusion:or_opt:1:seed0,multi_start_fusion,or_opt,True,6153780.0,90.0,6153690.0,91.63135170799796,False,0.94,10,True,decompose=multi_start_fusion|chosen=depot_distance|post=or_opt|tw_repair=True|qubo_cap=15
+1,q3:multi_start_fusion:or_opt:1:seed1,multi_start_fusion,or_opt,True,7431730.0,110.0,7431620.0,94.17528604099061,False,0.94,10,True,decompose=multi_start_fusion|chosen=distance_only|post=or_opt|tw_repair=True|qubo_cap=15

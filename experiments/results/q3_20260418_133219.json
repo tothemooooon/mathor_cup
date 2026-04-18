@@ -1,0 +1,915 @@
+{
+  "question": "Q3",
+  "method": "hybrid decomposition + QUBO subproblem + route repair",
+  "route": [
+    0,
+    6,
+    13,
+    2,
+    15,
+    14,
+    16,
+    17,
+    5,
+    18,
+    8,
+    7,
+    19,
+    11,
+    10,
+    9,
+    3,
+    12,
+    4,
+    1,
+    20,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 6,
+      "arrival": 1.0,
+      "start_service": 1.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 6.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 360.0,
+      "leave_time": 3.0
+    },
+    {
+      "node": 13,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 9.0,
+      "window_upper": 27.0,
+      "early_violation": 5.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 250.0,
+      "leave_time": 6.0
+    },
+    {
+      "node": 2,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 15,
+      "arrival": 11.0,
+      "start_service": 11.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 13.0
+    },
+    {
+      "node": 14,
+      "arrival": 15.0,
+      "start_service": 15.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 17.0
+    },
+    {
+      "node": 16,
+      "arrival": 18.0,
+      "start_service": 18.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 4.0,
+      "time_window_penalty": 320.0,
+      "leave_time": 20.0
+    },
+    {
+      "node": 17,
+      "arrival": 21.0,
+      "start_service": 21.0,
+      "window_lower": 7.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 23.0
+    },
+    {
+      "node": 5,
+      "arrival": 24.0,
+      "start_service": 24.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 10.0,
+      "time_window_penalty": 2000.0,
+      "leave_time": 26.0
+    },
+    {
+      "node": 18,
+      "arrival": 27.0,
+      "start_service": 27.0,
+      "window_lower": 10.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 13.0,
+      "time_window_penalty": 3380.0,
+      "leave_time": 29.0
+    },
+    {
+      "node": 8,
+      "arrival": 30.0,
+      "start_service": 30.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 12.0,
+      "time_window_penalty": 2880.0,
+      "leave_time": 32.0
+    },
+    {
+      "node": 7,
+      "arrival": 34.0,
+      "start_service": 34.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 20.0,
+      "time_window_penalty": 8000.0,
+      "leave_time": 36.0
+    },
+    {
+      "node": 19,
+      "arrival": 37.0,
+      "start_service": 37.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 23.0,
+      "time_window_penalty": 10580.0,
+      "leave_time": 39.0
+    },
+    {
+      "node": 11,
+      "arrival": 40.0,
+      "start_service": 40.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 20.0,
+      "time_window_penalty": 8000.0,
+      "leave_time": 42.0
+    },
+    {
+      "node": 10,
+      "arrival": 43.0,
+      "start_service": 43.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 23.0,
+      "time_window_penalty": 10580.0,
+      "leave_time": 45.0
+    },
+    {
+      "node": 9,
+      "arrival": 48.0,
+      "start_service": 48.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 28.0,
+      "time_window_penalty": 15680.0,
+      "leave_time": 50.0
+    },
+    {
+      "node": 3,
+      "arrival": 52.0,
+      "start_service": 52.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 34.0,
+      "time_window_penalty": 23120.0,
+      "leave_time": 54.0
+    },
+    {
+      "node": 12,
+      "arrival": 55.0,
+      "start_service": 55.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 42.0,
+      "time_window_penalty": 35280.0,
+      "leave_time": 57.0
+    },
+    {
+      "node": 4,
+      "arrival": 59.0,
+      "start_service": 59.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 34.0,
+      "time_window_penalty": 23120.0,
+      "leave_time": 61.0
+    },
+    {
+      "node": 1,
+      "arrival": 65.0,
+      "start_service": 65.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 0.0,
+      "late_violation": 39.0,
+      "time_window_penalty": 30420.0,
+      "leave_time": 67.0
+    },
+    {
+      "node": 20,
+      "arrival": 69.0,
+      "start_service": 69.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 49.0,
+      "time_window_penalty": 48020.0,
+      "leave_time": 71.0
+    }
+  ],
+  "decision_points": {
+    "分解策略": "时间窗感知 > 距离分解 > 仓库距离排序（融合时自动选择）",
+    "簇内求解预算": "seed_count_per_cluster 决定每个子问题稳定性",
+    "簇间修复": "postprocess + tw_repair 控制质量与运行时平衡",
+    "簇级自适应λ": "每个簇单独做可行率/目标改善驱动的lambda调节"
+  },
+  "parameters": {
+    "n_customers": 20,
+    "cluster_size": 5,
+    "seed_count_per_cluster": 2,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "lambda_scale_ratio": null,
+    "tw_weight": 1.0,
+    "do_two_opt": true,
+    "decompose_strategy": "depot_distance",
+    "postprocess_strategy": "two_opt",
+    "enable_tw_repair": true,
+    "qubo_cap": 15,
+    "seed_offset": 0,
+    "tw_violation_ratio_cap": 0.5,
+    "use_adaptive_lambda": true,
+    "adaptive_rounds": 4,
+    "adaptive_budget": 3,
+    "exact_benchmark_cap": 12
+  },
+  "diagnostics": {
+    "cluster_count": 4,
+    "cluster_max_size": 5,
+    "clusters": [
+      {
+        "cluster_index": 0,
+        "cluster_nodes": [
+          6,
+          13,
+          1,
+          2,
+          12
+        ],
+        "cluster_size": 5,
+        "selected_seed": 13,
+        "lambda_pos": 122.825,
+        "lambda_cus": 122.825,
+        "travel": 10.0,
+        "tw_penalty": 620.0,
+        "objective": 630.0,
+        "route": [
+          0,
+          6,
+          13,
+          2,
+          12,
+          1,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2260.0,
+            "best_seed": 0,
+            "best_travel": 10.0,
+            "best_tw_penalty": 2250.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 5,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 7,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 9,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 1,
+        "cluster_nodes": [
+          18,
+          3,
+          4,
+          5,
+          7
+        ],
+        "cluster_size": 5,
+        "selected_seed": 26,
+        "lambda_pos": 122.825,
+        "lambda_cus": 122.825,
+        "travel": 16.0,
+        "tw_penalty": 160.0,
+        "objective": 176.0,
+        "route": [
+          0,
+          5,
+          18,
+          7,
+          3,
+          4,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2556.0,
+            "best_seed": 14,
+            "best_travel": 16.0,
+            "best_tw_penalty": 2540.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2056.0,
+            "best_seed": 17,
+            "best_travel": 16.0,
+            "best_tw_penalty": 2040.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 176.0,
+            "best_seed": 20,
+            "best_travel": 16.0,
+            "best_tw_penalty": 160.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 176.0,
+            "best_seed": 23,
+            "best_travel": 16.0,
+            "best_tw_penalty": 160.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 2,
+        "cluster_nodes": [
+          8,
+          10,
+          9,
+          11,
+          14
+        ],
+        "cluster_size": 5,
+        "selected_seed": 37,
+        "lambda_pos": 144.5,
+        "lambda_cus": 144.5,
+        "travel": 19.0,
+        "tw_penalty": 750.0,
+        "objective": 769.0,
+        "route": [
+          0,
+          9,
+          10,
+          11,
+          8,
+          14,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 28,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 31,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 34,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 3,
+        "cluster_nodes": [
+          15,
+          16,
+          17,
+          19,
+          20
+        ],
+        "cluster_size": 5,
+        "selected_seed": 51,
+        "lambda_pos": 122.825,
+        "lambda_cus": 122.825,
+        "travel": 20.0,
+        "tw_penalty": 640.0,
+        "objective": 660.0,
+        "route": [
+          0,
+          15,
+          16,
+          17,
+          19,
+          20,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 1840.0,
+            "best_seed": 40,
+            "best_travel": 20.0,
+            "best_tw_penalty": 1820.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 43,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 45,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 48,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          }
+        ]
+      }
+    ],
+    "adaptive_trace": [
+      {
+        "cluster_index": 0,
+        "cluster_size": 5,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2260.0,
+            "best_seed": 0,
+            "best_travel": 10.0,
+            "best_tw_penalty": 2250.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 5,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 7,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 630.0,
+            "best_seed": 9,
+            "best_travel": 10.0,
+            "best_tw_penalty": 620.0
+          }
+        ],
+        "selected_lambda": 122.825
+      },
+      {
+        "cluster_index": 1,
+        "cluster_size": 5,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2556.0,
+            "best_seed": 14,
+            "best_travel": 16.0,
+            "best_tw_penalty": 2540.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2056.0,
+            "best_seed": 17,
+            "best_travel": 16.0,
+            "best_tw_penalty": 2040.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 176.0,
+            "best_seed": 20,
+            "best_travel": 16.0,
+            "best_tw_penalty": 160.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 176.0,
+            "best_seed": 23,
+            "best_travel": 16.0,
+            "best_tw_penalty": 160.0
+          }
+        ],
+        "selected_lambda": 122.825
+      },
+      {
+        "cluster_index": 2,
+        "cluster_size": 5,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 28,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 31,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 199.0,
+            "best_seed": 34,
+            "best_travel": 19.0,
+            "best_tw_penalty": 180.0
+          }
+        ],
+        "selected_lambda": 144.5
+      },
+      {
+        "cluster_index": 3,
+        "cluster_size": 5,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 1840.0,
+            "best_seed": 40,
+            "best_travel": 20.0,
+            "best_tw_penalty": 1820.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 43,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 45,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 660.0,
+            "best_seed": 48,
+            "best_travel": 20.0,
+            "best_tw_penalty": 640.0
+          }
+        ],
+        "selected_lambda": 122.825
+      }
+    ],
+    "best_by_lambda": [
+      {
+        "lambda": 122.825,
+        "best_objective": 176.0
+      },
+      {
+        "lambda": 144.5,
+        "best_objective": 769.0
+      }
+    ],
+    "fusion_candidates": [],
+    "tw_violation_ratio": 0.8,
+    "feasibility_rate": 0.0,
+    "ablation_id": null,
+    "strategy_signature": "decompose=depot_distance|chosen=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15",
+    "selection_reason": "single strategy run",
+    "selected_decompose_strategy": "depot_distance",
+    "tw_penalty_dominance": 0.9998423600945839,
+    "subproblem_exact_benchmark": [
+      {
+        "cluster_index": 0,
+        "cluster_size": 5,
+        "status": "ok",
+        "heuristic_objective": 630.0,
+        "exact_objective": 24.0,
+        "gap_abs": 606.0,
+        "gap_ratio": 26.25,
+        "heuristic_route": [
+          0,
+          6,
+          13,
+          2,
+          12,
+          1,
+          0
+        ],
+        "exact_route": [
+          0,
+          2,
+          12,
+          6,
+          13,
+          1,
+          0
+        ]
+      },
+      {
+        "cluster_index": 1,
+        "cluster_size": 5,
+        "status": "ok",
+        "heuristic_objective": 176.0,
+        "exact_objective": 28.0,
+        "gap_abs": 148.0,
+        "gap_ratio": 6.285714285714286,
+        "heuristic_route": [
+          0,
+          5,
+          18,
+          7,
+          3,
+          4,
+          0
+        ],
+        "exact_route": [
+          0,
+          5,
+          7,
+          18,
+          3,
+          4,
+          0
+        ]
+      },
+      {
+        "cluster_index": 2,
+        "cluster_size": 5,
+        "status": "ok",
+        "heuristic_objective": 769.0,
+        "exact_objective": 199.0,
+        "gap_abs": 570.0,
+        "gap_ratio": 3.864321608040201,
+        "heuristic_route": [
+          0,
+          9,
+          10,
+          11,
+          8,
+          14,
+          0
+        ],
+        "exact_route": [
+          0,
+          14,
+          8,
+          11,
+          10,
+          9,
+          0
+        ]
+      },
+      {
+        "cluster_index": 3,
+        "cluster_size": 5,
+        "status": "ok",
+        "heuristic_objective": 660.0,
+        "exact_objective": 660.0,
+        "gap_abs": 0.0,
+        "gap_ratio": 1.0,
+        "heuristic_route": [
+          0,
+          15,
+          16,
+          17,
+          19,
+          20,
+          0
+        ],
+        "exact_route": [
+          0,
+          15,
+          16,
+          17,
+          19,
+          20,
+          0
+        ]
+      }
+    ],
+    "cluster_gap_median": 359.0,
+    "cluster_gap_p90": 595.2,
+    "cluster_gap_max": 606.0,
+    "exact_reference": {
+      "mode": "subproblem_only",
+      "cap": 12
+    },
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": null,
+    "profile_version": null,
+    "profile_path": null,
+    "known_limitations": [],
+    "profile_experiment_sources": [],
+    "proxy_score": {
+      "proxy_score": 28.98,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 35.0,
+    "total_time_window_penalty": 221990.0,
+    "total_objective": 222025.0,
+    "feasible": false,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 34.549109332991065
+  },
+  "generated_at": "2026-04-18T13:32:19"
+}

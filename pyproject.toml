@@ -9,6 +9,7 @@ dependencies = [
   "pandas==2.2.3",
   "openpyxl==3.1.5",
   "pypdf==6.10.0",
+  "ortools>=9.10,<10",
 ]
 
 [tool.uv.sources]

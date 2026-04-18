@@ -1,0 +1,4 @@
+group,run_id,status,objective,travel,tw_penalty,runtime_sec,selected_lambda,selected_tw_weight,selected_profile,selected_anchor,gap_to_dp_abs,gap_to_dp_ratio,objective_milp,subtour_cuts,solve_rounds,approximation_note,milp_pieces
+QUBO_FIXED,0,ok,317926.0,56.0,317870.0,19.032450541999424,200.0,1.0,P0,7,233805.0,3.7793892131572377,,,,,
+QUBO_ADAPTIVE,0,ok,162971.0,41.0,162930.0,41.427409541007364,5.84,1.2,P2,,78850.0,1.9373402598637677,,,,,
+DP_EXACT,0,ok,84121.0,31.0,84090.0,,,,,,0.0,1.0,,,,,

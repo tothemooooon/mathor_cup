@@ -1,0 +1,7 @@
+seed,ablation_id,assignment_strategy,route_postprocess,enable_tw_repair,vehicle_scan_mode,objective,travel,tw_penalty,runtime_sec,feasible,selected_k,tw_violation_ratio,max_subproblem_size,subproblem_cap_ok,strategy_signature
+0,q4:ffd:two_opt:1:fixed:seed0,ffd,two_opt,True,fixed,119686.0,136.0,118830.0,14.41780233301688,False,6,0.66,13,True,assign=ffd|route=two_opt|tw_repair=True|scan=fixed|qubo_cap=15
+1,q4:ffd:two_opt:1:fixed:seed1,ffd,two_opt,True,fixed,110164.0,144.0,109180.0,14.513038708013482,False,7,0.68,13,True,assign=ffd|route=two_opt|tw_repair=True|scan=fixed|qubo_cap=15
+0,q4:regret:or_opt:1:feasibility_filtered:seed0,regret,or_opt,True,feasibility_filtered,95662.0,132.0,94930.0,15.598255375021836,False,5,0.7,13,True,assign=regret|route=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15
+1,q4:regret:or_opt:1:feasibility_filtered:seed1,regret,or_opt,True,feasibility_filtered,98304.0,134.0,97570.0,15.93824379099533,False,5,0.7,13,True,assign=regret|route=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15
+0,q4:tw_pressure:or_opt:1:feasibility_filtered:seed0,tw_pressure,or_opt,True,feasibility_filtered,132947.0,137.0,132210.0,16.335509374999674,False,5,0.6,13,True,assign=tw_pressure|route=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15
+1,q4:tw_pressure:or_opt:1:feasibility_filtered:seed1,tw_pressure,or_opt,True,feasibility_filtered,128584.0,134.0,127610.0,17.49765641699196,False,7,0.64,13,True,assign=tw_pressure|route=or_opt|tw_repair=True|scan=feasibility_filtered|qubo_cap=15

@@ -1,0 +1,1033 @@
+{
+  "question": "Q1",
+  "method": "QUBO-TSP + Kaiwu SA (adaptive lambda + profile ensemble + anchor decomposition)",
+  "route": [
+    0,
+    6,
+    1,
+    9,
+    3,
+    5,
+    14,
+    15,
+    2,
+    4,
+    12,
+    10,
+    11,
+    7,
+    8,
+    13,
+    0
+  ],
+  "routes": null,
+  "per_customer": [],
+  "decision_points": {
+    "惩罚系数规模": "先网格筛选lambda，再在入围lambda上做深度搜索",
+    "退火预算": "采用多退火档案并控制在预算倍率约束内",
+    "锚点分解": "固定首访客户以降低跨可行解跃迁难度"
+  },
+  "parameters": {
+    "n_customers": 15,
+    "lambda_pos": null,
+    "lambda_cus": null,
+    "seed_start": 0,
+    "seed_count": 8,
+    "iterations_per_t": 240,
+    "initial_temperature": 120.0,
+    "alpha": 0.995,
+    "cutoff_temperature": 0.05,
+    "size_limit": 50,
+    "adaptive_lambda_grid": [
+      12.0,
+      16.0,
+      19.0,
+      24.0,
+      32.0,
+      48.0,
+      64.0
+    ],
+    "top_k_lambda": 2,
+    "anchor_count": 4,
+    "screen_seed_plan": 12,
+    "profile_seed_plan": 20,
+    "budget_multiplier": 10.0,
+    "screen_budget_ratio": 0.3,
+    "anchor_weight": 2000.0,
+    "exact_max_customers": 20,
+    "target_travel_stop": 33.0
+  },
+  "diagnostics": {
+    "candidate_count": 52,
+    "all_candidates": [
+      {
+        "seed": 12,
+        "travel_time": 40.0,
+        "qubo_value": 40.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 6,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 9,
+        "travel_time": 43.0,
+        "qubo_value": 43.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 6,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 38,
+        "travel_time": 43.0,
+        "qubo_value": 43.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 9,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 22,
+        "travel_time": 46.0,
+        "qubo_value": 46.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 13,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 27,
+        "travel_time": 46.0,
+        "qubo_value": 46.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 25,
+        "travel_time": 47.0,
+        "qubo_value": 47.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 13,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 35,
+        "travel_time": 47.0,
+        "qubo_value": 47.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 9,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 51,
+        "travel_time": 47.0,
+        "qubo_value": 47.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 11,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 8,
+        "travel_time": 49.0,
+        "qubo_value": 49.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 6,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 16,
+        "travel_time": 49.0,
+        "qubo_value": 49.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 47,
+        "travel_time": 49.0,
+        "qubo_value": 49.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 11,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 48,
+        "travel_time": 49.0,
+        "qubo_value": 49.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 11,
+        "profile_name": "P3",
+        "phase": "deep"
+      },
+      {
+        "seed": 23,
+        "travel_time": 51.0,
+        "qubo_value": 51.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 13,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 28,
+        "travel_time": 52.0,
+        "qubo_value": 52.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 13,
+        "travel_time": 54.0,
+        "qubo_value": 54.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 29,
+        "travel_time": 54.0,
+        "qubo_value": 54.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 34,
+        "travel_time": 54.0,
+        "qubo_value": 54.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 9,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 24,
+        "travel_time": 55.0,
+        "qubo_value": 55.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 13,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 37,
+        "travel_time": 55.0,
+        "qubo_value": 55.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 9,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 50,
+        "travel_time": 55.0,
+        "qubo_value": 55.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 11,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 19,
+        "travel_time": 56.0,
+        "qubo_value": 56.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 64.0,
+        "lambda_cus": 64.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 32,
+        "travel_time": 56.0,
+        "qubo_value": 56.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 64.0,
+        "lambda_cus": 64.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 1,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 3,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 20,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 13,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 21,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 13,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 26,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 31,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 48.0,
+        "lambda_cus": 48.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 33,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 9,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 39,
+        "travel_time": 57.0,
+        "qubo_value": 57.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 10,
+        "travel_time": 58.0,
+        "qubo_value": 58.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 6,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 11,
+        "travel_time": 58.0,
+        "qubo_value": 58.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 6,
+        "profile_name": "P2",
+        "phase": "deep"
+      },
+      {
+        "seed": 30,
+        "travel_time": 58.0,
+        "qubo_value": 58.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 32.0,
+        "lambda_cus": 32.0,
+        "anchor_customer": 9,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 14,
+        "travel_time": 59.0,
+        "qubo_value": 59.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 36,
+        "travel_time": 59.0,
+        "qubo_value": 59.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 9,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 40,
+        "travel_time": 59.0,
+        "qubo_value": 59.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 44,
+        "travel_time": 59.0,
+        "qubo_value": 59.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 48.0,
+        "lambda_cus": 48.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 46,
+        "travel_time": 59.0,
+        "qubo_value": 59.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 11,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 2,
+        "travel_time": 60.0,
+        "qubo_value": 60.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 18,
+        "travel_time": 60.0,
+        "qubo_value": 60.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 48.0,
+        "lambda_cus": 48.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 42,
+        "travel_time": 60.0,
+        "qubo_value": 60.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 24.0,
+        "lambda_cus": 24.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 41,
+        "travel_time": 61.0,
+        "qubo_value": 61.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 5,
+        "travel_time": 62.0,
+        "qubo_value": 62.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 48.0,
+        "lambda_cus": 48.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 17,
+        "travel_time": 62.0,
+        "qubo_value": 62.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 32.0,
+        "lambda_cus": 32.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 45,
+        "travel_time": 62.0,
+        "qubo_value": 62.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 64.0,
+        "lambda_cus": 64.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 0,
+        "travel_time": 64.0,
+        "qubo_value": 64.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 12.0,
+        "lambda_cus": 12.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 4,
+        "travel_time": 64.0,
+        "qubo_value": 64.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 32.0,
+        "lambda_cus": 32.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 49,
+        "travel_time": 64.0,
+        "qubo_value": 64.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 11,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 6,
+        "travel_time": 65.0,
+        "qubo_value": 65.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 64.0,
+        "lambda_cus": 64.0,
+        "anchor_customer": 6,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 43,
+        "travel_time": 65.0,
+        "qubo_value": 65.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 32.0,
+        "lambda_cus": 32.0,
+        "anchor_customer": 11,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      },
+      {
+        "seed": 7,
+        "travel_time": 67.0,
+        "qubo_value": 67.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 16.0,
+        "lambda_cus": 16.0,
+        "anchor_customer": 6,
+        "profile_name": "P1",
+        "phase": "deep"
+      },
+      {
+        "seed": 15,
+        "travel_time": 75.0,
+        "qubo_value": 75.0,
+        "feasible_raw": true,
+        "row_violations": 0,
+        "col_violations": 0,
+        "lambda_pos": 19.0,
+        "lambda_cus": 19.0,
+        "anchor_customer": 13,
+        "profile_name": "SCREEN",
+        "phase": "screen"
+      }
+    ],
+    "exact_reference": {
+      "method": "Held-Karp Dynamic Programming",
+      "optimal_route": [
+        0,
+        13,
+        2,
+        15,
+        14,
+        6,
+        5,
+        8,
+        7,
+        11,
+        10,
+        1,
+        9,
+        3,
+        12,
+        4,
+        0
+      ],
+      "optimal_value": 29.0
+    },
+    "search_budget_breakdown": {
+      "baseline_units": 1920,
+      "budget_multiplier": 10.0,
+      "total_budget_units": 19200,
+      "screen_budget_units": 5760,
+      "deep_budget_units": 13440,
+      "screen_seed_plan": 12,
+      "screen_seed_used": 1,
+      "profile_seed_plan": 20,
+      "profile_seed_used": 1,
+      "spent_screen_units": 6720,
+      "spent_deep_units": 9920,
+      "spent_total_units": 16640,
+      "anchor_count": 4,
+      "lambda_grid": [
+        12.0,
+        16.0,
+        19.0,
+        24.0,
+        32.0,
+        48.0,
+        64.0
+      ],
+      "top_k_lambda": 2,
+      "target_travel_stop": 33.0,
+      "early_stop_triggered": false,
+      "best_travel_seen_during_search": 40.0,
+      "profiles": [
+        {
+          "name": "P1",
+          "initial_temperature": 120.0,
+          "alpha": 0.995,
+          "iterations_per_t": 240,
+          "cutoff_temperature": 0.05,
+          "size_limit": 50
+        },
+        {
+          "name": "P2",
+          "initial_temperature": 180.0,
+          "alpha": 0.997,
+          "iterations_per_t": 400,
+          "cutoff_temperature": 0.02,
+          "size_limit": 70
+        },
+        {
+          "name": "P3",
+          "initial_temperature": 220.0,
+          "alpha": 0.998,
+          "iterations_per_t": 600,
+          "cutoff_temperature": 0.01,
+          "size_limit": 100
+        }
+      ],
+      "seed_start": 0,
+      "seed_end_exclusive": 52
+    },
+    "best_by_lambda": [
+      {
+        "lambda": 12.0,
+        "best_travel": 47.0,
+        "best_seed": 25,
+        "best_anchor": 13,
+        "best_profile": "P3"
+      },
+      {
+        "lambda": 16.0,
+        "best_travel": 43.0,
+        "best_seed": 9,
+        "best_anchor": 6,
+        "best_profile": "P3"
+      },
+      {
+        "lambda": 19.0,
+        "best_travel": 43.0,
+        "best_seed": 38,
+        "best_anchor": 9,
+        "best_profile": "P3"
+      },
+      {
+        "lambda": 24.0,
+        "best_travel": 40.0,
+        "best_seed": 12,
+        "best_anchor": 6,
+        "best_profile": "P3"
+      },
+      {
+        "lambda": 32.0,
+        "best_travel": 58.0,
+        "best_seed": 30,
+        "best_anchor": 9,
+        "best_profile": "SCREEN"
+      },
+      {
+        "lambda": 48.0,
+        "best_travel": 57.0,
+        "best_seed": 31,
+        "best_anchor": 9,
+        "best_profile": "SCREEN"
+      },
+      {
+        "lambda": 64.0,
+        "best_travel": 56.0,
+        "best_seed": 19,
+        "best_anchor": 13,
+        "best_profile": "SCREEN"
+      }
+    ],
+    "best_by_profile": [
+      {
+        "profile": "P1",
+        "best_travel": 51.0,
+        "best_seed": 23,
+        "best_anchor": 13,
+        "best_lambda": 12.0
+      },
+      {
+        "profile": "P2",
+        "best_travel": 49.0,
+        "best_seed": 8,
+        "best_anchor": 6,
+        "best_lambda": 16.0
+      },
+      {
+        "profile": "P3",
+        "best_travel": 40.0,
+        "best_seed": 12,
+        "best_anchor": 6,
+        "best_lambda": 24.0
+      }
+    ],
+    "best_by_anchor": [
+      {
+        "anchor_customer": 6,
+        "best_travel": 40.0,
+        "best_seed": 12,
+        "best_lambda": 24.0,
+        "best_profile": "P3",
+        "candidate_count": 13,
+        "selected_lambdas": [
+          16.0,
+          24.0
+        ]
+      },
+      {
+        "anchor_customer": 9,
+        "best_travel": 43.0,
+        "best_seed": 38,
+        "best_lambda": 19.0,
+        "best_profile": "P3",
+        "candidate_count": 13,
+        "selected_lambdas": [
+          16.0,
+          19.0
+        ]
+      },
+      {
+        "anchor_customer": 13,
+        "best_travel": 46.0,
+        "best_seed": 22,
+        "best_lambda": 24.0,
+        "best_profile": "P3",
+        "candidate_count": 13,
+        "selected_lambdas": [
+          24.0,
+          12.0
+        ]
+      },
+      {
+        "anchor_customer": 11,
+        "best_travel": 47.0,
+        "best_seed": 51,
+        "best_lambda": 16.0,
+        "best_profile": "P3",
+        "candidate_count": 13,
+        "selected_lambdas": [
+          12.0,
+          16.0
+        ]
+      }
+    ],
+    "gap_abs": 11.0,
+    "gap_ratio": 1.3793103448275863,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "baseline_v1",
+    "profile_version": "1.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/baseline_v1.json",
+    "known_limitations": [],
+    "profile_experiment_sources": [
+      "experiments/results/q1_20260417_133616.json"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 40.0,
+    "total_time_window_penalty": 0.0,
+    "total_objective": 40.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 159.4850149170088
+  },
+  "generated_at": "2026-04-17T20:54:50"
+}

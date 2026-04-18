@@ -10,7 +10,7 @@
 ## 2. 建模思路
 
 - Q1：将 15 客户单车路径建模为 QUBO-TSP，核心是“每个序位唯一 + 每个客户唯一”。
-- Q2：B+C 迭代主线，将位置级时间窗惩罚一次项写入 QUBO，并用真实到达时间更新 `tau_k` 后重建 QUBO。
+- Q2：增强直入QUBO（位置一元 + 相邻次序二元修正 + 软先后偏置），主求解采用 `(lambda, tw_weight)` 二层自适应 + 多退火档案 + 锚点重启（纯 QUBO-SA，非 B+C 迭代）。
 - Q3：50 客户用“分片求解 + 路径拼接 + two_opt”平衡规模可解性与结果质量。
 - Q4：先做容量可行分配，再对每车做 QUBO 路径优化，并在车辆数区间内扫描最优方案。
 
@@ -19,9 +19,23 @@
 | 题号 | 指标摘要 | 结论 |
 |---|---|---|
 | Q1 | `travel=47` | 单车无约束基线可稳定复现 |
-| Q2 | `travel=42, tw_penalty=162570, objective=162612` | 时间窗已入模，较旧 baseline(`241172`) 下降 `32.57%` |
+| Q2 | `enhanced_direct_penalty + adaptive(lambda,tw) + exact_dp_ref` | 输出包含 `selected_lambda/selected_tw_weight/best_by_profile/best_by_anchor` 与 `gap_abs/gap_ratio` |
 | Q3 | `travel=62, tw_penalty=5425280, objective=5425342` | `cluster_size=10 + two_opt=True` 为主线 |
 | Q4 | `selected_k=7, travel=177, tw_penalty=292790, objective=293807` | 当前权重区间下最优车辆数稳定为 7 |
+
+## 3.1 Q3/Q4 Boost V1（提分迭代冻结）
+
+- 配置文件：`configs/q3_q4_boost_v1.json`
+- 目标：在“可行率优先 + QUBO子问题上限15”约束下，基于全量消融选出更强 Q3/Q4 主线。
+
+| 题号 | 推荐策略 | 关键参数 | 全量消融结论 |
+|---|---|---|---|
+| Q3 | `multi_start_fusion + two_opt + tw_repair` | `cluster_size=10, seed_count_per_cluster=2, qubo_cap=15, tw_violation_ratio_cap=0.92` | `feasibility_rate=1.00, objective_mean=6,290,248.4` |
+| Q4 | `regret + or_opt + tw_repair + feasibility_filtered` | `k∈[5,8], seed_count_per_vehicle=1, qubo_cap=15, tw_violation_ratio_cap=0.7` | `feasibility_rate=1.00, objective_mean=99,954.2` |
+
+- 对应实验产物：
+  - Q3：`decision_batch_q3_boost_v1_full_20260417_212313.*`
+  - Q4：`decision_batch_q4_boost_v1_full_fix_20260417_214046.*`
 
 ## 4. 一键运行命令
 
@@ -31,6 +45,14 @@ python run_baseline.py --profile baseline_v1 --question Q1
 python run_baseline.py --profile baseline_v1 --question Q2
 python run_baseline.py --profile baseline_v1 --question Q3
 python run_baseline.py --profile baseline_v1 --question Q4
+```
+
+Boost V1（仅Q3/Q4）：
+
+```bash
+source .venv/bin/activate
+python run_baseline.py --profile q3_q4_boost_v1 --question Q3
+python run_baseline.py --profile q3_q4_boost_v1 --question Q4
 ```
 
 ## 5. 固化参数（Baseline V1）
@@ -44,13 +66,22 @@ python run_baseline.py --profile baseline_v1 --question Q4
 - `n_customers=15`
 - `seed_start=0`
 - `seed_count=12`
-- `mode=iterative_bc`
-- `min_rounds=3`
-- `max_rounds=5`
-- `tw_weight_grid=[0.1,0.5,1,2,5,10]`
-- `beta=0.65`
+- `lambda_fixed=null`（为空时启用自适应 λ）
+- `use_adaptive_lambda=true`
+- `adaptive_rounds=5`
+- `adaptive_budget=6`
+- `adaptive_target_ratio=1.05`
 - `m1=10, m2=20`
-- `tw_weight=1.0`（默认输入权重，会并入网格）
+- `tw_weight=1.0`
+- `tw_weight_grid=[0.8,1.0,1.2]`
+- `use_adaptive_tw_weight=true`
+- `use_profile_ensemble=true`
+- `use_anchor_restarts=true`
+- `anchor_candidate_count=3`
+- `tw_pairwise_weight=0.35`
+- `edge_bias_weight=0.08`
+- `normalize_qubo_terms=true`
+- `exact_dp_max_states=12000000`
 
 ### Q3
 - `n_customers=50`
@@ -88,10 +119,10 @@ python run_baseline.py --profile baseline_v1 --question Q3 --cluster-size 8
 
 ## 8. Q2 已知限制（本轮冻结）
 
-- 当前 Q2 的时间窗惩罚基于位置级到达时间估计，精度受 `tau_k` 估计误差影响。
+- 当前 Q2 虽加入相邻次序二元修正，但到达时刻仍为估计量，和精确 DP 仍存在代理误差。
 - 当前最优路线对应的原始二值解仍可能存在约束违反，最终路线通过解码修复得到。
-- 输出 `diagnostics` 已包含 `iter_history`、`selected_tw_weight`、`improvement_vs_baseline`、收敛曲线 CSV/PNG 路径。
-- 下一轮改进方向：提升原始二值可行率并做 `beta × tw_weight_grid` 稳定性敏感性分析。
+- 输出 `diagnostics` 包含 `adaptive_trace`、`adaptive_trace_tw_weight`、`selected_lambda`、`selected_tw_weight`、`best_by_profile`、`best_by_anchor`、`exact_reference` 与 `gap_abs/gap_ratio`。
+- 锚点重启与多退火档案会增加运行时，需在质量与时长间权衡。
 
 ## 9. 复现检查清单
 
@@ -112,3 +143,40 @@ python run_baseline.py --profile baseline_v1 --question Q3 --cluster-size 8
   - 最优 `P*=19`（区间 `[19,19]`），`best_qubo=44`
   - 验收比值 `best_qubo/L_2opt=1.3333`，未达到 `<=1.05`
 - 结论：当前“仅调P+当前QUBO建模”无法逼近2-opt基线，后续需在变量/目标结构层面升级而非只加大惩罚系数。
+
+## 11. Q2 回退后对照实验（2026-04-18）
+
+- 实验脚本：`decision_batch_q2_compare.py`
+- 核心设定：`n=15, seed_count=12, seed_repeats=3, enable_dp=true, enable_branch_cut=true`
+- 对照口径：统一“无等待服务（到达即服务）”，并统一用同一评估函数重算 objective。
+
+| Group | best objective | median objective | gap_to_dp(best) | runtime_mean(s) |
+|---|---:|---:|---:|---:|
+| `QUBO_FIXED` | 214648.0 | 214648.0 | 2.5517 | 19.75 |
+| `QUBO_ADAPTIVE` | 207427.0 | 214648.0 | 2.4658 | 45.29 |
+| `BRANCH_CUT` | 97920.0 | 97920.0 | 1.1640 | 122.54 |
+| `DP_EXACT` | 84121.0 | 84121.0 | 1.0000 | - |
+
+- 结论：
+  - Q2 回退主线（直入模 + 自适应 λ）已可复现运行并输出完整 `gap` 证据链。
+  - 自适应 λ 相比固定 λ 的 `best objective` 有提升（`-3.36%`），但 `median` 仍持平，稳定性提升有限。
+  - 分支切割显著优于 QUBO 两组，并明显接近 DP 基准。
+- 结果文件：
+  - `experiments/results/decision_batch_q2_compare_20260418_124137.json`
+  - `experiments/results/decision_batch_q2_compare_20260418_124137.csv`
+  - `experiments/results/decision_batch_q2_compare_*.md`
+
+## 12. Q2 增强版对照（本次升级）
+
+- 新脚本参数支持：`tw_weight_grid / tw_pairwise_weight / edge_bias_weight / anchor_candidate_count / milp_piece_sensitivity`。
+- 对照输出新增：
+  - `selected_lambda/selected_tw_weight/selected_profile/selected_anchor` 分布；
+  - `best_by_profile`、`best_by_anchor` 贡献；
+  - Branch-Cut `pieces` 敏感性表。
+- 运行示例：
+
+```bash
+source .venv/bin/activate
+python decision_batch_q2_compare.py --enable-dp --enable-branch-cut \
+  --tw-weight-grid 0.8,1.0,1.2 --milp-piece-sensitivity 8,10,12
+```

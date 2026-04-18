@@ -1,0 +1,4 @@
+decompose_strategy,route_postprocess,enable_tw_repair,n_runs,feasibility_rate,cap_ok_rate,tw_violation_ratio_mean,objective_mean,objective_std,objective_min,objective_p25,objective_p75,travel_mean,tw_penalty_mean,runtime_mean,runtime_std,strategy_signature
+depot_distance,two_opt,True,2,0.0,1.0,0.91,6476585.0,619831.0,5856754.0,6166669.5,6786500.5,90.0,6476495.0,28.47365008351335,12.69771795849374,decompose=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15
+multi_start_fusion,or_opt,True,2,0.0,1.0,0.94,6792755.0,638975.0,6153780.0,6473267.5,7112242.5,100.0,6792655.0,92.90331887449429,1.2719671664963244,decompose=multi_start_fusion|post=or_opt|tw_repair=True|qubo_cap=15
+distance_tw,or_opt,True,2,0.0,1.0,0.95,8728952.5,153960.5,8574992.0,8651972.25,8805932.75,102.5,8728850.0,26.13100050050707,1.3581005415035179,decompose=distance_tw|post=or_opt|tw_repair=True|qubo_cap=15

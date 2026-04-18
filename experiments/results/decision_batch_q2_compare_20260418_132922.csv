@@ -1,0 +1,6 @@
+group,run_id,status,objective,travel,tw_penalty,runtime_sec,selected_lambda,selected_tw_weight,selected_profile,selected_anchor,gap_to_dp_abs,gap_to_dp_ratio,objective_milp,subtour_cuts,solve_rounds,approximation_note,milp_pieces
+QUBO_FIXED,0,ok,35959.0,29.0,35930.0,2.983992167020915,200.0,1.0,P1,,26334.0,3.736,,,,,
+QUBO_ADAPTIVE,0,ok,20626.0,26.0,20600.0,10.180530791985802,5.568888888888889,0.8,P1,,11001.0,2.142961038961039,,,,,
+BRANCH_CUT,0,ok,14928.0,28.0,14900.0,20.551400458003627,,,,,5303.0,1.5509610389610389,16401.200000000004,0,1,MILP objective uses piecewise linearized TW penalty,10
+BRANCH_CUT_P6,1,ok,16124.0,24.0,16100.0,20.48408587501035,,,,,6499.0,1.6752207792207792,22190.666666666664,0,1,MILP objective uses piecewise linearized TW penalty,6
+DP_EXACT,0,ok,9625.0,25.0,9600.0,,,,,,0.0,1.0,,,,,

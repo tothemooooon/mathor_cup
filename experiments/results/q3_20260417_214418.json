@@ -1,0 +1,870 @@
+{
+  "question": "Q3",
+  "method": "hybrid decomposition + QUBO subproblem + route repair",
+  "route": [
+    0,
+    27,
+    28,
+    12,
+    3,
+    1,
+    31,
+    10,
+    11,
+    19,
+    7,
+    18,
+    8,
+    17,
+    16,
+    5,
+    6,
+    13,
+    40,
+    2,
+    37,
+    44,
+    14,
+    43,
+    15,
+    42,
+    41,
+    22,
+    21,
+    26,
+    4,
+    39,
+    25,
+    24,
+    29,
+    34,
+    35,
+    9,
+    33,
+    50,
+    30,
+    20,
+    32,
+    49,
+    36,
+    46,
+    45,
+    47,
+    48,
+    38,
+    23,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 27,
+      "arrival": 1.0,
+      "start_service": 1.0,
+      "window_lower": 1.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 3.0
+    },
+    {
+      "node": 28,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 1.0,
+      "window_upper": 10.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 6.0
+    },
+    {
+      "node": 12,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 3,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 4.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 160.0,
+      "leave_time": 12.0
+    },
+    {
+      "node": 1,
+      "arrival": 14.0,
+      "start_service": 14.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 3.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 90.0,
+      "leave_time": 16.0
+    },
+    {
+      "node": 31,
+      "arrival": 17.0,
+      "start_service": 17.0,
+      "window_lower": 3.0,
+      "window_upper": 11.0,
+      "early_violation": 0.0,
+      "late_violation": 6.0,
+      "time_window_penalty": 720.0,
+      "leave_time": 19.0
+    },
+    {
+      "node": 10,
+      "arrival": 20.0,
+      "start_service": 20.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 22.0
+    },
+    {
+      "node": 11,
+      "arrival": 23.0,
+      "start_service": 23.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 3.0,
+      "time_window_penalty": 180.0,
+      "leave_time": 25.0
+    },
+    {
+      "node": 19,
+      "arrival": 26.0,
+      "start_service": 26.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 12.0,
+      "time_window_penalty": 2880.0,
+      "leave_time": 28.0
+    },
+    {
+      "node": 7,
+      "arrival": 29.0,
+      "start_service": 29.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 15.0,
+      "time_window_penalty": 4500.0,
+      "leave_time": 31.0
+    },
+    {
+      "node": 18,
+      "arrival": 32.0,
+      "start_service": 32.0,
+      "window_lower": 10.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 18.0,
+      "time_window_penalty": 6480.0,
+      "leave_time": 34.0
+    },
+    {
+      "node": 8,
+      "arrival": 35.0,
+      "start_service": 35.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 17.0,
+      "time_window_penalty": 5780.0,
+      "leave_time": 37.0
+    },
+    {
+      "node": 17,
+      "arrival": 39.0,
+      "start_service": 39.0,
+      "window_lower": 7.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 14.0,
+      "time_window_penalty": 3920.0,
+      "leave_time": 41.0
+    },
+    {
+      "node": 16,
+      "arrival": 42.0,
+      "start_service": 42.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 28.0,
+      "time_window_penalty": 15680.0,
+      "leave_time": 44.0
+    },
+    {
+      "node": 5,
+      "arrival": 45.0,
+      "start_service": 45.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 31.0,
+      "time_window_penalty": 19220.0,
+      "leave_time": 47.0
+    },
+    {
+      "node": 6,
+      "arrival": 48.0,
+      "start_service": 48.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 28.0,
+      "time_window_penalty": 15680.0,
+      "leave_time": 50.0
+    },
+    {
+      "node": 13,
+      "arrival": 51.0,
+      "start_service": 51.0,
+      "window_lower": 9.0,
+      "window_upper": 27.0,
+      "early_violation": 0.0,
+      "late_violation": 24.0,
+      "time_window_penalty": 11520.0,
+      "leave_time": 53.0
+    },
+    {
+      "node": 40,
+      "arrival": 54.0,
+      "start_service": 54.0,
+      "window_lower": 7.0,
+      "window_upper": 17.0,
+      "early_violation": 0.0,
+      "late_violation": 37.0,
+      "time_window_penalty": 27380.0,
+      "leave_time": 56.0
+    },
+    {
+      "node": 2,
+      "arrival": 57.0,
+      "start_service": 57.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 0.0,
+      "late_violation": 45.0,
+      "time_window_penalty": 40500.0,
+      "leave_time": 59.0
+    },
+    {
+      "node": 37,
+      "arrival": 61.0,
+      "start_service": 61.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 40.0,
+      "time_window_penalty": 32000.0,
+      "leave_time": 63.0
+    },
+    {
+      "node": 44,
+      "arrival": 64.0,
+      "start_service": 64.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 46.0,
+      "time_window_penalty": 42320.0,
+      "leave_time": 66.0
+    },
+    {
+      "node": 14,
+      "arrival": 67.0,
+      "start_service": 67.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 49.0,
+      "time_window_penalty": 48020.0,
+      "leave_time": 69.0
+    },
+    {
+      "node": 43,
+      "arrival": 70.0,
+      "start_service": 70.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 49.0,
+      "time_window_penalty": 48020.0,
+      "leave_time": 72.0
+    },
+    {
+      "node": 15,
+      "arrival": 73.0,
+      "start_service": 73.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 53.0,
+      "time_window_penalty": 56180.0,
+      "leave_time": 75.0
+    },
+    {
+      "node": 42,
+      "arrival": 76.0,
+      "start_service": 76.0,
+      "window_lower": 3.0,
+      "window_upper": 22.0,
+      "early_violation": 0.0,
+      "late_violation": 54.0,
+      "time_window_penalty": 58320.0,
+      "leave_time": 78.0
+    },
+    {
+      "node": 41,
+      "arrival": 80.0,
+      "start_service": 80.0,
+      "window_lower": 6.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 59.0,
+      "time_window_penalty": 69620.0,
+      "leave_time": 82.0
+    },
+    {
+      "node": 22,
+      "arrival": 83.0,
+      "start_service": 83.0,
+      "window_lower": 8.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 64.0,
+      "time_window_penalty": 81920.0,
+      "leave_time": 85.0
+    },
+    {
+      "node": 21,
+      "arrival": 86.0,
+      "start_service": 86.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 73.0,
+      "time_window_penalty": 106580.0,
+      "leave_time": 88.0
+    },
+    {
+      "node": 26,
+      "arrival": 89.0,
+      "start_service": 89.0,
+      "window_lower": 15.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 69.0,
+      "time_window_penalty": 95220.0,
+      "leave_time": 91.0
+    },
+    {
+      "node": 4,
+      "arrival": 93.0,
+      "start_service": 93.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 68.0,
+      "time_window_penalty": 92480.0,
+      "leave_time": 95.0
+    },
+    {
+      "node": 39,
+      "arrival": 96.0,
+      "start_service": 96.0,
+      "window_lower": 4.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 72.0,
+      "time_window_penalty": 103680.0,
+      "leave_time": 98.0
+    },
+    {
+      "node": 25,
+      "arrival": 99.0,
+      "start_service": 99.0,
+      "window_lower": 6.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 75.0,
+      "time_window_penalty": 112500.0,
+      "leave_time": 101.0
+    },
+    {
+      "node": 24,
+      "arrival": 103.0,
+      "start_service": 103.0,
+      "window_lower": 15.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 78.0,
+      "time_window_penalty": 121680.0,
+      "leave_time": 105.0
+    },
+    {
+      "node": 29,
+      "arrival": 106.0,
+      "start_service": 106.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 93.0,
+      "time_window_penalty": 172980.0,
+      "leave_time": 108.0
+    },
+    {
+      "node": 34,
+      "arrival": 110.0,
+      "start_service": 110.0,
+      "window_lower": 13.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 91.0,
+      "time_window_penalty": 165620.0,
+      "leave_time": 112.0
+    },
+    {
+      "node": 35,
+      "arrival": 113.0,
+      "start_service": 113.0,
+      "window_lower": 7.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 90.0,
+      "time_window_penalty": 162000.0,
+      "leave_time": 115.0
+    },
+    {
+      "node": 9,
+      "arrival": 116.0,
+      "start_service": 116.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 96.0,
+      "time_window_penalty": 184320.0,
+      "leave_time": 118.0
+    },
+    {
+      "node": 33,
+      "arrival": 119.0,
+      "start_service": 119.0,
+      "window_lower": 3.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 96.0,
+      "time_window_penalty": 184320.0,
+      "leave_time": 121.0
+    },
+    {
+      "node": 50,
+      "arrival": 122.0,
+      "start_service": 122.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 102.0,
+      "time_window_penalty": 208080.0,
+      "leave_time": 124.0
+    },
+    {
+      "node": 30,
+      "arrival": 126.0,
+      "start_service": 126.0,
+      "window_lower": 4.0,
+      "window_upper": 16.0,
+      "early_violation": 0.0,
+      "late_violation": 110.0,
+      "time_window_penalty": 242000.0,
+      "leave_time": 128.0
+    },
+    {
+      "node": 20,
+      "arrival": 129.0,
+      "start_service": 129.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 109.0,
+      "time_window_penalty": 237620.0,
+      "leave_time": 131.0
+    },
+    {
+      "node": 32,
+      "arrival": 132.0,
+      "start_service": 132.0,
+      "window_lower": 15.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 109.0,
+      "time_window_penalty": 237620.0,
+      "leave_time": 134.0
+    },
+    {
+      "node": 49,
+      "arrival": 138.0,
+      "start_service": 138.0,
+      "window_lower": 12.0,
+      "window_upper": 17.0,
+      "early_violation": 0.0,
+      "late_violation": 121.0,
+      "time_window_penalty": 292820.0,
+      "leave_time": 140.0
+    },
+    {
+      "node": 36,
+      "arrival": 141.0,
+      "start_service": 141.0,
+      "window_lower": 5.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 118.0,
+      "time_window_penalty": 278480.0,
+      "leave_time": 143.0
+    },
+    {
+      "node": 46,
+      "arrival": 145.0,
+      "start_service": 145.0,
+      "window_lower": 12.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 125.0,
+      "time_window_penalty": 312500.0,
+      "leave_time": 147.0
+    },
+    {
+      "node": 45,
+      "arrival": 148.0,
+      "start_service": 148.0,
+      "window_lower": 4.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 123.0,
+      "time_window_penalty": 302580.0,
+      "leave_time": 150.0
+    },
+    {
+      "node": 47,
+      "arrival": 152.0,
+      "start_service": 152.0,
+      "window_lower": 4.0,
+      "window_upper": 15.0,
+      "early_violation": 0.0,
+      "late_violation": 137.0,
+      "time_window_penalty": 375380.0,
+      "leave_time": 154.0
+    },
+    {
+      "node": 48,
+      "arrival": 155.0,
+      "start_service": 155.0,
+      "window_lower": 16.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 130.0,
+      "time_window_penalty": 338000.0,
+      "leave_time": 157.0
+    },
+    {
+      "node": 38,
+      "arrival": 163.0,
+      "start_service": 163.0,
+      "window_lower": 5.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 144.0,
+      "time_window_penalty": 414720.0,
+      "leave_time": 165.0
+    },
+    {
+      "node": 23,
+      "arrival": 172.0,
+      "start_service": 172.0,
+      "window_lower": 5.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 152.0,
+      "time_window_penalty": 462080.0,
+      "leave_time": 174.0
+    }
+  ],
+  "decision_points": {
+    "分解策略": "时间窗感知 > 距离分解 > 仓库距离排序（融合时自动选择）",
+    "簇内求解预算": "seed_count_per_cluster 决定每个子问题稳定性",
+    "簇间修复": "postprocess + tw_repair 控制质量与运行时平衡"
+  },
+  "parameters": {
+    "n_customers": 50,
+    "cluster_size": 10,
+    "seed_count_per_cluster": 2,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "lambda_scale_ratio": null,
+    "tw_weight": 1.0,
+    "do_two_opt": true,
+    "decompose_strategy": "multi_start_fusion",
+    "postprocess_strategy": "two_opt",
+    "enable_tw_repair": true,
+    "qubo_cap": 15,
+    "seed_offset": 0,
+    "tw_violation_ratio_cap": 0.92
+  },
+  "diagnostics": {
+    "cluster_count": 5,
+    "cluster_max_size": 10,
+    "clusters": [
+      {
+        "cluster_index": 0,
+        "cluster_nodes": [
+          6,
+          13,
+          26,
+          27,
+          28,
+          40,
+          1,
+          2,
+          12,
+          18
+        ],
+        "cluster_size": 10,
+        "selected_seed": 20000,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 18.0,
+        "tw_penalty": 9960.0,
+        "objective": 9978.0
+      },
+      {
+        "cluster_index": 1,
+        "cluster_nodes": [
+          21,
+          31,
+          50,
+          3,
+          4,
+          5,
+          7,
+          8,
+          10,
+          30
+        ],
+        "cluster_size": 10,
+        "selected_seed": 20003,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 37.0,
+        "tw_penalty": 53030.0,
+        "objective": 53067.0
+      },
+      {
+        "cluster_index": 2,
+        "cluster_nodes": [
+          33,
+          37,
+          42,
+          9,
+          11,
+          14,
+          15,
+          16,
+          17,
+          19
+        ],
+        "cluster_size": 10,
+        "selected_seed": 20004,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 30.0,
+        "tw_penalty": 28590.0,
+        "objective": 28620.0
+      },
+      {
+        "cluster_index": 3,
+        "cluster_nodes": [
+          20,
+          22,
+          24,
+          25,
+          29,
+          32,
+          39,
+          41,
+          43,
+          44
+        ],
+        "cluster_size": 10,
+        "selected_seed": 20007,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 36.0,
+        "tw_penalty": 40090.0,
+        "objective": 40126.0
+      },
+      {
+        "cluster_index": 4,
+        "cluster_nodes": [
+          45,
+          47,
+          48,
+          23,
+          34,
+          35,
+          36,
+          46,
+          38,
+          49
+        ],
+        "cluster_size": 10,
+        "selected_seed": 20008,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 45.0,
+        "tw_penalty": 60200.0,
+        "objective": 60245.0
+      }
+    ],
+    "fusion_candidates": [
+      {
+        "decompose_strategy": "depot_distance",
+        "objective": 5794429.0,
+        "travel": 79.0,
+        "tw_penalty": 5794350.0,
+        "tw_violation_ratio": 0.92
+      },
+      {
+        "decompose_strategy": "distance_only",
+        "objective": 6257059.0,
+        "travel": 89.0,
+        "tw_penalty": 6256970.0,
+        "tw_violation_ratio": 0.92
+      },
+      {
+        "decompose_strategy": "distance_tw",
+        "objective": 7310925.0,
+        "travel": 95.0,
+        "tw_penalty": 7310830.0,
+        "tw_violation_ratio": 0.94
+      }
+    ],
+    "tw_violation_ratio": 0.92,
+    "feasibility_rate": 1.0,
+    "ablation_id": null,
+    "strategy_signature": "decompose=multi_start_fusion|chosen=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15",
+    "selection_reason": "multi_start_fusion selected by feasible-first objective",
+    "selected_decompose_strategy": "depot_distance",
+    "tw_penalty_dominance": 0.9999863662148591,
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "q3_q4_boost_v1",
+    "profile_version": "1.0.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/q3_q4_boost_v1.json",
+    "known_limitations": [
+      "在无等待假设下，Q3时间窗违反率仍偏高（约0.90量级），目标值受时间窗惩罚主导。",
+      "multi_start_fusion显著提升稳定性但增加运行时。"
+    ],
+    "profile_experiment_sources": [
+      "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313.json",
+      "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313_report.md",
+      "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313_paper.md"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 79.0,
+    "total_time_window_penalty": 5794350.0,
+    "total_objective": 5794429.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 90.87735762499506
+  },
+  "generated_at": "2026-04-17T21:44:18"
+}

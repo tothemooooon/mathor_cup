@@ -1,0 +1,5 @@
+group,run_id,status,objective,travel,tw_penalty,runtime_sec,selected_lambda,gap_to_dp_abs,gap_to_dp_ratio,objective_milp,subtour_cuts,solve_rounds,approximation_note
+QUBO_FIXED,0,ok,46265.0,35.0,46230.0,1.1878065420023631,200.0,36640.0,4.806753246753247,,,,
+QUBO_ADAPTIVE,0,ok,41404.0,34.0,41370.0,7.938546249992214,5.568888888888889,31779.0,4.301714285714286,,,,
+BRANCH_CUT,0,ok,14928.0,28.0,14900.0,20.356825041992124,,5303.0,1.5509610389610389,16401.200000000004,0,1,MILP objective uses piecewise linearized TW penalty
+DP_EXACT,0,ok,9625.0,25.0,9600.0,,,0.0,1.0,,,,
