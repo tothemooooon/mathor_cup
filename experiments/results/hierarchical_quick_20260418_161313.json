@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Q3",
+    "partition_strategy": "distance",
+    "n_partitions": 5,
+    "postprocess": "or_opt",
+    "objective": 6443434.0,
+    "travel": 94.0,
+    "tw_penalty": 6443340.0,
+    "tw_violation_ratio": 0.92,
+    "feasible": true,
+    "runtime_sec": 47.3471861659782
+  },
+  {
+    "question": "Q3",
+    "partition_strategy": "tw_pressure",
+    "n_partitions": 5,
+    "postprocess": "or_opt",
+    "objective": 8399573.0,
+    "travel": 113.0,
+    "tw_penalty": 8399460.0,
+    "tw_violation_ratio": 0.94,
+    "feasible": false,
+    "runtime_sec": 17.682672124996316
+  },
+  {
+    "question": "Q4",
+    "soft_strategy": "regret",
+    "n_vehicles": 6,
+    "postprocess": "or_opt",
+    "objective": 109903.0,
+    "travel": 143.0,
+    "tw_penalty": 109040.0,
+    "k": 6,
+    "tw_violation_ratio": 0.68,
+    "feasible": true,
+    "runtime_sec": 5.186432999995304
+  },
+  {
+    "question": "Q4",
+    "soft_strategy": "distance",
+    "n_vehicles": 6,
+    "postprocess": "or_opt",
+    "objective": 93693.0,
+    "travel": 133.0,
+    "tw_penalty": 92840.0,
+    "k": 6,
+    "tw_violation_ratio": 0.64,
+    "feasible": true,
+    "runtime_sec": 5.431808917026501
+  }
+]

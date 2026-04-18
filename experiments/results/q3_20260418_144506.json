@@ -1,0 +1,1751 @@
+{
+  "question": "Q3",
+  "method": "hybrid decomposition + QUBO subproblem + route repair",
+  "route": [
+    0,
+    27,
+    28,
+    12,
+    26,
+    40,
+    2,
+    13,
+    6,
+    37,
+    44,
+    16,
+    5,
+    17,
+    8,
+    18,
+    7,
+    19,
+    11,
+    10,
+    31,
+    1,
+    50,
+    30,
+    32,
+    20,
+    9,
+    33,
+    3,
+    29,
+    24,
+    25,
+    39,
+    41,
+    42,
+    14,
+    43,
+    15,
+    22,
+    23,
+    21,
+    4,
+    34,
+    35,
+    48,
+    45,
+    46,
+    47,
+    36,
+    49,
+    38,
+    0
+  ],
+  "routes": null,
+  "per_customer": [
+    {
+      "node": 27,
+      "arrival": 1.0,
+      "start_service": 1.0,
+      "window_lower": 1.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 3.0
+    },
+    {
+      "node": 28,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 1.0,
+      "window_upper": 10.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 6.0
+    },
+    {
+      "node": 12,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0
+    },
+    {
+      "node": 26,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 15.0,
+      "window_upper": 20.0,
+      "early_violation": 5.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 250.0,
+      "leave_time": 12.0
+    },
+    {
+      "node": 40,
+      "arrival": 13.0,
+      "start_service": 13.0,
+      "window_lower": 7.0,
+      "window_upper": 17.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 15.0
+    },
+    {
+      "node": 2,
+      "arrival": 16.0,
+      "start_service": 16.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 0.0,
+      "late_violation": 4.0,
+      "time_window_penalty": 320.0,
+      "leave_time": 18.0
+    },
+    {
+      "node": 13,
+      "arrival": 19.0,
+      "start_service": 19.0,
+      "window_lower": 9.0,
+      "window_upper": 27.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 21.0
+    },
+    {
+      "node": 6,
+      "arrival": 22.0,
+      "start_service": 22.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 2.0,
+      "time_window_penalty": 80.0,
+      "leave_time": 24.0
+    },
+    {
+      "node": 37,
+      "arrival": 25.0,
+      "start_service": 25.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 4.0,
+      "time_window_penalty": 320.0,
+      "leave_time": 27.0
+    },
+    {
+      "node": 44,
+      "arrival": 28.0,
+      "start_service": 28.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 10.0,
+      "time_window_penalty": 2000.0,
+      "leave_time": 30.0
+    },
+    {
+      "node": 16,
+      "arrival": 31.0,
+      "start_service": 31.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 17.0,
+      "time_window_penalty": 5780.0,
+      "leave_time": 33.0
+    },
+    {
+      "node": 5,
+      "arrival": 34.0,
+      "start_service": 34.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 20.0,
+      "time_window_penalty": 8000.0,
+      "leave_time": 36.0
+    },
+    {
+      "node": 17,
+      "arrival": 37.0,
+      "start_service": 37.0,
+      "window_lower": 7.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 12.0,
+      "time_window_penalty": 2880.0,
+      "leave_time": 39.0
+    },
+    {
+      "node": 8,
+      "arrival": 41.0,
+      "start_service": 41.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 23.0,
+      "time_window_penalty": 10580.0,
+      "leave_time": 43.0
+    },
+    {
+      "node": 18,
+      "arrival": 44.0,
+      "start_service": 44.0,
+      "window_lower": 10.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 30.0,
+      "time_window_penalty": 18000.0,
+      "leave_time": 46.0
+    },
+    {
+      "node": 7,
+      "arrival": 47.0,
+      "start_service": 47.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 33.0,
+      "time_window_penalty": 21780.0,
+      "leave_time": 49.0
+    },
+    {
+      "node": 19,
+      "arrival": 50.0,
+      "start_service": 50.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 36.0,
+      "time_window_penalty": 25920.0,
+      "leave_time": 52.0
+    },
+    {
+      "node": 11,
+      "arrival": 53.0,
+      "start_service": 53.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 33.0,
+      "time_window_penalty": 21780.0,
+      "leave_time": 55.0
+    },
+    {
+      "node": 10,
+      "arrival": 56.0,
+      "start_service": 56.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 36.0,
+      "time_window_penalty": 25920.0,
+      "leave_time": 58.0
+    },
+    {
+      "node": 31,
+      "arrival": 59.0,
+      "start_service": 59.0,
+      "window_lower": 3.0,
+      "window_upper": 11.0,
+      "early_violation": 0.0,
+      "late_violation": 48.0,
+      "time_window_penalty": 46080.0,
+      "leave_time": 61.0
+    },
+    {
+      "node": 1,
+      "arrival": 62.0,
+      "start_service": 62.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 0.0,
+      "late_violation": 36.0,
+      "time_window_penalty": 25920.0,
+      "leave_time": 64.0
+    },
+    {
+      "node": 50,
+      "arrival": 65.0,
+      "start_service": 65.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 45.0,
+      "time_window_penalty": 40500.0,
+      "leave_time": 67.0
+    },
+    {
+      "node": 30,
+      "arrival": 69.0,
+      "start_service": 69.0,
+      "window_lower": 4.0,
+      "window_upper": 16.0,
+      "early_violation": 0.0,
+      "late_violation": 53.0,
+      "time_window_penalty": 56180.0,
+      "leave_time": 71.0
+    },
+    {
+      "node": 32,
+      "arrival": 72.0,
+      "start_service": 72.0,
+      "window_lower": 15.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 49.0,
+      "time_window_penalty": 48020.0,
+      "leave_time": 74.0
+    },
+    {
+      "node": 20,
+      "arrival": 75.0,
+      "start_service": 75.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 55.0,
+      "time_window_penalty": 60500.0,
+      "leave_time": 77.0
+    },
+    {
+      "node": 9,
+      "arrival": 78.0,
+      "start_service": 78.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 58.0,
+      "time_window_penalty": 67280.0,
+      "leave_time": 80.0
+    },
+    {
+      "node": 33,
+      "arrival": 81.0,
+      "start_service": 81.0,
+      "window_lower": 3.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 58.0,
+      "time_window_penalty": 67280.0,
+      "leave_time": 83.0
+    },
+    {
+      "node": 3,
+      "arrival": 84.0,
+      "start_service": 84.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 66.0,
+      "time_window_penalty": 87120.0,
+      "leave_time": 86.0
+    },
+    {
+      "node": 29,
+      "arrival": 87.0,
+      "start_service": 87.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 74.0,
+      "time_window_penalty": 109520.0,
+      "leave_time": 89.0
+    },
+    {
+      "node": 24,
+      "arrival": 90.0,
+      "start_service": 90.0,
+      "window_lower": 15.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 65.0,
+      "time_window_penalty": 84500.0,
+      "leave_time": 92.0
+    },
+    {
+      "node": 25,
+      "arrival": 94.0,
+      "start_service": 94.0,
+      "window_lower": 6.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 70.0,
+      "time_window_penalty": 98000.0,
+      "leave_time": 96.0
+    },
+    {
+      "node": 39,
+      "arrival": 97.0,
+      "start_service": 97.0,
+      "window_lower": 4.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 73.0,
+      "time_window_penalty": 106580.0,
+      "leave_time": 99.0
+    },
+    {
+      "node": 41,
+      "arrival": 101.0,
+      "start_service": 101.0,
+      "window_lower": 6.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 80.0,
+      "time_window_penalty": 128000.0,
+      "leave_time": 103.0
+    },
+    {
+      "node": 42,
+      "arrival": 105.0,
+      "start_service": 105.0,
+      "window_lower": 3.0,
+      "window_upper": 22.0,
+      "early_violation": 0.0,
+      "late_violation": 83.0,
+      "time_window_penalty": 137780.0,
+      "leave_time": 107.0
+    },
+    {
+      "node": 14,
+      "arrival": 108.0,
+      "start_service": 108.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 90.0,
+      "time_window_penalty": 162000.0,
+      "leave_time": 110.0
+    },
+    {
+      "node": 43,
+      "arrival": 111.0,
+      "start_service": 111.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 90.0,
+      "time_window_penalty": 162000.0,
+      "leave_time": 113.0
+    },
+    {
+      "node": 15,
+      "arrival": 114.0,
+      "start_service": 114.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 94.0,
+      "time_window_penalty": 176720.0,
+      "leave_time": 116.0
+    },
+    {
+      "node": 22,
+      "arrival": 118.0,
+      "start_service": 118.0,
+      "window_lower": 8.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 99.0,
+      "time_window_penalty": 196020.0,
+      "leave_time": 120.0
+    },
+    {
+      "node": 23,
+      "arrival": 121.0,
+      "start_service": 121.0,
+      "window_lower": 5.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 101.0,
+      "time_window_penalty": 204020.0,
+      "leave_time": 123.0
+    },
+    {
+      "node": 21,
+      "arrival": 125.0,
+      "start_service": 125.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 112.0,
+      "time_window_penalty": 250880.0,
+      "leave_time": 127.0
+    },
+    {
+      "node": 4,
+      "arrival": 128.0,
+      "start_service": 128.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 103.0,
+      "time_window_penalty": 212180.0,
+      "leave_time": 130.0
+    },
+    {
+      "node": 34,
+      "arrival": 135.0,
+      "start_service": 135.0,
+      "window_lower": 13.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 116.0,
+      "time_window_penalty": 269120.0,
+      "leave_time": 137.0
+    },
+    {
+      "node": 35,
+      "arrival": 138.0,
+      "start_service": 138.0,
+      "window_lower": 7.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 115.0,
+      "time_window_penalty": 264500.0,
+      "leave_time": 140.0
+    },
+    {
+      "node": 48,
+      "arrival": 147.0,
+      "start_service": 147.0,
+      "window_lower": 16.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 122.0,
+      "time_window_penalty": 297680.0,
+      "leave_time": 149.0
+    },
+    {
+      "node": 45,
+      "arrival": 151.0,
+      "start_service": 151.0,
+      "window_lower": 4.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 126.0,
+      "time_window_penalty": 317520.0,
+      "leave_time": 153.0
+    },
+    {
+      "node": 46,
+      "arrival": 154.0,
+      "start_service": 154.0,
+      "window_lower": 12.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 134.0,
+      "time_window_penalty": 359120.0,
+      "leave_time": 156.0
+    },
+    {
+      "node": 47,
+      "arrival": 157.0,
+      "start_service": 157.0,
+      "window_lower": 4.0,
+      "window_upper": 15.0,
+      "early_violation": 0.0,
+      "late_violation": 142.0,
+      "time_window_penalty": 403280.0,
+      "leave_time": 159.0
+    },
+    {
+      "node": 36,
+      "arrival": 160.0,
+      "start_service": 160.0,
+      "window_lower": 5.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 137.0,
+      "time_window_penalty": 375380.0,
+      "leave_time": 162.0
+    },
+    {
+      "node": 49,
+      "arrival": 163.0,
+      "start_service": 163.0,
+      "window_lower": 12.0,
+      "window_upper": 17.0,
+      "early_violation": 0.0,
+      "late_violation": 146.0,
+      "time_window_penalty": 426320.0,
+      "leave_time": 165.0
+    },
+    {
+      "node": 38,
+      "arrival": 173.0,
+      "start_service": 173.0,
+      "window_lower": 5.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 154.0,
+      "time_window_penalty": 474320.0,
+      "leave_time": 175.0
+    }
+  ],
+  "decision_points": {
+    "分解策略": "时间窗感知 > 距离分解 > 仓库距离排序（融合时自动选择）",
+    "簇内求解预算": "seed_count_per_cluster 决定每个子问题稳定性",
+    "簇间修复": "postprocess + tw_repair 控制质量与运行时平衡",
+    "簇级自适应λ": "每个簇单独做可行率/目标改善驱动的lambda调节"
+  },
+  "parameters": {
+    "n_customers": 50,
+    "cluster_size": 8,
+    "seed_count_per_cluster": 2,
+    "lambda_pos": 200.0,
+    "lambda_cus": 200.0,
+    "lambda_scale_ratio": null,
+    "tw_weight": 1.0,
+    "do_two_opt": true,
+    "decompose_strategy": "multi_start_fusion",
+    "postprocess_strategy": "two_opt",
+    "enable_tw_repair": true,
+    "qubo_cap": 15,
+    "seed_offset": 0,
+    "tw_violation_ratio_cap": 0.92,
+    "use_adaptive_lambda": true,
+    "adaptive_rounds": 4,
+    "adaptive_budget": 3,
+    "exact_benchmark_cap": 12
+  },
+  "diagnostics": {
+    "cluster_count": 7,
+    "cluster_max_size": 8,
+    "clusters": [
+      {
+        "cluster_index": 0,
+        "cluster_nodes": [
+          6,
+          13,
+          26,
+          27,
+          28,
+          40,
+          1,
+          2
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20010,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "travel": 15.0,
+        "tw_penalty": 3280.0,
+        "objective": 3295.0,
+        "route": [
+          0,
+          2,
+          40,
+          26,
+          1,
+          28,
+          13,
+          6,
+          27,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2823.0,
+            "best_seed": 20002,
+            "best_travel": 13.0,
+            "best_tw_penalty": 2810.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 3464.0,
+            "best_seed": 20003,
+            "best_travel": 14.0,
+            "best_tw_penalty": 3450.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 3582.0,
+            "best_seed": 20008,
+            "best_travel": 12.0,
+            "best_tw_penalty": 3570.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 1,
+        "cluster_nodes": [
+          12,
+          18,
+          21,
+          31,
+          50,
+          3,
+          4,
+          5
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20023,
+        "lambda_pos": 170.0,
+        "lambda_cus": 170.0,
+        "travel": 18.0,
+        "tw_penalty": 4580.0,
+        "objective": 4598.0,
+        "route": [
+          0,
+          5,
+          18,
+          31,
+          12,
+          21,
+          4,
+          3,
+          50,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11111.0,
+            "best_seed": 20013,
+            "best_travel": 21.0,
+            "best_tw_penalty": 11090.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 7976.0,
+            "best_seed": 20015,
+            "best_travel": 16.0,
+            "best_tw_penalty": 7960.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 12068.0,
+            "best_seed": 20018,
+            "best_travel": 18.0,
+            "best_tw_penalty": 12050.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 8052.0,
+            "best_seed": 20020,
+            "best_travel": 22.0,
+            "best_tw_penalty": 8030.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 2,
+        "cluster_nodes": [
+          7,
+          8,
+          10,
+          30,
+          33,
+          37,
+          42,
+          9
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20037,
+        "lambda_pos": 170.0,
+        "lambda_cus": 170.0,
+        "travel": 25.0,
+        "tw_penalty": 10140.0,
+        "objective": 10165.0,
+        "route": [
+          0,
+          30,
+          10,
+          8,
+          37,
+          42,
+          7,
+          9,
+          33,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 10121.0,
+            "best_seed": 20027,
+            "best_travel": 21.0,
+            "best_tw_penalty": 10100.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 4431.0,
+            "best_seed": 20028,
+            "best_travel": 21.0,
+            "best_tw_penalty": 4410.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 9964.0,
+            "best_seed": 20032,
+            "best_travel": 24.0,
+            "best_tw_penalty": 9940.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 6885.0,
+            "best_seed": 20035,
+            "best_travel": 25.0,
+            "best_tw_penalty": 6860.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 3,
+        "cluster_nodes": [
+          11,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          22
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20051,
+        "lambda_pos": 122.825,
+        "lambda_cus": 122.825,
+        "travel": 30.0,
+        "tw_penalty": 15430.0,
+        "objective": 15460.0,
+        "route": [
+          0,
+          17,
+          14,
+          16,
+          19,
+          11,
+          20,
+          22,
+          15,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 18102.0,
+            "best_seed": 20041,
+            "best_travel": 32.0,
+            "best_tw_penalty": 18070.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 15972.0,
+            "best_seed": 20043,
+            "best_travel": 32.0,
+            "best_tw_penalty": 15940.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 25703.0,
+            "best_seed": 20045,
+            "best_travel": 33.0,
+            "best_tw_penalty": 25670.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 15118.0,
+            "best_seed": 20050,
+            "best_travel": 28.0,
+            "best_tw_penalty": 15090.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 4,
+        "cluster_nodes": [
+          24,
+          25,
+          29,
+          32,
+          39,
+          41,
+          43,
+          44
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20066,
+        "lambda_pos": 170.0,
+        "lambda_cus": 170.0,
+        "travel": 24.0,
+        "tw_penalty": 6830.0,
+        "objective": 6854.0,
+        "route": [
+          0,
+          44,
+          43,
+          41,
+          39,
+          25,
+          24,
+          29,
+          32,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11238.0,
+            "best_seed": 20053,
+            "best_travel": 28.0,
+            "best_tw_penalty": 11210.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 6956.0,
+            "best_seed": 20057,
+            "best_travel": 26.0,
+            "best_tw_penalty": 6930.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 8304.0,
+            "best_seed": 20061,
+            "best_travel": 24.0,
+            "best_tw_penalty": 8280.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 24824.0,
+            "best_seed": 20064,
+            "best_travel": 34.0,
+            "best_tw_penalty": 24790.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 5,
+        "cluster_nodes": [
+          45,
+          47,
+          48,
+          23,
+          34,
+          35,
+          36,
+          46
+        ],
+        "cluster_size": 8,
+        "selected_seed": 20080,
+        "lambda_pos": 170.0,
+        "lambda_cus": 170.0,
+        "travel": 30.0,
+        "tw_penalty": 17840.0,
+        "objective": 17870.0,
+        "route": [
+          0,
+          23,
+          34,
+          35,
+          48,
+          45,
+          46,
+          47,
+          36,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 13212.0,
+            "best_seed": 20067,
+            "best_travel": 32.0,
+            "best_tw_penalty": 13180.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11762.0,
+            "best_seed": 20071,
+            "best_travel": 32.0,
+            "best_tw_penalty": 11730.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 14602.0,
+            "best_seed": 20075,
+            "best_travel": 32.0,
+            "best_tw_penalty": 14570.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 18954.0,
+            "best_seed": 20077,
+            "best_travel": 34.0,
+            "best_tw_penalty": 18920.0
+          }
+        ]
+      },
+      {
+        "cluster_index": 6,
+        "cluster_nodes": [
+          38,
+          49
+        ],
+        "cluster_size": 2,
+        "selected_seed": 20090,
+        "lambda_pos": 170.0,
+        "lambda_cus": 170.0,
+        "travel": 20.0,
+        "tw_penalty": 360.0,
+        "objective": 380.0,
+        "route": [
+          0,
+          49,
+          38,
+          0
+        ],
+        "adaptive_trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 20.0,
+            "best_seed": 20082,
+            "best_travel": 20.0,
+            "best_tw_penalty": 0.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 20.0,
+            "best_seed": 20084,
+            "best_travel": 20.0,
+            "best_tw_penalty": 0.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 380.0,
+            "best_seed": 20087,
+            "best_travel": 20.0,
+            "best_tw_penalty": 360.0
+          }
+        ]
+      }
+    ],
+    "adaptive_trace": [
+      {
+        "cluster_index": 0,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 2823.0,
+            "best_seed": 20002,
+            "best_travel": 13.0,
+            "best_tw_penalty": 2810.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 3464.0,
+            "best_seed": 20003,
+            "best_travel": 14.0,
+            "best_tw_penalty": 3450.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 3582.0,
+            "best_seed": 20008,
+            "best_travel": 12.0,
+            "best_tw_penalty": 3570.0
+          }
+        ],
+        "selected_lambda": 200.0
+      },
+      {
+        "cluster_index": 1,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11111.0,
+            "best_seed": 20013,
+            "best_travel": 21.0,
+            "best_tw_penalty": 11090.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 7976.0,
+            "best_seed": 20015,
+            "best_travel": 16.0,
+            "best_tw_penalty": 7960.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 12068.0,
+            "best_seed": 20018,
+            "best_travel": 18.0,
+            "best_tw_penalty": 12050.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 8052.0,
+            "best_seed": 20020,
+            "best_travel": 22.0,
+            "best_tw_penalty": 8030.0
+          }
+        ],
+        "selected_lambda": 170.0
+      },
+      {
+        "cluster_index": 2,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 10121.0,
+            "best_seed": 20027,
+            "best_travel": 21.0,
+            "best_tw_penalty": 10100.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 4431.0,
+            "best_seed": 20028,
+            "best_travel": 21.0,
+            "best_tw_penalty": 4410.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 9964.0,
+            "best_seed": 20032,
+            "best_travel": 24.0,
+            "best_tw_penalty": 9940.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 6885.0,
+            "best_seed": 20035,
+            "best_travel": 25.0,
+            "best_tw_penalty": 6860.0
+          }
+        ],
+        "selected_lambda": 170.0
+      },
+      {
+        "cluster_index": 3,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 18102.0,
+            "best_seed": 20041,
+            "best_travel": 32.0,
+            "best_tw_penalty": 18070.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 15972.0,
+            "best_seed": 20043,
+            "best_travel": 32.0,
+            "best_tw_penalty": 15940.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 25703.0,
+            "best_seed": 20045,
+            "best_travel": 33.0,
+            "best_tw_penalty": 25670.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 15118.0,
+            "best_seed": 20050,
+            "best_travel": 28.0,
+            "best_tw_penalty": 15090.0
+          }
+        ],
+        "selected_lambda": 122.825
+      },
+      {
+        "cluster_index": 4,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11238.0,
+            "best_seed": 20053,
+            "best_travel": 28.0,
+            "best_tw_penalty": 11210.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 6956.0,
+            "best_seed": 20057,
+            "best_travel": 26.0,
+            "best_tw_penalty": 6930.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 8304.0,
+            "best_seed": 20061,
+            "best_travel": 24.0,
+            "best_tw_penalty": 8280.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 24824.0,
+            "best_seed": 20064,
+            "best_travel": 34.0,
+            "best_tw_penalty": 24790.0
+          }
+        ],
+        "selected_lambda": 170.0
+      },
+      {
+        "cluster_index": 5,
+        "cluster_size": 8,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 13212.0,
+            "best_seed": 20067,
+            "best_travel": 32.0,
+            "best_tw_penalty": 13180.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 11762.0,
+            "best_seed": 20071,
+            "best_travel": 32.0,
+            "best_tw_penalty": 11730.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 14602.0,
+            "best_seed": 20075,
+            "best_travel": 32.0,
+            "best_tw_penalty": 14570.0
+          },
+          {
+            "round": 4,
+            "lambda": 122.825,
+            "feasible_rate": 1.0,
+            "best_objective": 18954.0,
+            "best_seed": 20077,
+            "best_travel": 34.0,
+            "best_tw_penalty": 18920.0
+          }
+        ],
+        "selected_lambda": 170.0
+      },
+      {
+        "cluster_index": 6,
+        "cluster_size": 2,
+        "trace": [
+          {
+            "round": 1,
+            "lambda": 200.0,
+            "feasible_rate": 1.0,
+            "best_objective": 20.0,
+            "best_seed": 20082,
+            "best_travel": 20.0,
+            "best_tw_penalty": 0.0
+          },
+          {
+            "round": 2,
+            "lambda": 170.0,
+            "feasible_rate": 1.0,
+            "best_objective": 20.0,
+            "best_seed": 20084,
+            "best_travel": 20.0,
+            "best_tw_penalty": 0.0
+          },
+          {
+            "round": 3,
+            "lambda": 144.5,
+            "feasible_rate": 1.0,
+            "best_objective": 380.0,
+            "best_seed": 20087,
+            "best_travel": 20.0,
+            "best_tw_penalty": 360.0
+          }
+        ],
+        "selected_lambda": 170.0
+      }
+    ],
+    "best_by_lambda": [
+      {
+        "lambda": 122.825,
+        "best_objective": 15460.0
+      },
+      {
+        "lambda": 170.0,
+        "best_objective": 380.0
+      },
+      {
+        "lambda": 200.0,
+        "best_objective": 3295.0
+      }
+    ],
+    "fusion_candidates": [
+      {
+        "decompose_strategy": "depot_distance",
+        "objective": 5858011.0,
+        "travel": 81.0,
+        "tw_penalty": 5857930.0,
+        "tw_violation_ratio": 0.9
+      },
+      {
+        "decompose_strategy": "distance_tw",
+        "objective": 6031979.0,
+        "travel": 79.0,
+        "tw_penalty": 6031900.0,
+        "tw_violation_ratio": 0.9
+      },
+      {
+        "decompose_strategy": "distance_only",
+        "objective": 6223057.0,
+        "travel": 97.0,
+        "tw_penalty": 6222960.0,
+        "tw_violation_ratio": 0.88
+      }
+    ],
+    "tw_violation_ratio": 0.9,
+    "feasibility_rate": 1.0,
+    "ablation_id": null,
+    "strategy_signature": "decompose=multi_start_fusion|chosen=depot_distance|post=two_opt|tw_repair=True|qubo_cap=15",
+    "selection_reason": "multi_start_fusion selected by feasible-first objective",
+    "selected_decompose_strategy": "depot_distance",
+    "tw_penalty_dominance": 0.999986172781171,
+    "subproblem_exact_benchmark": [
+      {
+        "cluster_index": 0,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 3295.0,
+        "exact_objective": 35.0,
+        "gap_abs": 3260.0,
+        "gap_ratio": 94.14285714285714,
+        "heuristic_route": [
+          0,
+          2,
+          40,
+          26,
+          1,
+          28,
+          13,
+          6,
+          27,
+          0
+        ],
+        "exact_route": [
+          0,
+          27,
+          28,
+          6,
+          2,
+          40,
+          26,
+          13,
+          1,
+          0
+        ]
+      },
+      {
+        "cluster_index": 1,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 4598.0,
+        "exact_objective": 2530.0,
+        "gap_abs": 2068.0,
+        "gap_ratio": 1.817391304347826,
+        "heuristic_route": [
+          0,
+          5,
+          18,
+          31,
+          12,
+          21,
+          4,
+          3,
+          50,
+          0
+        ],
+        "exact_route": [
+          0,
+          31,
+          18,
+          5,
+          21,
+          12,
+          3,
+          50,
+          4,
+          0
+        ]
+      },
+      {
+        "cluster_index": 2,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 10165.0,
+        "exact_objective": 1868.0,
+        "gap_abs": 8297.0,
+        "gap_ratio": 5.441648822269808,
+        "heuristic_route": [
+          0,
+          30,
+          10,
+          8,
+          37,
+          42,
+          7,
+          9,
+          33,
+          0
+        ],
+        "exact_route": [
+          0,
+          33,
+          9,
+          30,
+          10,
+          7,
+          8,
+          37,
+          42,
+          0
+        ]
+      },
+      {
+        "cluster_index": 3,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 15460.0,
+        "exact_objective": 6062.0,
+        "gap_abs": 9398.0,
+        "gap_ratio": 2.5503134279115804,
+        "heuristic_route": [
+          0,
+          17,
+          14,
+          16,
+          19,
+          11,
+          20,
+          22,
+          15,
+          0
+        ],
+        "exact_route": [
+          0,
+          22,
+          15,
+          14,
+          16,
+          17,
+          19,
+          11,
+          20,
+          0
+        ]
+      },
+      {
+        "cluster_index": 4,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 6854.0,
+        "exact_objective": 6297.0,
+        "gap_abs": 557.0,
+        "gap_ratio": 1.0884548197554391,
+        "heuristic_route": [
+          0,
+          44,
+          43,
+          41,
+          39,
+          25,
+          24,
+          29,
+          32,
+          0
+        ],
+        "exact_route": [
+          0,
+          29,
+          24,
+          25,
+          39,
+          41,
+          43,
+          44,
+          32,
+          0
+        ]
+      },
+      {
+        "cluster_index": 5,
+        "cluster_size": 8,
+        "status": "ok",
+        "heuristic_objective": 17870.0,
+        "exact_objective": 8939.0,
+        "gap_abs": 8931.0,
+        "gap_ratio": 1.9991050453070813,
+        "heuristic_route": [
+          0,
+          23,
+          34,
+          35,
+          48,
+          45,
+          46,
+          47,
+          36,
+          0
+        ],
+        "exact_route": [
+          0,
+          45,
+          46,
+          47,
+          36,
+          48,
+          35,
+          34,
+          23,
+          0
+        ]
+      },
+      {
+        "cluster_index": 6,
+        "cluster_size": 2,
+        "status": "ok",
+        "heuristic_objective": 380.0,
+        "exact_objective": 20.0,
+        "gap_abs": 360.0,
+        "gap_ratio": 19.0,
+        "heuristic_route": [
+          0,
+          49,
+          38,
+          0
+        ],
+        "exact_route": [
+          0,
+          38,
+          49,
+          0
+        ]
+      }
+    ],
+    "cluster_gap_median": 3260.0,
+    "cluster_gap_p90": 9117.8,
+    "cluster_gap_max": 9398.0,
+    "exact_reference": {
+      "mode": "subproblem_only",
+      "cap": 12
+    },
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "q3_q4_candidate_v2",
+    "profile_version": "0.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/q3_q4_candidate_v2.json",
+    "known_limitations": [
+      "cluster_size=8 目前来自快速单seed扫描，需做5-seed回归确认。",
+      "Q3目标值仍由时间窗惩罚主导。"
+    ],
+    "profile_experiment_sources": [
+      "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313.json",
+      "experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_summary.csv"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 81.0,
+    "total_time_window_penalty": 5857930.0,
+    "total_objective": 5858011.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 216.14293679199181
+  },
+  "generated_at": "2026-04-18T14:45:06"
+}

@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-04-18T14:36:22",
+  "seed": 0,
+  "best_by_group": [
+    {
+      "question": "Q3",
+      "group": "cluster_size",
+      "setting": "cluster_size=8",
+      "feasible": 1,
+      "objective": 5858011.0,
+      "tw_violation_ratio": 0.9,
+      "runtime_sec": 233.84294358399347,
+      "selected_k": ""
+    },
+    {
+      "question": "Q3",
+      "group": "qubo_cap",
+      "setting": "qubo_cap=15",
+      "feasible": 1,
+      "objective": 6600665.0,
+      "tw_violation_ratio": 0.88,
+      "runtime_sec": 164.91287091601407,
+      "selected_k": ""
+    },
+    {
+      "question": "Q4",
+      "group": "qubo_cap",
+      "setting": "qubo_cap=12",
+      "feasible": 1,
+      "objective": 96579.0,
+      "tw_violation_ratio": 0.68,
+      "runtime_sec": 115.91166641699965,
+      "selected_k": 5
+    },
+    {
+      "question": "Q4",
+      "group": "seed_count_per_vehicle",
+      "setting": "seed_count_per_vehicle=1",
+      "feasible": 1,
+      "objective": 96579.0,
+      "tw_violation_ratio": 0.68,
+      "runtime_sec": 116.31800345800002,
+      "selected_k": 5
+    },
+    {
+      "question": "Q4",
+      "group": "vehicle_scan_range",
+      "setting": "k_range=5-8",
+      "feasible": 1,
+      "objective": 96579.0,
+      "tw_violation_ratio": 0.68,
+      "runtime_sec": 126.67874825000763,
+      "selected_k": 5
+    }
+  ],
+  "raw_csv": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_raw.csv",
+  "summary_csv": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_summary.csv"
+}

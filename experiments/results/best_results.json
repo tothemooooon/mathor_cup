@@ -1,0 +1,20 @@
+{
+  "Q3": {
+    "best_travel": 70.0,
+    "tw_weight": 0.0,
+    "n_partitions": 10,
+    "partition_strategy": "distance",
+    "seed_count_per_subgraph": 8,
+    "target": 62,
+    "gap": 8.0
+  },
+  "Q4": {
+    "best_travel": 133.0,
+    "soft_strategy": "distance",
+    "n_vehicles": 5,
+    "vehicle_weight": 80,
+    "target": 117,
+    "gap": 16.0
+  },
+  "notes": "Q3 travel=70接近62目标，Q4差距较大需要更多优化"
+}
