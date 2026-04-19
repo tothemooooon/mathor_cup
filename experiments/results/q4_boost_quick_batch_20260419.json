@@ -1,0 +1,68 @@
+[
+  {
+    "name": "F_ffd_or_k5_14_i16_c4_swapT",
+    "travel": 109.0,
+    "objective": 51749.0,
+    "tw_penalty": 51640.0,
+    "feasible": true,
+    "selected_k": 5,
+    "tw_vr": 0.68,
+    "refine_moves": 16,
+    "runtime_sec": 118.90341841700138
+  },
+  {
+    "name": "E_twpress_or_k5_14_i16_c4_swapT",
+    "travel": 110.0,
+    "objective": 54370.0,
+    "tw_penalty": 54260.0,
+    "feasible": true,
+    "selected_k": 5,
+    "tw_vr": 0.64,
+    "refine_moves": 16,
+    "runtime_sec": 125.68549891700968
+  },
+  {
+    "name": "D_regret_two_k5_14_i16_c4_swapT",
+    "travel": 112.0,
+    "objective": 56682.0,
+    "tw_penalty": 56570.0,
+    "feasible": true,
+    "selected_k": 5,
+    "tw_vr": 0.62,
+    "refine_moves": 16,
+    "runtime_sec": 103.50457895899308
+  },
+  {
+    "name": "B_regret_or_k5_14_i16_c4_swapT",
+    "travel": 114.0,
+    "objective": 40504.0,
+    "tw_penalty": 40390.0,
+    "feasible": true,
+    "selected_k": 5,
+    "tw_vr": 0.62,
+    "refine_moves": 16,
+    "runtime_sec": 109.4574356249941
+  },
+  {
+    "name": "C_regret_or_k5_14_i16_c4_swapF",
+    "travel": 119.0,
+    "objective": 12489.0,
+    "tw_penalty": 12370.0,
+    "feasible": true,
+    "selected_k": 6,
+    "tw_vr": 0.6,
+    "refine_moves": 16,
+    "runtime_sec": 106.66595316698658
+  },
+  {
+    "name": "A_regret_or_k5_14_i8_c3_swapT",
+    "travel": 124.0,
+    "objective": 69664.0,
+    "tw_penalty": 69540.0,
+    "feasible": true,
+    "selected_k": 5,
+    "tw_vr": 0.66,
+    "refine_moves": 8,
+    "runtime_sec": 67.04183250002097
+  }
+]

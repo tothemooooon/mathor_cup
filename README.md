@@ -1,5 +1,19 @@
 # MathorCup 2026 A题工作流
 
+## 当前目录建议
+
+```text
+A题/
+├─ src/mathorcup_a/               # 核心求解代码
+├─ configs/                       # profile配置
+├─ scripts/                       # 辅助脚本（复现/批处理入口）
+├─ experiments/results/           # 历史实验结果
+├─ artifacts/repro/               # 最新复现报告与复现实验落盘
+├─ 建模全说明.md                  # 当前主线完整说明
+├─ 建模总纲.md                    # 项目记忆与决策日志
+└─ BASELINE说明.md                # baseline 固化说明
+```
+
 ## Baseline 思路与结果速览
 
 - Q1：标准 QUBO-TSP（单车、无时间窗无容量），通过位置唯一+客户唯一惩罚建模。
@@ -23,6 +37,39 @@ python run_baseline.py --profile baseline_v1 --question Q2
 python run_baseline.py --profile baseline_v1 --question Q3
 python run_baseline.py --profile baseline_v1 --question Q4
 ```
+
+## 最佳主线一键复现（当前推荐）
+
+```bash
+uv run python scripts/reproduce_best_results.py
+```
+
+- profile：`configs/best_mainline_v1.json`
+- 复现报告：`artifacts/repro/latest_repro_summary.md`
+- 单问输出：`artifacts/repro/runs/*.json`
+
+## 图表一键生成（项目说明图册）
+
+```bash
+uv run python scripts/generate_project_charts.py
+```
+
+- 图表目录：`artifacts/plots/`
+- 图册索引：`artifacts/plots/INDEX.md`
+- 结果摘要：`artifacts/plots/RESULTS_SUMMARY.md`
+- 结果表格：`artifacts/plots/tables/*.csv`
+- 当前版本会产出 `25` 张候选图（旧版图自动归档到 `artifacts/plots/_legacy/`）
+
+## 提交核心图一键生成（按题目要求聚焦）
+
+```bash
+uv run python scripts/generate_submission_figures.py
+```
+
+- 输出目录：`artifacts/plots/submission_pack/`
+- 覆盖内容：节点/路线示意图、收敛图、Q4敏感性图、模型结构图、建模流程图
+- 收敛图口径：`Q1~Q4` 全覆盖，且 `Q2` 使用当前主线 `adaptive(lambda, tw_weight)` 日志，不使用旧 B+C 迭代口径
+- 数据追溯：`artifacts/plots/submission_pack/INDEX.md` 与 `manifest.json`
 
 ## Q3/Q4 Boost V1（一键运行）
 
@@ -91,3 +138,4 @@ python run_smoke_tests.py
 
 - Baseline复现与参数解释：`BASELINE说明.md`
 - 全流程建模与实验日志：`建模总纲.md`
+- 主线完整说明（建议优先读）：`建模全说明.md`

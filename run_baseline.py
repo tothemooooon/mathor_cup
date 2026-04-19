@@ -57,6 +57,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--assignment-strategy", type=str, default=None)
     p.add_argument("--route-postprocess", type=str, default=None)
     p.add_argument("--vehicle-scan-mode", type=str, default=None)
+    cross_refine_group = p.add_mutually_exclusive_group()
+    cross_refine_group.add_argument("--enable-cross-vehicle-refine", action="store_true", default=None)
+    cross_refine_group.add_argument("--disable-cross-vehicle-refine", action="store_true", default=None)
+    p.add_argument("--cross-vehicle-max-iter", type=int, default=None)
+    p.add_argument("--cross-vehicle-candidate-per-route", type=int, default=None)
+    cross_swap_group = p.add_mutually_exclusive_group()
+    cross_swap_group.add_argument("--enable-cross-vehicle-swap", action="store_true", default=None)
+    cross_swap_group.add_argument("--disable-cross-vehicle-swap", action="store_true", default=None)
     p.add_argument("--lambda-scale-ratio", type=float, default=None)
     adaptive_group = p.add_mutually_exclusive_group()
     adaptive_group.add_argument("--enable-adaptive-lambda", action="store_true", default=None)
@@ -139,6 +147,26 @@ def resolve_adaptive_lambda(args: argparse.Namespace, params: dict[str, Any], de
         return True
     if "use_adaptive_lambda" in params:
         return bool(params["use_adaptive_lambda"])
+    return default
+
+
+def resolve_cross_vehicle_refine(args: argparse.Namespace, params: dict[str, Any], default: bool = False) -> bool:
+    if args.disable_cross_vehicle_refine:
+        return False
+    if args.enable_cross_vehicle_refine:
+        return True
+    if "enable_cross_vehicle_refine" in params:
+        return bool(params["enable_cross_vehicle_refine"])
+    return default
+
+
+def resolve_cross_vehicle_swap(args: argparse.Namespace, params: dict[str, Any], default: bool = True) -> bool:
+    if args.disable_cross_vehicle_swap:
+        return False
+    if args.enable_cross_vehicle_swap:
+        return True
+    if "cross_vehicle_allow_swap" in params:
+        return bool(params["cross_vehicle_allow_swap"])
     return default
 
 
@@ -258,6 +286,15 @@ def main() -> None:
             assignment_strategy=pick(args.assignment_strategy, profile_params, "assignment_strategy", "ffd"),
             route_postprocess=pick(args.route_postprocess, profile_params, "route_postprocess", "two_opt"),
             enable_tw_repair=resolve_tw_repair(args, profile_params, default=False),
+            enable_cross_vehicle_refine=resolve_cross_vehicle_refine(args, profile_params, default=False),
+            cross_vehicle_max_iter=pick(args.cross_vehicle_max_iter, profile_params, "cross_vehicle_max_iter", 10),
+            cross_vehicle_candidate_per_route=pick(
+                args.cross_vehicle_candidate_per_route,
+                profile_params,
+                "cross_vehicle_candidate_per_route",
+                3,
+            ),
+            cross_vehicle_allow_swap=resolve_cross_vehicle_swap(args, profile_params, default=True),
             vehicle_scan_mode=pick(args.vehicle_scan_mode, profile_params, "vehicle_scan_mode", "fixed"),
             qubo_cap=pick(args.qubo_cap, profile_params, "qubo_cap", 15),
             seed_offset=pick(args.seed_offset, profile_params, "seed_offset", 0),

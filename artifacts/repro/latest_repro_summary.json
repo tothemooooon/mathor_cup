@@ -1,0 +1,76 @@
+{
+  "profile_name": "best_mainline_v1",
+  "profile_version": "1.0.0",
+  "generated_at": "2026-04-19T13:25:52",
+  "rows": [
+    {
+      "question": "Q1",
+      "saved": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/repro/runs/q1_best_mainline_v1.json",
+      "feasible": true,
+      "travel": 30.0,
+      "tw_penalty": 0.0,
+      "objective": 30.0,
+      "runtime_sec": 29.893160791980335,
+      "target": {
+        "must_feasible": true,
+        "max_travel": 30.0,
+        "max_objective": 30.0
+      },
+      "pass": true,
+      "fail_reasons": [],
+      "best_reference": "experiments/results/q1_20260417_205616.json"
+    },
+    {
+      "question": "Q2",
+      "saved": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/repro/runs/q2_best_mainline_v1.json",
+      "feasible": true,
+      "travel": 40.0,
+      "tw_penalty": 175620.0,
+      "objective": 175660.0,
+      "runtime_sec": 70.51843116700184,
+      "target": {
+        "must_feasible": true,
+        "max_travel": 40.0,
+        "max_objective": 175660.0
+      },
+      "pass": true,
+      "fail_reasons": [],
+      "best_reference": "experiments/results/q2_20260418_133144.json"
+    },
+    {
+      "question": "Q3",
+      "saved": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/repro/runs/q3_best_mainline_v1.json",
+      "feasible": true,
+      "travel": 91.0,
+      "tw_penalty": 6375340.0,
+      "objective": 6375431.0,
+      "runtime_sec": 158.01623116698465,
+      "target": {
+        "must_feasible": true,
+        "max_travel": 91.0,
+        "max_objective": 6375431.0
+      },
+      "pass": true,
+      "fail_reasons": [],
+      "best_reference": "artifacts/repro/runs/q3_20260419_125913.json"
+    },
+    {
+      "question": "Q4",
+      "saved": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/repro/runs/q4_best_mainline_v1.json",
+      "feasible": true,
+      "travel": 109.0,
+      "tw_penalty": 51640.0,
+      "objective": 51749.0,
+      "runtime_sec": 192.68376924999757,
+      "target": {
+        "must_feasible": true,
+        "max_travel": 109.0,
+        "max_objective": 51749.0
+      },
+      "pass": true,
+      "fail_reasons": [],
+      "best_reference": "experiments/results/q4_20260419_120746.json"
+    }
+  ],
+  "all_passed": true
+}

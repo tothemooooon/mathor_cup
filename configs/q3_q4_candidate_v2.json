@@ -1,0 +1,58 @@
+{
+  "profile_name": "q3_q4_candidate_v2",
+  "profile_version": "0.1.0",
+  "description": "Q3/Q4 决策地图复盘后的候选最优配置（待多seed回归确认）",
+  "questions": {
+    "Q3": {
+      "params": {
+        "n_customers": 50,
+        "cluster_size": 8,
+        "seed_count_per_cluster": 2,
+        "tw_weight": 1.0,
+        "do_two_opt": true,
+        "decompose_strategy": "multi_start_fusion",
+        "postprocess_strategy": "two_opt",
+        "enable_tw_repair": true,
+        "qubo_cap": 12,
+        "seed_offset": 0,
+        "tw_violation_ratio_cap": 0.92
+      },
+      "known_limitations": [
+        "cluster_size=8 目前来自快速单seed扫描，需做5-seed回归确认。",
+        "Q3目标值仍由时间窗惩罚主导。"
+      ],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q3_boost_v1_full_20260417_212313.json",
+        "experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_summary.csv"
+      ],
+      "recommended_command": "python run_baseline.py --profile q3_q4_candidate_v2 --question Q3"
+    },
+    "Q4": {
+      "params": {
+        "n_customers": 50,
+        "tw_weight": 1.0,
+        "travel_weight": 1.0,
+        "vehicle_weight": 120.0,
+        "min_vehicle_count": 5,
+        "max_vehicle_count": 8,
+        "seed_count_per_vehicle": 1,
+        "assignment_strategy": "regret",
+        "route_postprocess": "or_opt",
+        "enable_tw_repair": true,
+        "vehicle_scan_mode": "feasibility_filtered",
+        "qubo_cap": 15,
+        "seed_offset": 0,
+        "tw_violation_ratio_cap": 0.7
+      },
+      "known_limitations": [
+        "Q4目标值仍由时间窗惩罚主导，需继续降低时间窗违反率。",
+        "当前参数来自既有全量策略层+快速参数层复盘。"
+      ],
+      "experiment_sources": [
+        "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046.json",
+        "experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_summary.csv"
+      ],
+      "recommended_command": "python run_baseline.py --profile q3_q4_candidate_v2 --question Q4"
+    }
+  }
+}

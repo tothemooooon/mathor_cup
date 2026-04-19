@@ -1,0 +1,7 @@
+name,travel,objective,tw_penalty,feasible,selected_k,tw_vr,refine_moves,runtime_sec
+F_ffd_or_k5_14_i16_c4_swapT,109.0,51749.0,51640.0,True,5,0.68,16,118.90341841700138
+E_twpress_or_k5_14_i16_c4_swapT,110.0,54370.0,54260.0,True,5,0.64,16,125.68549891700968
+D_regret_two_k5_14_i16_c4_swapT,112.0,56682.0,56570.0,True,5,0.62,16,103.50457895899308
+B_regret_or_k5_14_i16_c4_swapT,114.0,40504.0,40390.0,True,5,0.62,16,109.4574356249941
+C_regret_or_k5_14_i16_c4_swapF,119.0,12489.0,12370.0,True,6,0.6,16,106.66595316698658
+A_regret_or_k5_14_i8_c3_swapT,124.0,69664.0,69540.0,True,5,0.66,8,67.04183250002097

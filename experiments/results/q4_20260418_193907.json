@@ -1,0 +1,4350 @@
+{
+  "question": "Q4",
+  "method": "two-stage hybrid VRP: assignment + per-vehicle QUBO + repair + optional cross-vehicle refine",
+  "route": null,
+  "routes": [
+    [
+      0,
+      2,
+      6,
+      18,
+      31,
+      10,
+      30,
+      50,
+      41,
+      0
+    ],
+    [
+      0,
+      28,
+      27,
+      19,
+      11,
+      32,
+      3,
+      25,
+      42,
+      17,
+      0
+    ],
+    [
+      0,
+      40,
+      26,
+      29,
+      33,
+      20,
+      1,
+      13,
+      8,
+      48,
+      49,
+      0
+    ],
+    [
+      0,
+      12,
+      21,
+      22,
+      15,
+      43,
+      14,
+      38,
+      44,
+      16,
+      37,
+      5,
+      45,
+      0
+    ],
+    [
+      0,
+      47,
+      36,
+      46,
+      7,
+      9,
+      35,
+      34,
+      24,
+      4,
+      39,
+      23,
+      0
+    ]
+  ],
+  "per_customer": [
+    {
+      "node": 2,
+      "arrival": 2.0,
+      "start_service": 2.0,
+      "window_lower": 3.0,
+      "window_upper": 12.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 4.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 6,
+      "arrival": 6.0,
+      "start_service": 6.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 8.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 18,
+      "arrival": 9.0,
+      "start_service": 9.0,
+      "window_lower": 10.0,
+      "window_upper": 14.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 11.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 31,
+      "arrival": 13.0,
+      "start_service": 13.0,
+      "window_lower": 3.0,
+      "window_upper": 11.0,
+      "early_violation": 0.0,
+      "late_violation": 2.0,
+      "time_window_penalty": 80.0,
+      "leave_time": 15.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 10,
+      "arrival": 16.0,
+      "start_service": 16.0,
+      "window_lower": 13.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 18.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 30,
+      "arrival": 19.0,
+      "start_service": 19.0,
+      "window_lower": 4.0,
+      "window_upper": 16.0,
+      "early_violation": 0.0,
+      "late_violation": 3.0,
+      "time_window_penalty": 180.0,
+      "leave_time": 21.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 50,
+      "arrival": 23.0,
+      "start_service": 23.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 3.0,
+      "time_window_penalty": 180.0,
+      "leave_time": 25.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 41,
+      "arrival": 30.0,
+      "start_service": 30.0,
+      "window_lower": 6.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 9.0,
+      "time_window_penalty": 1620.0,
+      "leave_time": 32.0,
+      "vehicle_route": [
+        0,
+        2,
+        6,
+        18,
+        31,
+        10,
+        30,
+        50,
+        41,
+        0
+      ]
+    },
+    {
+      "node": 28,
+      "arrival": 1.0,
+      "start_service": 1.0,
+      "window_lower": 1.0,
+      "window_upper": 10.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 3.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 27,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 1.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 6.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 19,
+      "arrival": 10.0,
+      "start_service": 10.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 12.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 11,
+      "arrival": 13.0,
+      "start_service": 13.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 15.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 32,
+      "arrival": 17.0,
+      "start_service": 17.0,
+      "window_lower": 15.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 19.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 3,
+      "arrival": 23.0,
+      "start_service": 23.0,
+      "window_lower": 14.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 5.0,
+      "time_window_penalty": 500.0,
+      "leave_time": 25.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 25,
+      "arrival": 29.0,
+      "start_service": 29.0,
+      "window_lower": 6.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 5.0,
+      "time_window_penalty": 500.0,
+      "leave_time": 31.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 42,
+      "arrival": 36.0,
+      "start_service": 36.0,
+      "window_lower": 3.0,
+      "window_upper": 22.0,
+      "early_violation": 0.0,
+      "late_violation": 14.0,
+      "time_window_penalty": 3920.0,
+      "leave_time": 38.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 17,
+      "arrival": 41.0,
+      "start_service": 41.0,
+      "window_lower": 7.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 16.0,
+      "time_window_penalty": 5120.0,
+      "leave_time": 43.0,
+      "vehicle_route": [
+        0,
+        28,
+        27,
+        19,
+        11,
+        32,
+        3,
+        25,
+        42,
+        17,
+        0
+      ]
+    },
+    {
+      "node": 40,
+      "arrival": 1.0,
+      "start_service": 1.0,
+      "window_lower": 7.0,
+      "window_upper": 17.0,
+      "early_violation": 6.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 360.0,
+      "leave_time": 3.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 26,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 15.0,
+      "window_upper": 20.0,
+      "early_violation": 11.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 1210.0,
+      "leave_time": 6.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 29,
+      "arrival": 9.0,
+      "start_service": 9.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 11.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 33,
+      "arrival": 13.0,
+      "start_service": 13.0,
+      "window_lower": 3.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 15.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 20,
+      "arrival": 17.0,
+      "start_service": 17.0,
+      "window_lower": 14.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 19.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 1,
+      "arrival": 21.0,
+      "start_service": 21.0,
+      "window_lower": 17.0,
+      "window_upper": 26.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 23.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 13,
+      "arrival": 26.0,
+      "start_service": 26.0,
+      "window_lower": 9.0,
+      "window_upper": 27.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 28.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 8,
+      "arrival": 32.0,
+      "start_service": 32.0,
+      "window_lower": 8.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 14.0,
+      "time_window_penalty": 3920.0,
+      "leave_time": 34.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 48,
+      "arrival": 35.0,
+      "start_service": 35.0,
+      "window_lower": 16.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 10.0,
+      "time_window_penalty": 2000.0,
+      "leave_time": 37.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 49,
+      "arrival": 39.0,
+      "start_service": 39.0,
+      "window_lower": 12.0,
+      "window_upper": 17.0,
+      "early_violation": 0.0,
+      "late_violation": 22.0,
+      "time_window_penalty": 9680.0,
+      "leave_time": 41.0,
+      "vehicle_route": [
+        0,
+        40,
+        26,
+        29,
+        33,
+        20,
+        1,
+        13,
+        8,
+        48,
+        49,
+        0
+      ]
+    },
+    {
+      "node": 12,
+      "arrival": 2.0,
+      "start_service": 2.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 3.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 90.0,
+      "leave_time": 4.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 21,
+      "arrival": 6.0,
+      "start_service": 6.0,
+      "window_lower": 5.0,
+      "window_upper": 13.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 8.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 22,
+      "arrival": 9.0,
+      "start_service": 9.0,
+      "window_lower": 8.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 11.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 15,
+      "arrival": 13.0,
+      "start_service": 13.0,
+      "window_lower": 4.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 15.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 43,
+      "arrival": 16.0,
+      "start_service": 16.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 18.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 14,
+      "arrival": 19.0,
+      "start_service": 19.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 1.0,
+      "time_window_penalty": 20.0,
+      "leave_time": 21.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 38,
+      "arrival": 22.0,
+      "start_service": 22.0,
+      "window_lower": 5.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 3.0,
+      "time_window_penalty": 180.0,
+      "leave_time": 24.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 44,
+      "arrival": 25.0,
+      "start_service": 25.0,
+      "window_lower": 4.0,
+      "window_upper": 18.0,
+      "early_violation": 0.0,
+      "late_violation": 7.0,
+      "time_window_penalty": 980.0,
+      "leave_time": 27.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 16,
+      "arrival": 28.0,
+      "start_service": 28.0,
+      "window_lower": 7.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 14.0,
+      "time_window_penalty": 3920.0,
+      "leave_time": 30.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 37,
+      "arrival": 31.0,
+      "start_service": 31.0,
+      "window_lower": 15.0,
+      "window_upper": 21.0,
+      "early_violation": 0.0,
+      "late_violation": 10.0,
+      "time_window_penalty": 2000.0,
+      "leave_time": 33.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 5,
+      "arrival": 34.0,
+      "start_service": 34.0,
+      "window_lower": 3.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 20.0,
+      "time_window_penalty": 8000.0,
+      "leave_time": 36.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 45,
+      "arrival": 38.0,
+      "start_service": 38.0,
+      "window_lower": 4.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 13.0,
+      "time_window_penalty": 3380.0,
+      "leave_time": 40.0,
+      "vehicle_route": [
+        0,
+        12,
+        21,
+        22,
+        15,
+        43,
+        14,
+        38,
+        44,
+        16,
+        37,
+        5,
+        45,
+        0
+      ]
+    },
+    {
+      "node": 47,
+      "arrival": 4.0,
+      "start_service": 4.0,
+      "window_lower": 4.0,
+      "window_upper": 15.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 6.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 36,
+      "arrival": 7.0,
+      "start_service": 7.0,
+      "window_lower": 5.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 0.0,
+      "leave_time": 9.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 46,
+      "arrival": 11.0,
+      "start_service": 11.0,
+      "window_lower": 12.0,
+      "window_upper": 20.0,
+      "early_violation": 1.0,
+      "late_violation": 0.0,
+      "time_window_penalty": 10.0,
+      "leave_time": 13.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 7,
+      "arrival": 15.0,
+      "start_service": 15.0,
+      "window_lower": 9.0,
+      "window_upper": 14.0,
+      "early_violation": 0.0,
+      "late_violation": 1.0,
+      "time_window_penalty": 20.0,
+      "leave_time": 17.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 9,
+      "arrival": 22.0,
+      "start_service": 22.0,
+      "window_lower": 7.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 2.0,
+      "time_window_penalty": 80.0,
+      "leave_time": 24.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 35,
+      "arrival": 25.0,
+      "start_service": 25.0,
+      "window_lower": 7.0,
+      "window_upper": 23.0,
+      "early_violation": 0.0,
+      "late_violation": 2.0,
+      "time_window_penalty": 80.0,
+      "leave_time": 27.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 34,
+      "arrival": 28.0,
+      "start_service": 28.0,
+      "window_lower": 13.0,
+      "window_upper": 19.0,
+      "early_violation": 0.0,
+      "late_violation": 9.0,
+      "time_window_penalty": 1620.0,
+      "leave_time": 30.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 24,
+      "arrival": 33.0,
+      "start_service": 33.0,
+      "window_lower": 15.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 8.0,
+      "time_window_penalty": 1280.0,
+      "leave_time": 35.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 4,
+      "arrival": 37.0,
+      "start_service": 37.0,
+      "window_lower": 9.0,
+      "window_upper": 25.0,
+      "early_violation": 0.0,
+      "late_violation": 12.0,
+      "time_window_penalty": 2880.0,
+      "leave_time": 39.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 39,
+      "arrival": 40.0,
+      "start_service": 40.0,
+      "window_lower": 4.0,
+      "window_upper": 24.0,
+      "early_violation": 0.0,
+      "late_violation": 16.0,
+      "time_window_penalty": 5120.0,
+      "leave_time": 42.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    },
+    {
+      "node": 23,
+      "arrival": 43.0,
+      "start_service": 43.0,
+      "window_lower": 5.0,
+      "window_upper": 20.0,
+      "early_violation": 0.0,
+      "late_violation": 23.0,
+      "time_window_penalty": 10580.0,
+      "leave_time": 45.0,
+      "vehicle_route": [
+        0,
+        47,
+        36,
+        46,
+        7,
+        9,
+        35,
+        34,
+        24,
+        4,
+        39,
+        23,
+        0
+      ]
+    }
+  ],
+  "decision_points": {
+    "车辆数扫描区间": "min_vehicle_count ~ max_vehicle_count 决定敏感性分析范围",
+    "目标权重": "vehicle_weight 与 travel/tw 权重决定车辆数优先级",
+    "客户分配策略": "FFD / Regret / TW-pressure 三策略消融",
+    "路由后处理": "none / 2-opt / or-opt (+可选tw修复)",
+    "跨车重分配": "relocate/swap 局部搜索（容量硬约束）",
+    "车内自适应λ": "每车子问题按稳定性和目标改善调节lambda"
+  },
+  "parameters": {
+    "n_customers": 50,
+    "vehicle_weight": 120.0,
+    "travel_weight": 1.0,
+    "tw_weight": 1.0,
+    "lambda_pos": 180.0,
+    "lambda_cus": 180.0,
+    "lambda_scale_ratio": null,
+    "capacity": 60.0,
+    "total_demand": 271.0,
+    "min_vehicle_count": 5,
+    "max_vehicle_count": 10,
+    "seed_count_per_vehicle": 1,
+    "assignment_strategy": "regret",
+    "route_postprocess": "or_opt",
+    "enable_tw_repair": true,
+    "enable_cross_vehicle_refine": true,
+    "cross_vehicle_max_iter": 8,
+    "cross_vehicle_candidate_per_route": 3,
+    "cross_vehicle_allow_swap": true,
+    "vehicle_scan_mode": "travel_first",
+    "qubo_cap": 15,
+    "seed_offset": 0,
+    "tw_violation_ratio_cap": 0.7,
+    "use_adaptive_lambda": false,
+    "adaptive_rounds": 4,
+    "adaptive_budget": 3,
+    "exact_benchmark_cap": 1
+  },
+  "diagnostics": {
+    "scan_results": [
+      {
+        "k": 5,
+        "feasible_assignment": true,
+        "objective": 70264.0,
+        "total_travel": 124.0,
+        "total_tw_penalty": 69540.0,
+        "tw_violation_ratio": 0.66,
+        "vehicle_routes": [
+          [
+            0,
+            2,
+            6,
+            18,
+            31,
+            10,
+            30,
+            50,
+            41,
+            0
+          ],
+          [
+            0,
+            28,
+            27,
+            19,
+            11,
+            32,
+            3,
+            25,
+            42,
+            17,
+            0
+          ],
+          [
+            0,
+            40,
+            26,
+            29,
+            33,
+            20,
+            1,
+            13,
+            8,
+            48,
+            49,
+            0
+          ],
+          [
+            0,
+            12,
+            21,
+            22,
+            15,
+            43,
+            14,
+            38,
+            44,
+            16,
+            37,
+            5,
+            45,
+            0
+          ],
+          [
+            0,
+            47,
+            36,
+            46,
+            7,
+            9,
+            35,
+            34,
+            24,
+            4,
+            39,
+            23,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              2,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41
+            ],
+            "route": [
+              0,
+              2,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 20.0,
+            "tw_penalty": 2090.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 500,
+                "travel": 20.0,
+                "tw_penalty": 6730.0
+              }
+            ],
+            "load": 56.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              25,
+              42,
+              17
+            ],
+            "route": [
+              0,
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              25,
+              42,
+              17,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 29.0,
+            "tw_penalty": 10040.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 501,
+                "travel": 30.0,
+                "tw_penalty": 22050.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              40,
+              26,
+              29,
+              33,
+              20,
+              1,
+              13,
+              8,
+              48,
+              49
+            ],
+            "route": [
+              0,
+              40,
+              26,
+              29,
+              33,
+              20,
+              1,
+              13,
+              8,
+              48,
+              49,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 27.0,
+            "tw_penalty": 17170.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 502,
+                "travel": 36.0,
+                "tw_penalty": 59010.0
+              }
+            ],
+            "load": 59.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              12,
+              21,
+              22,
+              15,
+              43,
+              14,
+              38,
+              44,
+              16,
+              37,
+              5,
+              45
+            ],
+            "route": [
+              0,
+              12,
+              21,
+              22,
+              15,
+              43,
+              14,
+              38,
+              44,
+              16,
+              37,
+              5,
+              45,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 20.0,
+            "tw_penalty": 18570.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 503,
+                "travel": 54.0,
+                "tw_penalty": 257830.0
+              }
+            ],
+            "load": 54.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              47,
+              36,
+              46,
+              7,
+              9,
+              35,
+              34,
+              24,
+              4,
+              39,
+              23
+            ],
+            "route": [
+              0,
+              47,
+              36,
+              46,
+              7,
+              9,
+              35,
+              34,
+              24,
+              4,
+              39,
+              23,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 28.0,
+            "tw_penalty": 21670.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 504,
+                "travel": 54.0,
+                "tw_penalty": 113320.0
+              }
+            ],
+            "load": 42.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            110468.0,
+            100145.0,
+            94883.0,
+            89022.0,
+            84754.0,
+            81366.0,
+            78043.0,
+            75684.0,
+            69664.0
+          ],
+          "final_score": 69664.0
+        }
+      },
+      {
+        "k": 6,
+        "feasible_assignment": true,
+        "objective": 39261.0,
+        "total_travel": 141.0,
+        "total_tw_penalty": 38400.0,
+        "tw_violation_ratio": 0.58,
+        "vehicle_routes": [
+          [
+            0,
+            40,
+            6,
+            18,
+            31,
+            10,
+            30,
+            50,
+            41,
+            0
+          ],
+          [
+            0,
+            28,
+            27,
+            19,
+            11,
+            32,
+            3,
+            42,
+            17,
+            0
+          ],
+          [
+            0,
+            13,
+            14,
+            2,
+            26,
+            33,
+            20,
+            1,
+            7,
+            48,
+            0
+          ],
+          [
+            0,
+            12,
+            21,
+            22,
+            15,
+            43,
+            38,
+            44,
+            16,
+            45,
+            8,
+            0
+          ],
+          [
+            0,
+            36,
+            47,
+            46,
+            5,
+            37,
+            35,
+            9,
+            4,
+            0
+          ],
+          [
+            0,
+            39,
+            23,
+            25,
+            24,
+            29,
+            34,
+            49,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41
+            ],
+            "route": [
+              0,
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 19.0,
+            "tw_penalty": 1900.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 600,
+                "travel": 20.0,
+                "tw_penalty": 11570.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17
+            ],
+            "route": [
+              0,
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 26.0,
+            "tw_penalty": 4540.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 601,
+                "travel": 38.0,
+                "tw_penalty": 55090.0
+              }
+            ],
+            "load": 53.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              13,
+              14,
+              2,
+              26,
+              33,
+              20,
+              1,
+              7,
+              48
+            ],
+            "route": [
+              0,
+              13,
+              14,
+              2,
+              26,
+              33,
+              20,
+              1,
+              7,
+              48,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 24.0,
+            "tw_penalty": 10680.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 602,
+                "travel": 35.0,
+                "tw_penalty": 59590.0
+              }
+            ],
+            "load": 53.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8
+            ],
+            "route": [
+              0,
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 18.0,
+            "tw_penalty": 8490.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 603,
+                "travel": 55.0,
+                "tw_penalty": 232150.0
+              }
+            ],
+            "load": 44.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              36,
+              47,
+              46,
+              5,
+              37,
+              35,
+              9,
+              4
+            ],
+            "route": [
+              0,
+              36,
+              47,
+              46,
+              5,
+              37,
+              35,
+              9,
+              4,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 28.0,
+            "tw_penalty": 7610.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 604,
+                "travel": 46.0,
+                "tw_penalty": 90370.0
+              }
+            ],
+            "load": 27.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 5,
+            "assigned_customers": [
+              39,
+              23,
+              25,
+              24,
+              29,
+              34,
+              49
+            ],
+            "route": [
+              0,
+              39,
+              23,
+              25,
+              24,
+              29,
+              34,
+              49,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 26.0,
+            "tw_penalty": 5180.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 34.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            107599.0,
+            90226.0,
+            76071.0,
+            66476.0,
+            59268.0,
+            52726.0,
+            47345.0,
+            42484.0,
+            38541.0
+          ],
+          "final_score": 38541.0
+        }
+      },
+      {
+        "k": 7,
+        "feasible_assignment": true,
+        "objective": 31071.0,
+        "total_travel": 151.0,
+        "total_tw_penalty": 30080.0,
+        "tw_violation_ratio": 0.52,
+        "vehicle_routes": [
+          [
+            0,
+            40,
+            6,
+            18,
+            31,
+            10,
+            30,
+            50,
+            41,
+            0
+          ],
+          [
+            0,
+            28,
+            27,
+            19,
+            11,
+            32,
+            3,
+            42,
+            17,
+            0
+          ],
+          [
+            0,
+            13,
+            2,
+            26,
+            33,
+            20,
+            1,
+            7,
+            49,
+            48,
+            0
+          ],
+          [
+            0,
+            12,
+            21,
+            22,
+            15,
+            43,
+            38,
+            44,
+            16,
+            45,
+            8,
+            0
+          ],
+          [
+            0,
+            47,
+            36,
+            46,
+            37,
+            35,
+            9,
+            4,
+            0
+          ],
+          [
+            0,
+            39,
+            23,
+            25,
+            34,
+            24,
+            0
+          ],
+          [
+            0,
+            29,
+            5,
+            14,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41
+            ],
+            "route": [
+              0,
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 19.0,
+            "tw_penalty": 1900.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 700,
+                "travel": 20.0,
+                "tw_penalty": 10200.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17
+            ],
+            "route": [
+              0,
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 26.0,
+            "tw_penalty": 4540.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 701,
+                "travel": 32.0,
+                "tw_penalty": 37330.0
+              }
+            ],
+            "load": 53.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              13,
+              2,
+              26,
+              33,
+              20,
+              1,
+              7,
+              49,
+              48
+            ],
+            "route": [
+              0,
+              13,
+              2,
+              26,
+              33,
+              20,
+              1,
+              7,
+              49,
+              48,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 23.0,
+            "tw_penalty": 9930.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 702,
+                "travel": 35.0,
+                "tw_penalty": 34640.0
+              }
+            ],
+            "load": 54.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8
+            ],
+            "route": [
+              0,
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 18.0,
+            "tw_penalty": 8490.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 703,
+                "travel": 53.0,
+                "tw_penalty": 251310.0
+              }
+            ],
+            "load": 44.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              47,
+              36,
+              46,
+              37,
+              35,
+              9,
+              4
+            ],
+            "route": [
+              0,
+              47,
+              36,
+              46,
+              37,
+              35,
+              9,
+              4,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 28.0,
+            "tw_penalty": 5210.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 704,
+                "travel": 50.0,
+                "tw_penalty": 111580.0
+              }
+            ],
+            "load": 22.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 5,
+            "assigned_customers": [
+              39,
+              23,
+              25,
+              34,
+              24
+            ],
+            "route": [
+              0,
+              39,
+              23,
+              25,
+              34,
+              24,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 19.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 24.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 6,
+            "assigned_customers": [
+              29,
+              5,
+              14
+            ],
+            "route": [
+              0,
+              29,
+              5,
+              14,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 18.0,
+            "tw_penalty": 10.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 14.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            107789.0,
+            90416.0,
+            76261.0,
+            64744.0,
+            55265.0,
+            48043.0,
+            41520.0,
+            35734.0,
+            30231.0
+          ],
+          "final_score": 30231.0
+        }
+      },
+      {
+        "k": 8,
+        "feasible_assignment": true,
+        "objective": 26467.0,
+        "total_travel": 147.0,
+        "total_tw_penalty": 25360.0,
+        "tw_violation_ratio": 0.64,
+        "vehicle_routes": [
+          [
+            0,
+            50,
+            30,
+            10,
+            31,
+            18,
+            6,
+            40,
+            41,
+            0
+          ],
+          [
+            0,
+            27,
+            28,
+            3,
+            32,
+            11,
+            19,
+            17,
+            42,
+            25,
+            0
+          ],
+          [
+            0,
+            2,
+            14,
+            7,
+            48,
+            49,
+            20,
+            1,
+            13,
+            0
+          ],
+          [
+            0,
+            12,
+            21,
+            22,
+            15,
+            43,
+            38,
+            44,
+            16,
+            45,
+            24,
+            0
+          ],
+          [
+            0,
+            36,
+            47,
+            46,
+            37,
+            23,
+            39,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            26,
+            29,
+            34,
+            9,
+            33,
+            0
+          ],
+          [
+            0,
+            35,
+            8,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              50,
+              30,
+              10,
+              31,
+              18,
+              6,
+              40,
+              41
+            ],
+            "route": [
+              0,
+              50,
+              30,
+              10,
+              31,
+              18,
+              6,
+              40,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 17.0,
+            "tw_penalty": 3140.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 800,
+                "travel": 18.0,
+                "tw_penalty": 8550.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              27,
+              28,
+              3,
+              32,
+              11,
+              19,
+              17,
+              42,
+              25
+            ],
+            "route": [
+              0,
+              27,
+              28,
+              3,
+              32,
+              11,
+              19,
+              17,
+              42,
+              25,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 27.0,
+            "tw_penalty": 7930.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 801,
+                "travel": 35.0,
+                "tw_penalty": 45980.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              2,
+              14,
+              7,
+              48,
+              49,
+              20,
+              1,
+              13
+            ],
+            "route": [
+              0,
+              2,
+              14,
+              7,
+              48,
+              49,
+              20,
+              1,
+              13,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 24.0,
+            "tw_penalty": 4330.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 802,
+                "travel": 29.0,
+                "tw_penalty": 39200.0
+              }
+            ],
+            "load": 48.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              24
+            ],
+            "route": [
+              0,
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              24,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 26.0,
+            "tw_penalty": 8490.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 803,
+                "travel": 58.0,
+                "tw_penalty": 325390.0
+              }
+            ],
+            "load": 46.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              36,
+              47,
+              46,
+              37,
+              23,
+              39,
+              4
+            ],
+            "route": [
+              0,
+              36,
+              47,
+              46,
+              37,
+              23,
+              39,
+              4,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 21.0,
+            "tw_penalty": 1010.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 804,
+                "travel": 60.0,
+                "tw_penalty": 131060.0
+              }
+            ],
+            "load": 21.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 5,
+            "assigned_customers": [
+              5,
+              26,
+              29,
+              34,
+              9,
+              33
+            ],
+            "route": [
+              0,
+              5,
+              26,
+              29,
+              34,
+              9,
+              33,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 17.0,
+            "tw_penalty": 420.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 28.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 6,
+            "assigned_customers": [
+              35,
+              8
+            ],
+            "route": [
+              0,
+              35,
+              8,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 15.0,
+            "tw_penalty": 40.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 8.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 7,
+            "assigned_customers": [],
+            "route": [
+              0,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 0.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 0.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            97241.0,
+            79868.0,
+            65368.0,
+            55633.0,
+            48573.0,
+            41531.0,
+            35740.0,
+            30216.0,
+            25507.0
+          ],
+          "final_score": 25507.0
+        }
+      },
+      {
+        "k": 9,
+        "feasible_assignment": true,
+        "objective": 29546.0,
+        "total_travel": 166.0,
+        "total_tw_penalty": 28300.0,
+        "tw_violation_ratio": 0.52,
+        "vehicle_routes": [
+          [
+            0,
+            50,
+            30,
+            10,
+            31,
+            18,
+            6,
+            40,
+            41,
+            0
+          ],
+          [
+            0,
+            28,
+            27,
+            19,
+            11,
+            32,
+            3,
+            42,
+            17,
+            0
+          ],
+          [
+            0,
+            13,
+            14,
+            2,
+            26,
+            7,
+            48,
+            33,
+            1,
+            0
+          ],
+          [
+            0,
+            5,
+            16,
+            44,
+            38,
+            43,
+            15,
+            22,
+            21,
+            24,
+            45,
+            0
+          ],
+          [
+            0,
+            9,
+            35,
+            29,
+            4,
+            39,
+            23,
+            37,
+            36,
+            0
+          ],
+          [
+            0,
+            47,
+            8,
+            20,
+            34,
+            0
+          ],
+          [
+            0,
+            12,
+            49,
+            46,
+            0
+          ],
+          [
+            0,
+            25,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              50,
+              30,
+              10,
+              31,
+              18,
+              6,
+              40,
+              41
+            ],
+            "route": [
+              0,
+              50,
+              30,
+              10,
+              31,
+              18,
+              6,
+              40,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 17.0,
+            "tw_penalty": 3140.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 900,
+                "travel": 20.0,
+                "tw_penalty": 10760.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17
+            ],
+            "route": [
+              0,
+              28,
+              27,
+              19,
+              11,
+              32,
+              3,
+              42,
+              17,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 26.0,
+            "tw_penalty": 4540.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 901,
+                "travel": 35.0,
+                "tw_penalty": 40840.0
+              }
+            ],
+            "load": 53.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              13,
+              14,
+              2,
+              26,
+              7,
+              48,
+              33,
+              1
+            ],
+            "route": [
+              0,
+              13,
+              14,
+              2,
+              26,
+              7,
+              48,
+              33,
+              1,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 23.0,
+            "tw_penalty": 4520.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 902,
+                "travel": 33.0,
+                "tw_penalty": 51900.0
+              }
+            ],
+            "load": 47.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              5,
+              16,
+              44,
+              38,
+              43,
+              15,
+              22,
+              21,
+              24,
+              45
+            ],
+            "route": [
+              0,
+              5,
+              16,
+              44,
+              38,
+              43,
+              15,
+              22,
+              21,
+              24,
+              45,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 27.0,
+            "tw_penalty": 9550.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 903,
+                "travel": 64.0,
+                "tw_penalty": 285080.0
+              }
+            ],
+            "load": 46.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              9,
+              35,
+              29,
+              4,
+              39,
+              23,
+              37,
+              36
+            ],
+            "route": [
+              0,
+              9,
+              35,
+              29,
+              4,
+              39,
+              23,
+              37,
+              36,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 29.0,
+            "tw_penalty": 6390.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 904,
+                "travel": 40.0,
+                "tw_penalty": 66870.0
+              }
+            ],
+            "load": 25.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 5,
+            "assigned_customers": [
+              47,
+              8,
+              20,
+              34
+            ],
+            "route": [
+              0,
+              47,
+              8,
+              20,
+              34,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 19.0,
+            "tw_penalty": 20.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 18.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 6,
+            "assigned_customers": [
+              12,
+              49,
+              46
+            ],
+            "route": [
+              0,
+              12,
+              49,
+              46,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 17.0,
+            "tw_penalty": 100.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 15.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 7,
+            "assigned_customers": [
+              25
+            ],
+            "route": [
+              0,
+              25,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 8.0,
+            "tw_penalty": 40.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 7.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 8,
+            "assigned_customers": [],
+            "route": [
+              0,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 0.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 0.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            109133.0,
+            89389.0,
+            76182.0,
+            63888.0,
+            55201.0,
+            47121.0,
+            40319.0,
+            33921.0,
+            28466.0
+          ],
+          "final_score": 28466.0
+        }
+      },
+      {
+        "k": 10,
+        "feasible_assignment": true,
+        "objective": 27743.0,
+        "total_travel": 143.0,
+        "total_tw_penalty": 26400.0,
+        "tw_violation_ratio": 0.56,
+        "vehicle_routes": [
+          [
+            0,
+            40,
+            6,
+            18,
+            31,
+            10,
+            30,
+            50,
+            41,
+            0
+          ],
+          [
+            0,
+            27,
+            28,
+            3,
+            32,
+            11,
+            19,
+            17,
+            42,
+            25,
+            0
+          ],
+          [
+            0,
+            26,
+            2,
+            13,
+            1,
+            20,
+            33,
+            7,
+            48,
+            0
+          ],
+          [
+            0,
+            12,
+            21,
+            22,
+            15,
+            43,
+            38,
+            44,
+            16,
+            45,
+            8,
+            0
+          ],
+          [
+            0,
+            9,
+            35,
+            29,
+            4,
+            39,
+            23,
+            37,
+            0
+          ],
+          [
+            0,
+            47,
+            34,
+            24,
+            0
+          ],
+          [
+            0,
+            5,
+            14,
+            46,
+            49,
+            36,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "vehicle_logs": [
+          {
+            "vehicle_id": 0,
+            "assigned_customers": [
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41
+            ],
+            "route": [
+              0,
+              40,
+              6,
+              18,
+              31,
+              10,
+              30,
+              50,
+              41,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 19.0,
+            "tw_penalty": 1900.0,
+            "selected_seed": null,
+            "max_chunk_size": 8,
+            "chunk_logs": [
+              {
+                "chunk_size": 8,
+                "selected_seed": 1000,
+                "travel": 23.0,
+                "tw_penalty": 8360.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 1,
+            "assigned_customers": [
+              27,
+              28,
+              3,
+              32,
+              11,
+              19,
+              17,
+              42,
+              25
+            ],
+            "route": [
+              0,
+              27,
+              28,
+              3,
+              32,
+              11,
+              19,
+              17,
+              42,
+              25,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 27.0,
+            "tw_penalty": 7930.0,
+            "selected_seed": null,
+            "max_chunk_size": 9,
+            "chunk_logs": [
+              {
+                "chunk_size": 9,
+                "selected_seed": 1001,
+                "travel": 35.0,
+                "tw_penalty": 26570.0
+              }
+            ],
+            "load": 60.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 2,
+            "assigned_customers": [
+              26,
+              2,
+              13,
+              1,
+              20,
+              33,
+              7,
+              48
+            ],
+            "route": [
+              0,
+              26,
+              2,
+              13,
+              1,
+              20,
+              33,
+              7,
+              48,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 20.0,
+            "tw_penalty": 6010.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 1002,
+                "travel": 35.0,
+                "tw_penalty": 32370.0
+              }
+            ],
+            "load": 47.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 3,
+            "assigned_customers": [
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8
+            ],
+            "route": [
+              0,
+              12,
+              21,
+              22,
+              15,
+              43,
+              38,
+              44,
+              16,
+              45,
+              8,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 18.0,
+            "tw_penalty": 8490.0,
+            "selected_seed": null,
+            "max_chunk_size": 13,
+            "chunk_logs": [
+              {
+                "chunk_size": 13,
+                "selected_seed": 1003,
+                "travel": 63.0,
+                "tw_penalty": 351330.0
+              }
+            ],
+            "load": 44.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 4,
+            "assigned_customers": [
+              9,
+              35,
+              29,
+              4,
+              39,
+              23,
+              37
+            ],
+            "route": [
+              0,
+              9,
+              35,
+              29,
+              4,
+              39,
+              23,
+              37,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 21.0,
+            "tw_penalty": 1890.0,
+            "selected_seed": null,
+            "max_chunk_size": 10,
+            "chunk_logs": [
+              {
+                "chunk_size": 10,
+                "selected_seed": 1004,
+                "travel": 42.0,
+                "tw_penalty": 74780.0
+              }
+            ],
+            "load": 22.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 5,
+            "assigned_customers": [
+              47,
+              34,
+              24
+            ],
+            "route": [
+              0,
+              47,
+              34,
+              24,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 18.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 14.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 6,
+            "assigned_customers": [
+              5,
+              14,
+              46,
+              49,
+              36
+            ],
+            "route": [
+              0,
+              5,
+              14,
+              46,
+              49,
+              36,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 20.0,
+            "tw_penalty": 180.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 24.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 7,
+            "assigned_customers": [],
+            "route": [
+              0,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 0.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 0.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 8,
+            "assigned_customers": [],
+            "route": [
+              0,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 0.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 0.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          },
+          {
+            "vehicle_id": 9,
+            "assigned_customers": [],
+            "route": [
+              0,
+              0
+            ],
+            "lambda_pos": 180.0,
+            "lambda_cus": 180.0,
+            "travel": 0.0,
+            "tw_penalty": 0.0,
+            "selected_seed": null,
+            "max_chunk_size": 0,
+            "chunk_logs": [
+              {
+                "chunk_size": 0,
+                "selected_seed": null,
+                "travel": 0.0,
+                "tw_penalty": 0.0
+              }
+            ],
+            "load": 0.0,
+            "adaptive_trace": [],
+            "exact_benchmark": {
+              "status": "skipped",
+              "reason": "cross vehicle refine enabled"
+            }
+          }
+        ],
+        "timewindow_feasible": true,
+        "refine_diagnostics": {
+          "applied": true,
+          "iterations": 8,
+          "moves": 8,
+          "history": [
+            102414.0,
+            85041.0,
+            71447.0,
+            58950.0,
+            49471.0,
+            43077.0,
+            36837.0,
+            31051.0,
+            26543.0
+          ],
+          "final_score": 26543.0
+        }
+      }
+    ],
+    "selected_k": 5,
+    "vehicle_logs": [
+      {
+        "vehicle_id": 0,
+        "assigned_customers": [
+          2,
+          6,
+          18,
+          31,
+          10,
+          30,
+          50,
+          41
+        ],
+        "route": [
+          0,
+          2,
+          6,
+          18,
+          31,
+          10,
+          30,
+          50,
+          41,
+          0
+        ],
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "travel": 20.0,
+        "tw_penalty": 2090.0,
+        "selected_seed": null,
+        "max_chunk_size": 8,
+        "chunk_logs": [
+          {
+            "chunk_size": 8,
+            "selected_seed": 500,
+            "travel": 20.0,
+            "tw_penalty": 6730.0
+          }
+        ],
+        "load": 56.0,
+        "adaptive_trace": [],
+        "exact_benchmark": {
+          "status": "skipped",
+          "reason": "cross vehicle refine enabled"
+        }
+      },
+      {
+        "vehicle_id": 1,
+        "assigned_customers": [
+          28,
+          27,
+          19,
+          11,
+          32,
+          3,
+          25,
+          42,
+          17
+        ],
+        "route": [
+          0,
+          28,
+          27,
+          19,
+          11,
+          32,
+          3,
+          25,
+          42,
+          17,
+          0
+        ],
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "travel": 29.0,
+        "tw_penalty": 10040.0,
+        "selected_seed": null,
+        "max_chunk_size": 9,
+        "chunk_logs": [
+          {
+            "chunk_size": 9,
+            "selected_seed": 501,
+            "travel": 30.0,
+            "tw_penalty": 22050.0
+          }
+        ],
+        "load": 60.0,
+        "adaptive_trace": [],
+        "exact_benchmark": {
+          "status": "skipped",
+          "reason": "cross vehicle refine enabled"
+        }
+      },
+      {
+        "vehicle_id": 2,
+        "assigned_customers": [
+          40,
+          26,
+          29,
+          33,
+          20,
+          1,
+          13,
+          8,
+          48,
+          49
+        ],
+        "route": [
+          0,
+          40,
+          26,
+          29,
+          33,
+          20,
+          1,
+          13,
+          8,
+          48,
+          49,
+          0
+        ],
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "travel": 27.0,
+        "tw_penalty": 17170.0,
+        "selected_seed": null,
+        "max_chunk_size": 10,
+        "chunk_logs": [
+          {
+            "chunk_size": 10,
+            "selected_seed": 502,
+            "travel": 36.0,
+            "tw_penalty": 59010.0
+          }
+        ],
+        "load": 59.0,
+        "adaptive_trace": [],
+        "exact_benchmark": {
+          "status": "skipped",
+          "reason": "cross vehicle refine enabled"
+        }
+      },
+      {
+        "vehicle_id": 3,
+        "assigned_customers": [
+          12,
+          21,
+          22,
+          15,
+          43,
+          14,
+          38,
+          44,
+          16,
+          37,
+          5,
+          45
+        ],
+        "route": [
+          0,
+          12,
+          21,
+          22,
+          15,
+          43,
+          14,
+          38,
+          44,
+          16,
+          37,
+          5,
+          45,
+          0
+        ],
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "travel": 20.0,
+        "tw_penalty": 18570.0,
+        "selected_seed": null,
+        "max_chunk_size": 13,
+        "chunk_logs": [
+          {
+            "chunk_size": 13,
+            "selected_seed": 503,
+            "travel": 54.0,
+            "tw_penalty": 257830.0
+          }
+        ],
+        "load": 54.0,
+        "adaptive_trace": [],
+        "exact_benchmark": {
+          "status": "skipped",
+          "reason": "cross vehicle refine enabled"
+        }
+      },
+      {
+        "vehicle_id": 4,
+        "assigned_customers": [
+          47,
+          36,
+          46,
+          7,
+          9,
+          35,
+          34,
+          24,
+          4,
+          39,
+          23
+        ],
+        "route": [
+          0,
+          47,
+          36,
+          46,
+          7,
+          9,
+          35,
+          34,
+          24,
+          4,
+          39,
+          23,
+          0
+        ],
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "travel": 28.0,
+        "tw_penalty": 21670.0,
+        "selected_seed": null,
+        "max_chunk_size": 10,
+        "chunk_logs": [
+          {
+            "chunk_size": 10,
+            "selected_seed": 504,
+            "travel": 54.0,
+            "tw_penalty": 113320.0
+          }
+        ],
+        "load": 42.0,
+        "adaptive_trace": [],
+        "exact_benchmark": {
+          "status": "skipped",
+          "reason": "cross vehicle refine enabled"
+        }
+      }
+    ],
+    "adaptive_trace": [],
+    "best_by_lambda": [
+      {
+        "lambda": 180.0,
+        "best_objective": 0.0
+      }
+    ],
+    "tw_violation_ratio": 0.66,
+    "feasibility_rate": 1.0,
+    "ablation_id": null,
+    "strategy_signature": "assign=regret|route=or_opt|tw_repair=True|cross_refine=True|scan=travel_first|qubo_cap=15",
+    "selection_reason": "selected by scan mode with feasible-first preference",
+    "selected_refine_diagnostics": {
+      "applied": true,
+      "iterations": 8,
+      "moves": 8,
+      "history": [
+        110468.0,
+        100145.0,
+        94883.0,
+        89022.0,
+        84754.0,
+        81366.0,
+        78043.0,
+        75684.0,
+        69664.0
+      ],
+      "final_score": 69664.0
+    },
+    "max_subproblem_size": 13,
+    "subproblem_exact_benchmark": [
+      {
+        "vehicle_id": 0,
+        "subset_size": 8,
+        "status": "skipped",
+        "reason": "cross vehicle refine enabled"
+      },
+      {
+        "vehicle_id": 1,
+        "subset_size": 9,
+        "status": "skipped",
+        "reason": "cross vehicle refine enabled"
+      },
+      {
+        "vehicle_id": 2,
+        "subset_size": 10,
+        "status": "skipped",
+        "reason": "cross vehicle refine enabled"
+      },
+      {
+        "vehicle_id": 3,
+        "subset_size": 12,
+        "status": "skipped",
+        "reason": "cross vehicle refine enabled"
+      },
+      {
+        "vehicle_id": 4,
+        "subset_size": 11,
+        "status": "skipped",
+        "reason": "cross vehicle refine enabled"
+      }
+    ],
+    "vehicle_subproblem_gap_median": null,
+    "vehicle_subproblem_gap_p90": null,
+    "vehicle_subproblem_gap_max": null,
+    "objective_upper_bound": 70264.0,
+    "local_improvable_bound": 0.0,
+    "exact_reference": {
+      "mode": "subproblem_only",
+      "cap": 1
+    },
+    "data_quality_snapshot": {
+      "node_rows": 51,
+      "node_columns": [
+        "节点ID",
+        "开始服务时间下界",
+        "开始服务时间上界",
+        "服务时间",
+        "需求量",
+        "Unnamed: 5",
+        "车容量"
+      ],
+      "node_missing": {
+        "节点ID": 0,
+        "开始服务时间下界": 0,
+        "开始服务时间上界": 0,
+        "服务时间": 0,
+        "需求量": 0,
+        "Unnamed: 5": 51,
+        "车容量": 50
+      },
+      "matrix_shape": [
+        51,
+        51
+      ],
+      "matrix_diag_zero": true,
+      "matrix_symmetric": true,
+      "matrix_nonnegative": true,
+      "matrix_min": 0.0,
+      "matrix_max": 11.0,
+      "range_节点ID": {
+        "min": 0.0,
+        "max": 50.0,
+        "unique": 51
+      },
+      "range_开始服务时间下界": {
+        "min": 0.0,
+        "max": 17.0,
+        "unique": 16
+      },
+      "range_开始服务时间上界": {
+        "min": 10.0,
+        "max": 30.0,
+        "unique": 19
+      },
+      "range_服务时间": {
+        "min": 0.0,
+        "max": 2.0,
+        "unique": 2
+      },
+      "range_需求量": {
+        "min": 0.0,
+        "max": 9.0,
+        "unique": 9
+      },
+      "range_车容量": {
+        "min": 60.0,
+        "max": 60.0,
+        "unique": 1
+      }
+    },
+    "baseline_profile": "q3_q4_candidate_v2",
+    "profile_version": "0.1.0",
+    "profile_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/configs/q3_q4_candidate_v2.json",
+    "known_limitations": [
+      "Q4目标值仍由时间窗惩罚主导，需继续降低时间窗违反率。",
+      "当前参数来自既有全量策略层+快速参数层复盘。"
+    ],
+    "profile_experiment_sources": [
+      "experiments/results/decision_batch_q4_boost_v1_full_fix_20260417_214046.json",
+      "experiments/results/q34_decision_map_sensitivity_single_seed_20260418_140101_summary.csv"
+    ],
+    "proxy_score": {
+      "proxy_score": 82.8,
+      "base_score": 82.8,
+      "performance_factor": 1.0,
+      "weights": {
+        "explainability": 0.4,
+        "professionalism": 0.4,
+        "simplicity": 0.2
+      }
+    }
+  },
+  "metrics": {
+    "total_travel_time": 124.0,
+    "total_time_window_penalty": 69540.0,
+    "total_objective": 70264.0,
+    "feasible": true,
+    "row_violations": 0,
+    "col_violations": 0,
+    "runtime_sec": 105.72498529098812
+  },
+  "generated_at": "2026-04-18T19:39:07"
+}

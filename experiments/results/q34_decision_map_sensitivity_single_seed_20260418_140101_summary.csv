@@ -1,0 +1,15 @@
+question,group,setting,feasible,objective,tw_violation_ratio,runtime_sec,selected_k
+Q3,cluster_size,cluster_size=8,1,5858011.0,0.9,233.84294358399347,
+Q3,cluster_size,cluster_size=10,1,6600665.0,0.88,167.37422237501596,
+Q3,cluster_size,cluster_size=12,1,7207428.0,0.88,177.90976858400973,
+Q3,qubo_cap,qubo_cap=15,1,6600665.0,0.88,164.91287091601407,
+Q3,qubo_cap,qubo_cap=10,1,6600665.0,0.88,170.61982825002633,
+Q3,qubo_cap,qubo_cap=12,1,6600665.0,0.88,190.18625541601796,
+Q4,qubo_cap,qubo_cap=12,1,96579.0,0.68,115.91166641699965,5
+Q4,qubo_cap,qubo_cap=15,1,96579.0,0.68,122.4750802500057,5
+Q4,qubo_cap,qubo_cap=10,1,96579.0,0.68,125.42729041702114,5
+Q4,seed_count_per_vehicle,seed_count_per_vehicle=1,1,96579.0,0.68,116.31800345800002,5
+Q4,seed_count_per_vehicle,seed_count_per_vehicle=2,1,99411.0,0.68,122.95717116698506,8
+Q4,vehicle_scan_range,k_range=5-8,1,96579.0,0.68,126.67874825000763,5
+Q4,vehicle_scan_range,k_range=5-9,1,96579.0,0.68,159.3504219999886,5
+Q4,vehicle_scan_range,k_range=6-9,1,97260.0,0.68,127.6367944579979,8

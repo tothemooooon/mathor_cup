@@ -471,6 +471,232 @@ def optimize_single_vehicle_route(
     }
 
 
+def _route_seq(route: list[int]) -> list[int]:
+    return [x for x in route if x != 0]
+
+
+def _route_metrics(
+    route: list[int],
+    node_df: pd.DataFrame,
+    time_matrix: np.ndarray,
+    tw_weight: float,
+) -> dict[str, Any]:
+    details, tw_pen, travel = evaluate_time_window_penalty(route, node_df, time_matrix)
+    return {
+        "route": route,
+        "details": details,
+        "tw_penalty": float(tw_pen),
+        "travel": float(travel),
+        "score": float(travel + tw_weight * tw_pen),
+    }
+
+
+def _best_insert_sequence(
+    base_seq: list[int],
+    customer: int,
+    node_df: pd.DataFrame,
+    time_matrix: np.ndarray,
+    tw_weight: float,
+) -> tuple[list[int], dict[str, Any]]:
+    best_seq = []
+    best_metrics: dict[str, Any] | None = None
+    for pos in range(0, len(base_seq) + 1):
+        cand_seq = base_seq[:pos] + [customer] + base_seq[pos:]
+        cand_route = [0] + cand_seq + [0]
+        m = _route_metrics(cand_route, node_df, time_matrix, tw_weight)
+        if best_metrics is None or float(m["score"]) < float(best_metrics["score"]):
+            best_metrics = m
+            best_seq = cand_seq
+    if best_metrics is None:
+        best_seq = [customer]
+        best_metrics = _route_metrics([0, customer, 0], node_df, time_matrix, tw_weight)
+    return best_seq, best_metrics
+
+
+def _candidate_nodes_for_route(
+    route: list[int],
+    details: list[dict[str, Any]],
+    time_matrix: np.ndarray,
+    limit: int,
+) -> list[int]:
+    seq = _route_seq(route)
+    if not seq:
+        return []
+
+    tw_pen_map = {int(x.get("node")): float(x.get("time_window_penalty", 0.0)) for x in details}
+    route2 = [0] + seq + [0]
+    edge_cost_map: dict[int, float] = {}
+    for i, node in enumerate(seq, start=1):
+        prev_n = route2[i - 1]
+        next_n = route2[i + 1]
+        edge_cost_map[node] = float(time_matrix[prev_n, node] + time_matrix[node, next_n])
+
+    scored = sorted(
+        seq,
+        key=lambda n: (
+            tw_pen_map.get(int(n), 0.0),
+            edge_cost_map.get(int(n), 0.0),
+            n,
+        ),
+        reverse=True,
+    )
+    k = max(1, min(limit, len(scored)))
+    return scored[:k]
+
+
+def _cross_vehicle_refine_routes(
+    *,
+    vehicle_routes: list[list[int]],
+    node_df: pd.DataFrame,
+    time_matrix: np.ndarray,
+    tw_weight: float,
+    capacity: float,
+    demand_map: dict[int, float],
+    max_iter: int = 10,
+    candidate_per_route: int = 3,
+    allow_swap: bool = True,
+) -> tuple[list[list[int]], dict[str, Any]]:
+    if len(vehicle_routes) <= 1:
+        return vehicle_routes, {"applied": False, "iterations": 0, "moves": 0, "history": []}
+
+    seqs = [_route_seq(r) for r in vehicle_routes]
+    metrics = [_route_metrics([0] + s + [0], node_df, time_matrix, tw_weight) for s in seqs]
+    loads = [float(sum(demand_map.get(c, 0.0) for c in s)) for s in seqs]
+    history = [float(sum(m["score"] for m in metrics))]
+    moves = 0
+
+    for _ in range(max_iter):
+        improved = False
+        cand_nodes = [
+            _candidate_nodes_for_route(
+                route=[0] + seqs[i] + [0],
+                details=list(metrics[i]["details"]),
+                time_matrix=time_matrix,
+                limit=candidate_per_route,
+            )
+            for i in range(len(seqs))
+        ]
+
+        best_reloc: dict[str, Any] | None = None
+        for src in range(len(seqs)):
+            if not seqs[src]:
+                continue
+            for customer in cand_nodes[src]:
+                d = float(demand_map.get(customer, 0.0))
+                if d <= 0:
+                    continue
+                for dst in range(len(seqs)):
+                    if dst == src:
+                        continue
+                    if loads[dst] + d > capacity + 1e-9:
+                        continue
+                    src_seq = seqs[src][:]
+                    src_seq.remove(customer)
+                    src_metrics = _route_metrics([0] + src_seq + [0], node_df, time_matrix, tw_weight)
+                    dst_seq, dst_metrics = _best_insert_sequence(
+                        seqs[dst], customer, node_df, time_matrix, tw_weight
+                    )
+                    delta = float(src_metrics["score"] + dst_metrics["score"] - metrics[src]["score"] - metrics[dst]["score"])
+                    if delta < -1e-9 and (best_reloc is None or delta < float(best_reloc["delta"])):
+                        best_reloc = {
+                            "src": src,
+                            "dst": dst,
+                            "customer": customer,
+                            "src_seq": src_seq,
+                            "dst_seq": dst_seq,
+                            "src_metrics": src_metrics,
+                            "dst_metrics": dst_metrics,
+                            "delta": delta,
+                        }
+
+        if best_reloc is not None:
+            src = int(best_reloc["src"])
+            dst = int(best_reloc["dst"])
+            customer = int(best_reloc["customer"])
+            seqs[src] = list(best_reloc["src_seq"])
+            seqs[dst] = list(best_reloc["dst_seq"])
+            metrics[src] = dict(best_reloc["src_metrics"])
+            metrics[dst] = dict(best_reloc["dst_metrics"])
+            d = float(demand_map.get(customer, 0.0))
+            loads[src] -= d
+            loads[dst] += d
+            improved = True
+            moves += 1
+            history.append(float(sum(m["score"] for m in metrics)))
+            continue
+
+        if allow_swap:
+            best_swap: dict[str, Any] | None = None
+            for a in range(len(seqs)):
+                if not seqs[a]:
+                    continue
+                for b in range(a + 1, len(seqs)):
+                    if not seqs[b]:
+                        continue
+                    for ca in cand_nodes[a]:
+                        da = float(demand_map.get(ca, 0.0))
+                        for cb in cand_nodes[b]:
+                            db = float(demand_map.get(cb, 0.0))
+                            new_load_a = loads[a] - da + db
+                            new_load_b = loads[b] - db + da
+                            if new_load_a > capacity + 1e-9 or new_load_b > capacity + 1e-9:
+                                continue
+
+                            a_base = seqs[a][:]
+                            b_base = seqs[b][:]
+                            a_base.remove(ca)
+                            b_base.remove(cb)
+                            a_seq, a_metrics = _best_insert_sequence(
+                                a_base, cb, node_df, time_matrix, tw_weight
+                            )
+                            b_seq, b_metrics = _best_insert_sequence(
+                                b_base, ca, node_df, time_matrix, tw_weight
+                            )
+                            delta = float(
+                                a_metrics["score"]
+                                + b_metrics["score"]
+                                - metrics[a]["score"]
+                                - metrics[b]["score"]
+                            )
+                            if delta < -1e-9 and (best_swap is None or delta < float(best_swap["delta"])):
+                                best_swap = {
+                                    "a": a,
+                                    "b": b,
+                                    "a_seq": a_seq,
+                                    "b_seq": b_seq,
+                                    "a_metrics": a_metrics,
+                                    "b_metrics": b_metrics,
+                                    "new_load_a": new_load_a,
+                                    "new_load_b": new_load_b,
+                                    "delta": delta,
+                                }
+
+            if best_swap is not None:
+                a = int(best_swap["a"])
+                b = int(best_swap["b"])
+                seqs[a] = list(best_swap["a_seq"])
+                seqs[b] = list(best_swap["b_seq"])
+                metrics[a] = dict(best_swap["a_metrics"])
+                metrics[b] = dict(best_swap["b_metrics"])
+                loads[a] = float(best_swap["new_load_a"])
+                loads[b] = float(best_swap["new_load_b"])
+                improved = True
+                moves += 1
+                history.append(float(sum(m["score"] for m in metrics)))
+
+        if not improved:
+            break
+
+    out_routes = [[0] + s + [0] for s in seqs]
+    return out_routes, {
+        "applied": moves > 0,
+        "iterations": max(0, len(history) - 1),
+        "moves": moves,
+        "history": history,
+        "final_score": history[-1] if history else 0.0,
+    }
+
+
 def run_q4_baseline(
     node_df: pd.DataFrame,
     time_matrix: np.ndarray,
@@ -487,6 +713,10 @@ def run_q4_baseline(
     assignment_strategy: str = "ffd",
     route_postprocess: str = "two_opt",
     enable_tw_repair: bool = False,
+    enable_cross_vehicle_refine: bool = False,
+    cross_vehicle_max_iter: int = 10,
+    cross_vehicle_candidate_per_route: int = 3,
+    cross_vehicle_allow_swap: bool = True,
     vehicle_scan_mode: str = "fixed",
     qubo_cap: int = 15,
     seed_offset: int = 0,
@@ -516,6 +746,7 @@ def run_q4_baseline(
     feasible_candidates = []
     adaptive_trace_all: list[dict[str, Any]] = []
     best_by_lambda_map: dict[float, float] = {}
+    demand_map = {c: float(get_demand(node_df, c)) for c in customers}
 
     for k in range(min_vehicle_count, max_vehicle_count + 1):
         assignment = assign_customers(
@@ -532,6 +763,7 @@ def run_q4_baseline(
 
         vehicle_routes: list[list[int]] = []
         vehicle_logs: list[dict] = []
+        refine_diagnostics: dict[str, Any] = {"applied": False, "iterations": 0, "moves": 0, "history": []}
         seed_cursor = seed_offset + k * 100
 
         total_travel = 0.0
@@ -628,6 +860,58 @@ def run_q4_baseline(
                 }
             )
 
+        if enable_cross_vehicle_refine:
+            refined_routes, refine_diagnostics = _cross_vehicle_refine_routes(
+                vehicle_routes=vehicle_routes,
+                node_df=node_df,
+                time_matrix=time_matrix,
+                tw_weight=tw_weight,
+                capacity=capacity,
+                demand_map=demand_map,
+                max_iter=max(0, int(cross_vehicle_max_iter)),
+                candidate_per_route=max(1, int(cross_vehicle_candidate_per_route)),
+                allow_swap=bool(cross_vehicle_allow_swap),
+            )
+            if refined_routes:
+                vehicle_routes = refined_routes
+
+            total_travel = 0.0
+            total_tw = 0.0
+            all_per_customer = []
+            old_logs = vehicle_logs
+            vehicle_logs = []
+            for vid, route in enumerate(vehicle_routes):
+                details, tw_pen, travel = evaluate_time_window_penalty(route, node_df, time_matrix)
+                total_travel += float(travel)
+                total_tw += float(tw_pen)
+                for d in details:
+                    d2 = dict(d)
+                    d2["vehicle_id"] = vid
+                    all_per_customer.append(d2)
+
+                base = old_logs[vid] if vid < len(old_logs) else {}
+                assigned_customers = _route_seq(route)
+                vehicle_logs.append(
+                    {
+                        "vehicle_id": vid,
+                        "assigned_customers": assigned_customers,
+                        "route": route,
+                        "lambda_pos": base.get("lambda_pos"),
+                        "lambda_cus": base.get("lambda_cus"),
+                        "travel": float(travel),
+                        "tw_penalty": float(tw_pen),
+                        "selected_seed": base.get("selected_seed"),
+                        "max_chunk_size": base.get("max_chunk_size", len(assigned_customers)),
+                        "chunk_logs": base.get("chunk_logs", []),
+                        "load": float(sum(demand_map.get(c, 0.0) for c in assigned_customers)),
+                        "adaptive_trace": base.get("adaptive_trace", []),
+                        "exact_benchmark": {
+                            "status": "skipped",
+                            "reason": "cross vehicle refine enabled",
+                        },
+                    }
+                )
+
         tw_violation_ratio = _violation_ratio(all_per_customer)
         objective = vehicle_weight * k + travel_weight * total_travel + tw_weight * total_tw
         scan_item = {
@@ -640,6 +924,7 @@ def run_q4_baseline(
             "vehicle_routes": vehicle_routes,
             "vehicle_logs": vehicle_logs,
             "timewindow_feasible": bool(tw_violation_ratio <= tw_violation_ratio_cap),
+            "refine_diagnostics": refine_diagnostics,
         }
         scans.append(scan_item)
         feasible_candidates.append(scan_item)
@@ -657,6 +942,15 @@ def run_q4_baseline(
         )
     elif vehicle_scan_mode == "fixed":
         feasible_candidates.sort(key=lambda x: (x["objective"], x["total_travel"], x["total_tw_penalty"]))
+    elif vehicle_scan_mode == "travel_first":
+        feasible_candidates.sort(
+            key=lambda x: (
+                0 if x["timewindow_feasible"] else 1,
+                x["total_travel"],
+                x["objective"],
+                x["total_tw_penalty"],
+            )
+        )
     else:
         raise ValueError(f"unsupported vehicle_scan_mode: {vehicle_scan_mode}")
 
@@ -715,12 +1009,12 @@ def run_q4_baseline(
 
     strategy_signature = (
         f"assign={assignment_strategy}|route={route_postprocess}|tw_repair={enable_tw_repair}|"
-        f"scan={vehicle_scan_mode}|qubo_cap={qubo_cap}"
+        f"cross_refine={enable_cross_vehicle_refine}|scan={vehicle_scan_mode}|qubo_cap={qubo_cap}"
     )
 
     return RunResult(
         question="Q4",
-        method="two-stage hybrid VRP: assignment + per-vehicle QUBO + repair",
+        method="two-stage hybrid VRP: assignment + per-vehicle QUBO + repair + optional cross-vehicle refine",
         routes=best_pack["vehicle_routes"],
         per_customer=per_customer,
         parameters={
@@ -739,6 +1033,10 @@ def run_q4_baseline(
             "assignment_strategy": assignment_strategy,
             "route_postprocess": route_postprocess,
             "enable_tw_repair": enable_tw_repair,
+            "enable_cross_vehicle_refine": enable_cross_vehicle_refine,
+            "cross_vehicle_max_iter": cross_vehicle_max_iter,
+            "cross_vehicle_candidate_per_route": cross_vehicle_candidate_per_route,
+            "cross_vehicle_allow_swap": cross_vehicle_allow_swap,
             "vehicle_scan_mode": vehicle_scan_mode,
             "qubo_cap": qubo_cap,
             "seed_offset": seed_offset,
@@ -753,6 +1051,7 @@ def run_q4_baseline(
             "目标权重": "vehicle_weight 与 travel/tw 权重决定车辆数优先级",
             "客户分配策略": "FFD / Regret / TW-pressure 三策略消融",
             "路由后处理": "none / 2-opt / or-opt (+可选tw修复)",
+            "跨车重分配": "relocate/swap 局部搜索（容量硬约束）",
             "车内自适应λ": "每车子问题按稳定性和目标改善调节lambda",
         },
         diagnostics={
@@ -769,6 +1068,7 @@ def run_q4_baseline(
             "ablation_id": ablation_id,
             "strategy_signature": strategy_signature,
             "selection_reason": selection_reason or "selected by scan mode with feasible-first preference",
+            "selected_refine_diagnostics": best_pack.get("refine_diagnostics", {}),
             "max_subproblem_size": int(
                 max((v.get("max_chunk_size", 0) for v in best_pack["vehicle_logs"]), default=0)
             ),

@@ -1,0 +1,115 @@
+{
+  "profile_name": "best_mainline_v1",
+  "profile_version": "1.0.0",
+  "description": "A题当前最优主线复现配置（Q1~Q4）",
+  "questions": {
+    "Q1": {
+      "params": {
+        "n_customers": 15,
+        "seed_start": 0,
+        "seed_count": 8,
+        "use_adaptive_lambda": true,
+        "adaptive_rounds": 5
+      },
+      "targets": {
+        "must_feasible": true,
+        "max_travel": 30.0,
+        "max_objective": 30.0
+      },
+      "best_reference": "experiments/results/q1_20260417_205616.json"
+    },
+    "Q2": {
+      "params": {
+        "n_customers": 15,
+        "seed_start": 0,
+        "seed_count": 2,
+        "tw_weight": 1.0,
+        "m1": 10.0,
+        "m2": 20.0,
+        "objective_eval_weight": 1.0,
+        "lambda_fixed": null,
+        "use_adaptive_lambda": true,
+        "adaptive_rounds": 5,
+        "adaptive_budget": 6,
+        "adaptive_target_ratio": 1.05,
+        "exact_benchmark_cap": 15,
+        "exact_dp_max_states": 12000000,
+        "use_profile_ensemble": true,
+        "use_anchor_restarts": true,
+        "anchor_candidate_count": 3,
+        "anchor_seed_ratio": 0.2,
+        "tw_weight_grid": [0.8, 1.0, 1.2],
+        "use_adaptive_tw_weight": true,
+        "adaptive_tw_top_k": 2,
+        "final_combo_top_k": 1,
+        "tw_pairwise_weight": 0.35,
+        "edge_bias_weight": 0.08,
+        "normalize_qubo_terms": true
+      },
+      "targets": {
+        "must_feasible": true,
+        "max_travel": 40.0,
+        "max_objective": 175660.0
+      },
+      "best_reference": "experiments/results/q2_20260418_133144.json"
+    },
+    "Q3": {
+      "params": {
+        "n_customers": 50,
+        "cluster_size": 10,
+        "lambda_pos": 200.0,
+        "lambda_cus": 200.0,
+        "tw_weight": 1.0,
+        "seed_count_per_cluster": 3,
+        "do_two_opt": true,
+        "postprocess_strategy": "two_opt",
+        "enable_tw_repair": true,
+        "qubo_cap": 15,
+        "seed_offset": 0,
+        "use_adaptive_lambda": true,
+        "adaptive_rounds": 4,
+        "adaptive_budget": 3,
+        "tw_violation_ratio_cap": 0.9,
+        "exact_benchmark_cap": 12
+      },
+      "targets": {
+        "must_feasible": true,
+        "max_travel": 91.0,
+        "max_objective": 6375431.0
+      },
+      "best_reference": "artifacts/repro/runs/q3_20260419_125913.json"
+    },
+    "Q4": {
+      "params": {
+        "n_customers": 50,
+        "tw_weight": 1.0,
+        "lambda_pos": 180.0,
+        "lambda_cus": 180.0,
+        "vehicle_weight": 0.0,
+        "travel_weight": 1.0,
+        "min_vehicle_count": 5,
+        "max_vehicle_count": 14,
+        "seed_count_per_vehicle": 1,
+        "assignment_strategy": "ffd",
+        "route_postprocess": "or_opt",
+        "enable_tw_repair": true,
+        "enable_cross_vehicle_refine": true,
+        "cross_vehicle_max_iter": 16,
+        "cross_vehicle_candidate_per_route": 4,
+        "cross_vehicle_allow_swap": true,
+        "vehicle_scan_mode": "travel_first",
+        "qubo_cap": 15,
+        "seed_offset": 0,
+        "tw_violation_ratio_cap": 0.7,
+        "use_adaptive_lambda": false,
+        "exact_benchmark_cap": 1
+      },
+      "targets": {
+        "must_feasible": true,
+        "max_travel": 109.0,
+        "max_objective": 51749.0
+      },
+      "best_reference": "experiments/results/q4_20260419_120746.json"
+    }
+  }
+}

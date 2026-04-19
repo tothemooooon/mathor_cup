@@ -1,0 +1,86 @@
+[
+  {
+    "name": "S01 节点示意图",
+    "file": "S01_nodes_overview_mds.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S01_nodes_overview_mds.png",
+    "purpose": "展示节点分布、需求与时间窗属性",
+    "data_source": "参考算例.xlsx/节点属性信息 + 旅行时间矩阵（MDS降维）"
+  },
+  {
+    "name": "S02 Q2/Q3路线示意图",
+    "file": "S02_q2_q3_route_schematics.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S02_q2_q3_route_schematics.png",
+    "purpose": "展示单车路径规划结果",
+    "data_source": "q2_20260418_133144.json + q3_20260417_151446.json"
+  },
+  {
+    "name": "S03 Q4多车路线示意图",
+    "file": "S03_q4_multivehicle_route_schematic.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S03_q4_multivehicle_route_schematic.png",
+    "purpose": "展示多车协同路径",
+    "data_source": "q4_20260419_120746.json/routes"
+  },
+  {
+    "name": "S04 Q1收敛图",
+    "file": "S04_q1_convergence.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S04_q1_convergence.png",
+    "purpose": "展示Q1惩罚系数调优过程中的最优值收敛",
+    "data_source": "q1_penalty_tuning_20260417_164902_detail.csv"
+  },
+  {
+    "name": "S05 Q2收敛图(当前主线)",
+    "file": "S05_q2_convergence_current_mainline.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S05_q2_convergence_current_mainline.png",
+    "purpose": "展示Q2主线adaptive(lambda,tw_weight)搜索收敛",
+    "data_source": "q2_20260418_133144.json/diagnostics.adaptive_trace + adaptive_trace_tw_weight"
+  },
+  {
+    "name": "S06 Q3收敛图",
+    "file": "S06_q3_convergence.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S06_q3_convergence.png",
+    "purpose": "展示Q3消融实验评估过程中的最优值收敛",
+    "data_source": "decision_batch_q3_boost_v1_full_20260417_212313_raw.csv"
+  },
+  {
+    "name": "S07 Q4收敛图",
+    "file": "S07_q4_convergence.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S07_q4_convergence.png",
+    "purpose": "展示Q4两阶段（扫描+修复）收敛过程",
+    "data_source": "q4_20260419_120746.json/diagnostics.scan_results + selected_refine_diagnostics.history"
+  },
+  {
+    "name": "S08 Q4敏感性(k扫描)",
+    "file": "S08_q4_k_sensitivity.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S08_q4_k_sensitivity.png",
+    "purpose": "展示 k 对目标值、里程、可行率的影响",
+    "data_source": "decision_batch_q4_boost_v1_full_fix_20260417_214046_k_curve.csv"
+  },
+  {
+    "name": "S09 Q4敏感性(Pareto)",
+    "file": "S09_q4_scan_pareto.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S09_q4_scan_pareto.png",
+    "purpose": "展示扫描候选在 travel-objective 的分布与可行性",
+    "data_source": "q4_20260419_120746.json/diagnostics.scan_results"
+  },
+  {
+    "name": "S10 Q4敏感性(策略热图)",
+    "file": "S10_q4_strategy_heatmap.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S10_q4_strategy_heatmap.png",
+    "purpose": "展示分配策略与路径后处理组合影响",
+    "data_source": "decision_batch_q4_boost_v1_full_fix_20260417_214046_summary.csv"
+  },
+  {
+    "name": "S11 模型结构示意图",
+    "file": "S11_model_structure_diagram.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S11_model_structure_diagram.png",
+    "purpose": "展示 Q1-Q4 一体化结构与模块关系",
+    "data_source": "src/mathorcup_a/*.py + run_baseline.py"
+  },
+  {
+    "name": "S12 建模过程示意图",
+    "file": "S12_modeling_process_diagram.png",
+    "absolute_path": "/Users/tothemoon/数模/2026年第十六届MathorCup数学应用挑战赛赛题/A题/artifacts/plots/submission_pack/S12_modeling_process_diagram.png",
+    "purpose": "展示从数据到最终基线的流程闭环",
+    "data_source": "建模总纲.md + experiments/results + artifacts/repro"
+  }
+]
